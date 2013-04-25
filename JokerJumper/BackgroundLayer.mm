@@ -5,11 +5,9 @@
 //  Created by Sun on 3/28/13.
 //  Copyright 2013 __MyCompanyName__. All rights reserved.
 //  TEST
-<<<<<<< HEAD
 //  ABCD123
-=======
 //  DEFG
->>>>>>> test2
+
 
 #import "BackgroundLayer.h"
 #import "Constants.h"
