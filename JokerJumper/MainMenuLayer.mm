@@ -204,7 +204,7 @@ CCFiniteTimeAction *moveAction4;
         
         
         
-        // Create Replay Button
+        // Create Play Button
         CCMenuItem *playButton = [CCMenuItemImage itemWithNormalImage:@"btn_play0.png" selectedImage:@"btn_play0.png" target:self selector:@selector(buttonReplayAction:)];
         playButton.scale = 1.3;
         CCMenu *Menu = [CCMenu menuWithItems:playButton, nil];

@@ -7,6 +7,9 @@
 //
 
 #import "Constants.h"
+#import "GameLayer.h"
+#import "GameLayer2.h"
+#import "GameLayer3.h"
 #import "SimpleAudioEngine.h"
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
@@ -22,6 +25,9 @@
     CCSprite *moon;
     CCSpriteBatchNode* moonBatchNode;
     
+    GameLayer *gameLayer;
+    GameLayer2 *gameLayer2;
+    GameLayer3 *gameLayer3;
 }
 -(void) updateLifeCounter:(int)amount;
 -(void) updateCoinCounter:(int)amount;
@@ -33,5 +39,7 @@
 //@property (nonatomic, readwrite)CCLabelBMFont * lifeLabel;
 //@property (nonatomic, readwrite)CCLabelBMFont * statusLabel;
 //@property (nonatomic, readwrite)CCLabelBMFont * coinLabel;
+
+- (id) initWithLevel:(int)level;
 @end
 

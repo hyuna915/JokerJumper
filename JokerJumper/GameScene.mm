@@ -65,7 +65,8 @@ showingPausedMenu = showingPausedMenu_;
             // add layer as a child to scene
             [scene addChild: gameLayer z:1];
             
-            HUDLayer *hudLayer = [HUDLayer node];
+//            HUDLayer *hudLayer = [HUDLayer node];
+            HUDLayer *hudLayer = [[HUDLayer alloc] initWithLevel: 1];
             // add layer as a child to scene
             [scene addChild: hudLayer z:3 tag:HUD_LAYER_TAG];
             break;
@@ -80,7 +81,8 @@ showingPausedMenu = showingPausedMenu_;
             // add layer as a child to scene
             [scene addChild: gameLayer z:1];
             
-            HUDLayer *hudLayer = [HUDLayer node];
+//            HUDLayer *hudLayer = [HUDLayer node];
+            HUDLayer *hudLayer = [[HUDLayer alloc] initWithLevel: 2];
             // add layer as a child to scene
             [scene addChild: hudLayer z:3 tag:HUD_LAYER_TAG];
             break;
@@ -95,7 +97,8 @@ showingPausedMenu = showingPausedMenu_;
             // add layer as a child to scene
             [scene addChild: gameLayer z:1];
             
-            HUDLayer *hudLayer = [HUDLayer node];
+//            HUDLayer *hudLayer = [HUDLayer node];
+            HUDLayer *hudLayer = [[HUDLayer alloc] initWithLevel: 3];
             // add layer as a child to scene
             [scene addChild: hudLayer z:3 tag:HUD_LAYER_TAG];
             break;
