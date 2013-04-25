@@ -4,7 +4,11 @@
 //
 //  Created by Sun on 3/28/13.
 //  Copyright 2013 __MyCompanyName__. All rights reserved.
+<<<<<<< HEAD
 //  TEST
+=======
+//  ABCD
+>>>>>>> ABC
 
 #import "BackgroundLayer.h"
 #import "Constants.h"
