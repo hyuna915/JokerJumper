@@ -4,13 +4,10 @@
 <dict>
 	<key>frames</key>
 	<dict>
-		
-		<key>acceleration0.png</key>
+		<key>acceration0.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{262, 240}, {178, 176}}</string>
 			<key>spriteOffset</key>
@@ -26,13 +23,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
-		<key>acceleration1.png</key>
+		<key>acceration1.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{238, 240}, {202, 176}}</string>
 			<key>spriteOffset</key>
@@ -48,13 +42,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
-		<key>acceleration2.png</key>
+		<key>acceration2.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{211, 240}, {230, 176}}</string>
 			<key>spriteOffset</key>
@@ -70,13 +61,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
-		<key>acceleration3.png</key>
+		<key>acceration3.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{238, 240}, {202, 176}}</string>
 			<key>spriteOffset</key>
@@ -92,13 +80,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
-		<key>acceleration4.png</key>
+		<key>acceration4.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{262, 240}, {178, 176}}</string>
 			<key>spriteOffset</key>
@@ -114,13 +99,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>dead1.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{0, 0}, {150, 118}}</string>
 			<key>spriteOffset</key>
@@ -136,13 +118,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>dead2.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{0, 0}, {150, 118}}</string>
 			<key>spriteOffset</key>
@@ -158,13 +137,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>dead3.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{0, 0}, {150, 118}}</string>
 			<key>spriteOffset</key>
@@ -180,13 +156,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>dead4.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{0, 0}, {150, 118}}</string>
 			<key>spriteOffset</key>
@@ -202,13 +175,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>dead5.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{0, 0}, {150, 118}}</string>
 			<key>spriteOffset</key>
@@ -224,13 +194,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>dead6.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{0, 0}, {150, 118}}</string>
 			<key>spriteOffset</key>
@@ -246,13 +213,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>dead7.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{0, 0}, {150, 118}}</string>
 			<key>spriteOffset</key>
@@ -268,13 +232,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>dead8.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{0, 0}, {142, 118}}</string>
 			<key>spriteOffset</key>
@@ -290,13 +251,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>dead9.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{2, 3}, {110, 112}}</string>
 			<key>spriteOffset</key>
@@ -312,13 +270,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>enermy0.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{12, 0}, {138, 110}}</string>
 			<key>spriteOffset</key>
@@ -334,13 +289,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>enermy1.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{10, 0}, {140, 109}}</string>
 			<key>spriteOffset</key>
@@ -356,13 +308,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>enermy10.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{10, 0}, {140, 110}}</string>
 			<key>spriteOffset</key>
@@ -378,13 +327,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>enermy11.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{6, 0}, {144, 110}}</string>
 			<key>spriteOffset</key>
@@ -400,13 +346,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>enermy12.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{12, 0}, {138, 110}}</string>
 			<key>spriteOffset</key>
@@ -422,13 +365,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>enermy13.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{10, 0}, {140, 109}}</string>
 			<key>spriteOffset</key>
@@ -444,13 +384,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>enermy14.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{10, 0}, {140, 110}}</string>
 			<key>spriteOffset</key>
@@ -466,13 +403,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>enermy15.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{4, 0}, {146, 110}}</string>
 			<key>spriteOffset</key>
@@ -488,13 +422,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>enermy2.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{10, 0}, {140, 110}}</string>
 			<key>spriteOffset</key>
@@ -510,13 +441,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>enermy3.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{6, 0}, {144, 110}}</string>
 			<key>spriteOffset</key>
@@ -532,13 +460,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>enermy4.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{12, 0}, {138, 110}}</string>
 			<key>spriteOffset</key>
@@ -554,13 +479,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>enermy5.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{10, 0}, {140, 109}}</string>
 			<key>spriteOffset</key>
@@ -576,13 +498,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>enermy6.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{10, 0}, {140, 110}}</string>
 			<key>spriteOffset</key>
@@ -598,13 +517,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>enermy7.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{4, 0}, {146, 110}}</string>
 			<key>spriteOffset</key>
@@ -620,13 +536,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>enermy8.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{12, 0}, {138, 110}}</string>
 			<key>spriteOffset</key>
@@ -642,13 +555,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>enermy9.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{10, 0}, {140, 109}}</string>
 			<key>spriteOffset</key>
@@ -664,13 +574,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster0.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{7, 10}, {122, 141}}</string>
 			<key>spriteOffset</key>
@@ -686,13 +593,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster1.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{4, 7}, {130, 139}}</string>
 			<key>spriteOffset</key>
@@ -708,13 +612,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster10.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{2, 4}, {138, 135}}</string>
 			<key>spriteOffset</key>
@@ -730,13 +631,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster11.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{4, 7}, {130, 139}}</string>
 			<key>spriteOffset</key>
@@ -752,13 +650,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster12.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{7, 2}, {122, 141}}</string>
 			<key>spriteOffset</key>
@@ -774,13 +669,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster13.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{5, 4}, {130, 141}}</string>
 			<key>spriteOffset</key>
@@ -796,13 +688,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster14.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{0, 8}, {140, 133}}</string>
 			<key>spriteOffset</key>
@@ -818,13 +707,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster15.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{5, 4}, {130, 141}}</string>
 			<key>spriteOffset</key>
@@ -840,13 +726,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster2.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{2, 14}, {138, 135}}</string>
 			<key>spriteOffset</key>
@@ -862,13 +745,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster3.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{4, 7}, {130, 139}}</string>
 			<key>spriteOffset</key>
@@ -884,13 +764,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster4.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{7, 10}, {122, 141}}</string>
 			<key>spriteOffset</key>
@@ -906,13 +783,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster5.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{5, 9}, {130, 141}}</string>
 			<key>spriteOffset</key>
@@ -928,13 +802,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster6.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{0, 12}, {140, 133}}</string>
 			<key>spriteOffset</key>
@@ -950,13 +821,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster7.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{5, 9}, {130, 141}}</string>
 			<key>spriteOffset</key>
@@ -972,13 +840,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster8.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{7, 2}, {122, 141}}</string>
 			<key>spriteOffset</key>
@@ -994,13 +859,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster9.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{4, 7}, {130, 139}}</string>
 			<key>spriteOffset</key>
@@ -1016,13 +878,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster_jump_down0.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{7, 2}, {122, 141}}</string>
 			<key>spriteOffset</key>
@@ -1038,13 +897,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster_jump_down1.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{28, 10}, {122, 150}}</string>
 			<key>spriteOffset</key>
@@ -1060,13 +916,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster_jump_down2.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{32, 1}, {134, 154}}</string>
 			<key>spriteOffset</key>
@@ -1082,13 +935,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster_jump_down3.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{28, 23}, {140, 142}}</string>
 			<key>spriteOffset</key>
@@ -1104,13 +954,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster_jump_down4.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{27, 35}, {142, 122}}</string>
 			<key>spriteOffset</key>
@@ -1126,13 +973,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster_jump_down5.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{29, 37}, {142, 134}}</string>
 			<key>spriteOffset</key>
@@ -1148,13 +992,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster_jump_down6.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{33, 36}, {132, 158}}</string>
 			<key>spriteOffset</key>
@@ -1170,13 +1011,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster_jump_down7.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{28, 41}, {124, 150}}</string>
 			<key>spriteOffset</key>
@@ -1192,13 +1030,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster_jump_down8.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{7, 10}, {122, 141}}</string>
 			<key>spriteOffset</key>
@@ -1214,13 +1049,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster_jump_up0.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{7, 10}, {122, 141}}</string>
 			<key>spriteOffset</key>
@@ -1236,13 +1068,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster_jump_up1.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{22, 27}, {144, 138}}</string>
 			<key>spriteOffset</key>
@@ -1258,13 +1087,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster_jump_up2.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{8, 36}, {154, 132}}</string>
 			<key>spriteOffset</key>
@@ -1280,13 +1106,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster_jump_up3.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{14, 39}, {148, 126}}</string>
 			<key>spriteOffset</key>
@@ -1302,13 +1125,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster_jump_up4.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{27, 43}, {142, 122}}</string>
 			<key>spriteOffset</key>
@@ -1324,13 +1144,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster_jump_up5.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{11, 48}, {150, 124}}</string>
 			<key>spriteOffset</key>
@@ -1346,13 +1163,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster_jump_up6.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{10, 33}, {158, 134}}</string>
 			<key>spriteOffset</key>
@@ -1368,13 +1182,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster_jump_up7.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{30, 30}, {138, 142}}</string>
 			<key>spriteOffset</key>
@@ -1390,13 +1201,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>green_monster_jump_up8.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{7, 2}, {122, 141}}</string>
 			<key>spriteOffset</key>
@@ -1412,13 +1220,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>joker1.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{10, 1}, {120, 137}}</string>
 			<key>spriteOffset</key>
@@ -1434,13 +1239,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>joker10.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{13, 1}, {116, 139}}</string>
 			<key>spriteOffset</key>
@@ -1456,13 +1258,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>joker11.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{10, 1}, {120, 141}}</string>
 			<key>spriteOffset</key>
@@ -1478,13 +1277,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>joker12.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{8, 1}, {122, 141}}</string>
 			<key>spriteOffset</key>
@@ -1500,13 +1296,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>joker13.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{12, 1}, {118, 144}}</string>
 			<key>spriteOffset</key>
@@ -1522,13 +1315,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>joker14.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{14, 1}, {116, 146}}</string>
 			<key>spriteOffset</key>
@@ -1544,13 +1334,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>joker15.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{8, 6}, {122, 137}}</string>
 			<key>spriteOffset</key>
@@ -1566,13 +1353,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>joker16.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{10, 4}, {120, 139}}</string>
 			<key>spriteOffset</key>
@@ -1588,13 +1372,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>joker17.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{13, 4}, {116, 139}}</string>
 			<key>spriteOffset</key>
@@ -1610,13 +1391,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>joker18.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{10, 1}, {120, 141}}</string>
 			<key>spriteOffset</key>
@@ -1632,13 +1410,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>joker19.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{8, 1}, {122, 141}}</string>
 			<key>spriteOffset</key>
@@ -1654,13 +1429,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>joker2.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{14, 0}, {116, 141}}</string>
 			<key>spriteOffset</key>
@@ -1676,13 +1448,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>joker20.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{12, 3}, {118, 144}}</string>
 			<key>spriteOffset</key>
@@ -1698,13 +1467,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>joker21.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{14, 2}, {116, 146}}</string>
 			<key>spriteOffset</key>
@@ -1720,13 +1486,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>joker22.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{10, 5}, {120, 137}}</string>
 			<key>spriteOffset</key>
@@ -1742,13 +1505,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>joker23.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{14, 2}, {116, 141}}</string>
 			<key>spriteOffset</key>
@@ -1764,13 +1524,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>joker24.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{10, 6}, {120, 137}}</string>
 			<key>spriteOffset</key>
@@ -1786,13 +1543,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>joker25.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{10, 2}, {120, 141}}</string>
 			<key>spriteOffset</key>
@@ -1808,13 +1562,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>joker26.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{10, 1}, {120, 141}}</string>
 			<key>spriteOffset</key>
@@ -1830,13 +1581,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>joker27.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{14, 2}, {116, 146}}</string>
 			<key>spriteOffset</key>
@@ -1852,13 +1600,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>joker28.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{10, 0}, {120, 143}}</string>
 			<key>spriteOffset</key>
@@ -1874,13 +1619,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>joker3.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{10, 1}, {120, 137}}</string>
 			<key>spriteOffset</key>
@@ -1896,13 +1638,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>joker4.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{10, 0}, {120, 141}}</string>
 			<key>spriteOffset</key>
@@ -1918,13 +1657,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>joker5.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{10, 1}, {120, 141}}</string>
 			<key>spriteOffset</key>
@@ -1940,13 +1676,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>joker6.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{14, 0}, {116, 146}}</string>
 			<key>spriteOffset</key>
@@ -1962,13 +1695,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>joker7.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{10, 0}, {120, 143}}</string>
 			<key>spriteOffset</key>
@@ -1984,13 +1714,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>joker8.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{8, 0}, {122, 137}}</string>
 			<key>spriteOffset</key>
@@ -2006,13 +1733,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>joker9.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{10, 1}, {120, 139}}</string>
 			<key>spriteOffset</key>
@@ -2028,13 +1752,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>jump1.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{9, 7}, {120, 137}}</string>
 			<key>spriteOffset</key>
@@ -2050,13 +1771,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>jump2.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{11, 4}, {128, 148}}</string>
 			<key>spriteOffset</key>
@@ -2072,13 +1790,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>jump3.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{7, 1}, {132, 151}}</string>
 			<key>spriteOffset</key>
@@ -2094,13 +1809,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>jump4.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{6, 1}, {128, 137}}</string>
 			<key>spriteOffset</key>
@@ -2116,13 +1828,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>jump5.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{5, 2}, {126, 151}}</string>
 			<key>spriteOffset</key>
@@ -2138,13 +1847,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>jump6.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{9, 1}, {112, 153}}</string>
 			<key>spriteOffset</key>
@@ -2160,13 +1866,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>jump7.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{14, 3}, {120, 151}}</string>
 			<key>spriteOffset</key>
@@ -2182,13 +1885,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>jump8.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{8, 6}, {122, 137}}</string>
 			<key>spriteOffset</key>
@@ -2204,13 +1904,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>jumpd1.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{8, 6}, {122, 137}}</string>
 			<key>spriteOffset</key>
@@ -2226,13 +1923,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>jumpd2.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{0, 0}, {135, 135}}</string>
 			<key>spriteOffset</key>
@@ -2248,13 +1942,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>jumpd3.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{0, 0}, {142, 130}}</string>
 			<key>spriteOffset</key>
@@ -2270,13 +1961,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>jumpd4.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{0, 0}, {152, 120}}</string>
 			<key>spriteOffset</key>
@@ -2292,13 +1980,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>jumpd5.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{0, 0}, {149, 112}}</string>
 			<key>spriteOffset</key>
@@ -2314,13 +1999,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>jumpd6.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{0, 0}, {141, 130}}</string>
 			<key>spriteOffset</key>
@@ -2336,13 +2018,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>jumpd7.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{0, 0}, {136, 139}}</string>
 			<key>spriteOffset</key>
@@ -2358,13 +2037,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>jumpd8.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{10, 1}, {120, 137}}</string>
 			<key>spriteOffset</key>
@@ -2380,13 +2056,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>lighting_deadman_jump_down0.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{12, 0}, {138, 110}}</string>
 			<key>spriteOffset</key>
@@ -2402,13 +2075,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>lighting_deadman_jump_down1.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{39, 45}, {142, 118}}</string>
 			<key>spriteOffset</key>
@@ -2424,13 +2094,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>lighting_deadman_jump_down2.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{36, 31}, {138, 148}}</string>
 			<key>spriteOffset</key>
@@ -2446,13 +2113,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>lighting_deadman_jump_down3.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{40, 29}, {130, 154}}</string>
 			<key>spriteOffset</key>
@@ -2468,13 +2132,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>lighting_deadman_jump_down4.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{48, 32}, {126, 142}}</string>
 			<key>spriteOffset</key>
@@ -2490,13 +2151,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>lighting_deadman_jump_down5.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{49, 23}, {120, 152}}</string>
 			<key>spriteOffset</key>
@@ -2512,13 +2170,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>lighting_deadman_jump_down6.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{41, 21}, {132, 154}}</string>
 			<key>spriteOffset</key>
@@ -2534,13 +2189,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>lighting_deadman_jump_down7.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{40, 24}, {144, 134}}</string>
 			<key>spriteOffset</key>
@@ -2556,13 +2208,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>lighting_deadman_jump_down8.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{12, 0}, {138, 110}}</string>
 			<key>spriteOffset</key>
@@ -2578,13 +2227,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>lighting_deadman_jump_up0.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{12, 0}, {138, 110}}</string>
 			<key>spriteOffset</key>
@@ -2600,13 +2246,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>lighting_deadman_jump_up1.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{33, 32}, {148, 126}}</string>
 			<key>spriteOffset</key>
@@ -2622,13 +2265,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>lighting_deadman_jump_up2.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{30, 40}, {156, 124}}</string>
 			<key>spriteOffset</key>
@@ -2644,13 +2284,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>lighting_deadman_jump_up3.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{33, 34}, {154, 130}}</string>
 			<key>spriteOffset</key>
@@ -2666,13 +2303,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>lighting_deadman_jump_up4.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{53, 38}, {130, 134}}</string>
 			<key>spriteOffset</key>
@@ -2688,13 +2322,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>lighting_deadman_jump_up5.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{33, 37}, {150, 138}}</string>
 			<key>spriteOffset</key>
@@ -2710,13 +2341,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>lighting_deadman_jump_up6.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{32, 50}, {144, 110}}</string>
 			<key>spriteOffset</key>
@@ -2732,13 +2360,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>lighting_deadman_jump_up7.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{29, 42}, {146, 112}}</string>
 			<key>spriteOffset</key>
@@ -2754,13 +2379,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>lighting_deadman_jump_up8.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{12, 0}, {138, 110}}</string>
 			<key>spriteOffset</key>
@@ -2776,13 +2398,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>smoke1.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{0, 0}, {63, 60}}</string>
 			<key>spriteOffset</key>
@@ -2798,13 +2417,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>smoke2.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{0, 0}, {50, 48}}</string>
 			<key>spriteOffset</key>
@@ -2820,13 +2436,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>smoke3.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{0, 0}, {40, 38}}</string>
 			<key>spriteOffset</key>
@@ -2842,13 +2455,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>smoke4.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{0, 0}, {20, 19}}</string>
 			<key>spriteOffset</key>
@@ -2864,13 +2474,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>smoke5.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{0, 0}, {63, 60}}</string>
 			<key>spriteOffset</key>
@@ -2886,13 +2493,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>smoke6.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{0, 0}, {50, 48}}</string>
 			<key>spriteOffset</key>
@@ -2908,13 +2512,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>smoke7.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{0, 0}, {40, 38}}</string>
 			<key>spriteOffset</key>
@@ -2930,13 +2531,10 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>smoke8.png</key>
 		<dict>
 			<key>aliases</key>
-			<array>
-			
-			</array>
+			<array/>
 			<key>spriteColorRect</key>
 			<string>{{0, 0}, {20, 19}}</string>
 			<key>spriteOffset</key>
@@ -2952,7 +2550,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 	</dict>
 	<key>metadata</key>
 	<dict>
