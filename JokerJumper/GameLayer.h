@@ -48,7 +48,10 @@
     Joker *joker;
     Joker *emeny;
     GameObject *fly;
+    GameObject *accerate;
+    GameObject *bubble;
     ContactListener *contactListener;
+    
     float fallPos;
     int flyPos;
     BOOL jokerStartCharge;
@@ -58,6 +61,8 @@
     BOOL flower2;
     BOOL flower3;
     float jokerCharge;
+    float timer;
+    
     CCSpriteBatchNode* brick1BatchNode;
     CCSpriteBatchNode* brick2BatchNode;
     CCSpriteBatchNode* brick3BatchNode;

@@ -757,6 +757,26 @@ bool gravity = false;
         flyPos=0;
         CCScene* scene = [[CCDirector sharedDirector] runningScene];
         hudLayer = (HUDLayer*)[scene getChildByTag:HUD_LAYER_TAG];
+        
+        bubble=[GameObject spriteWithFile:@"Bubble.png"];
+        [self addChild:bubble z:100];
+        [bubble setVisible:false];
+         
+        accerate=[GameObject spriteWithSpriteFrameName:@""];
+        NSMutableArray *animFrames = [NSMutableArray array];
+        
+        for(int i = 0; i <= 7; ++i) {
+            [animFrames addObject:
+             [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:
+              [NSString stringWithFormat:@"green_monster%d.png", i]]];
+        }
+        jokerRunAnimation = [CCAnimation animationWithSpriteFrames:runAnimFrames delay:0.09f];
+        jokerRunAction = [CCRepeat actionWithAction: [CCAnimate actionWithAnimation: jokerRunAnimation] times:200];
+        jokerRunAction.tag = jokerRunActionTag;
+        [self runAction:jokerRunAction];
+        [batchNode addChild:(Joker*)self];
+        
+        
         if(hudLayer!=NULL)
         {
 //            CCLOG(@"1");
@@ -914,6 +934,33 @@ bool gravity = false;
     }
     [joker adjust];
     [emeny adjust];
+    
+    if(jokerAcc)
+    {
+        timer+=dt;
+        accerate.position=ccp(joker.position.x+80,joker.position.y);
+        [accerate setVisible:true];
+        if(timer>50)
+        {
+            jokerAcc=false;
+            timer=0;
+        }
+    }
+    else
+    {
+        [accerate setVisible:false];
+    }
+    
+    if(loseGravity)
+    {
+        bubble.position=joker.position;
+        [bubble setVisible:true];
+    }
+    else
+    {
+        [bubble setVisible:false];
+    }
+
     if(joker.position.x>FALLING_WOOD1-FALLING_OFFSET&&fall1==false)
     {
         [self updateFalling:FALLING_WOOD1];
