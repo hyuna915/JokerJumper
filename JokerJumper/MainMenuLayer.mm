@@ -215,6 +215,25 @@ CCFiniteTimeAction *moveAction4;
         [self addChild:Menu z:1];
         [self schedule:@selector(updateObject:) interval:10.0f];
         
+        // Create Help Button
+        CCMenuItem *helpButton = [CCMenuItemImage itemWithNormalImage:@"btn_help.png" selectedImage:@"btn_help.png" target:self selector:@selector(buttonHelpAction:)];
+        helpButton.scale = 1.3;
+        CCMenu *Menu2 = [CCMenu menuWithItems:helpButton, nil];
+        Menu2.position=ccp(920, 80);
+        
+//        Menu.opacity = 0;
+        [self addChild:Menu2 z:1];
+
+        helpMenu = [CCSprite spriteWithFile:@"help_menu.png"];
+        helpMenu.anchorPoint = ccp(0, 0);
+        helpMenu.visible = false;
+        helpMenu.scale = 0.8;
+
+        helpMenu.position = ccp(20, 140);
+        [self addChild:helpMenu z:300];
+        
+//        [self schedule:@selector(updateObject:) interval:10.0f];
+        
         //        [CCMenuItemImage itemWithNormalImage:@"button_play_sel.png" selectedImage:@"button_play_sel.png" target:self selector:@selector(buttonReplayAction:)];
         
         
@@ -271,6 +290,13 @@ CCFiniteTimeAction *moveAction4;
     [enemy2 runAction: moveAction3];
     [enemy3 runAction: moveAction4];
     
+}
+
+-(void) buttonHelpAction:(id)sender {
+    if(helpMenu.visible == true)
+        helpMenu.visible = false;
+    else
+        helpMenu.visible = true;
 }
 
 
