@@ -19,6 +19,7 @@
     CCLabelTTF *statusLabel;
     CCLabelTTF *coinLabel;
     CCMenuItemImage *pause;
+    CCMenuItemImage *gravityButton;
     CCSprite *coinBar;
     CCSprite *disBar;
     CCSprite *lifeBar;

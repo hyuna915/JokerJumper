@@ -61,6 +61,15 @@ bool gravity = false;
     return self;
 }
 
+-(void)setGravityEffect {
+    if(self.isTouchEnabled == YES) {
+        self.isTouchEnabled = NO;
+    }
+    else {
+        self.isTouchEnabled = YES;
+    }
+}
+
 -(void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration {
     lastLastAccelerationY = lastAccelerationY;
     lastAccelerationY = accelerationY;

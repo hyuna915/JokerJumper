@@ -96,11 +96,17 @@ int hudLevel;
         [coinLabel setPosition:ccp(COIN_LABEL_X+OFFSET_X,screenSize.height-30)];
         [lifeLabel setPosition:ccp(LIFE_LABEL_X+OFFSET_X,screenSize.height-30)];
         
-        pause = [CCMenuItemImage itemFromNormalImage:@"pauseButton.png" selectedImage:@"pauseButtonPressed.png" target:self selector:@selector(pauseButtonSelected)];
+        pause = [CCMenuItemImage itemWithNormalImage:@"pauseButton.png" selectedImage:@"pauseButtonPressed.png" target:self selector:@selector(pauseButtonSelected)];
         CCMenu *menu = [CCMenu menuWithItems:pause, nil];
         menu.position = CGPointMake(35, screenSize.height - 30);
         
+        gravityButton = [CCMenuItemImage itemWithNormalImage:@"btn_gravity.png" selectedImage:@"btn_gravity.png" target:self selector:@selector(gravityButtonSelected)];
+        
+        CCMenu *menu2 = [CCMenu menuWithItems:gravityButton, nil];
+        menu2.position = CGPointMake(95, screenSize.height - 25);
+        
         [self addChild:menu z:100];
+        [self addChild:menu2 z:100];
         [self addChild:coinBar z:100];
         [self addChild:disBar z:100];
         [self addChild:lifeBar z:100];
@@ -119,6 +125,24 @@ int hudLevel;
         [[CCDirector sharedDirector] pause];
     }
     
+}
+
+- (void)gravityButtonSelected {
+    CCScene* scene = [[CCDirector sharedDirector] runningScene];
+    switch (hudLevel) {
+        case GAME_STATE_ONE:
+            gameLayer = (GameLayer*)[scene getChildByTag:GAME_LAYER_TAG];
+            [gameLayer setGravityEffect];
+            break;
+        case GAME_STATE_TWO:
+            gameLayer2 = (GameLayer2*)[scene getChildByTag:GAME_LAYER_TAG];
+            break;
+        case GAME_STATE_THREE:
+            gameLayer3 = (GameLayer3*)[scene getChildByTag:GAME_LAYER_TAG];
+            break;
+        default:
+            break;
+    }
 }
 
 
