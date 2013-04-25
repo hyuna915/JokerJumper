@@ -762,19 +762,18 @@ bool gravity = false;
         [self addChild:bubble z:100];
         [bubble setVisible:false];
          
-        accerate=[GameObject spriteWithSpriteFrameName:@""];
+        accerate=[GameObject spriteWithSpriteFrameName:@"acceration0.png"];
         NSMutableArray *animFrames = [NSMutableArray array];
-        
-        for(int i = 0; i <= 7; ++i) {
+        for(int i = 0; i <= 4; ++i) {
             [animFrames addObject:
              [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:
-              [NSString stringWithFormat:@"green_monster%d.png", i]]];
+              [NSString stringWithFormat:@"acceration%d.png", i]]];
         }
-        jokerRunAnimation = [CCAnimation animationWithSpriteFrames:runAnimFrames delay:0.09f];
-        jokerRunAction = [CCRepeat actionWithAction: [CCAnimate actionWithAnimation: jokerRunAnimation] times:200];
-        jokerRunAction.tag = jokerRunActionTag;
-        [self runAction:jokerRunAction];
-        [batchNode addChild:(Joker*)self];
+        CCAnimation *animation = [CCAnimation animationWithSpriteFrames:animFrames delay:0.09f];
+        CCAction* accerateAction = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation: animation]];
+        [accerate runAction:accerateAction];
+        [self addChild:accerate];
+
         
         
         if(hudLayer!=NULL)
