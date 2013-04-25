@@ -42,19 +42,21 @@ CCFiniteTimeAction *moveAction2;
 CCFiniteTimeAction *moveAction3;
 CCFiniteTimeAction *moveAction4;
 
+int cloudCount;
+CGSize winSize;
+
 @implementation MainMenuLayer
 
 - (id) init {
     self = [super init];
     if (self) {
-        CGSize winSize = [[CCDirector sharedDirector] winSize];
+        winSize = [[CCDirector sharedDirector] winSize];
         
         bg = [CCSprite spriteWithFile:@"bg.png"];
         bg.anchorPoint = ccp(0, 0);
-        [self addChild: bg z:-5];
+        [self addChild: bg z:-10];
         
         // Play Button
-//        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"btn_play_default.plist"];
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"btn_play_rot_default.plist"];
         
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"all_character_default.plist"];
@@ -65,7 +67,6 @@ CCFiniteTimeAction *moveAction4;
         
         characterBatchNode=[CCSpriteBatchNode batchNodeWithFile:@"all_character_default.png"];
         enemy2BatchNode=[CCSpriteBatchNode batchNodeWithFile:@"pokerSoilder_default.png"];
-//        playButtonBatchNode = [CCSpriteBatchNode batchNodeWithFile:@"btn_play_default.png"];
         captionBatchNode=[CCSpriteBatchNode batchNodeWithFile:@"caption_default.png"];
         [self addChild:characterBatchNode z:1];
         [self addChild:enemy2BatchNode z:2];
@@ -78,19 +79,15 @@ CCFiniteTimeAction *moveAction4;
         [light runAction:rot];
         light.position=ccp(504, 212);
         [self addChild:light z:-4];
-//        CCLOG(@"#######light: (%f,%f)",light.position.x,light.position.y);
         
         sun=[CCSprite spriteWithFile:@"sun.png"];
         sun.position=ccp(534,462);
         [self addChild:sun z:-3];
-//        CCLOG(@"#######sun: (%f,%f)",sun.position.x,sun.position.y);
         
         grass=[CCSprite spriteWithFile:@"ground.png"];
         grass.position=ccp(512,68);
-        [self addChild:grass z:-2];
-//        CCLOG(@"#######grass: (%f,%f)",grass.position.x,grass.position.y);
+        [self addChild:grass z:-1];
         
-//        CCLOG(@"here0");
         play = [CCSprite spriteWithSpriteFrameName:@"btn_play_rot0.png"];
         NSMutableArray *bgAnimFrames = [NSMutableArray array];
         for(int i = 0; i <= 14; ++i) {
@@ -98,7 +95,6 @@ CCFiniteTimeAction *moveAction4;
              [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:
               [NSString stringWithFormat:@"btn_play_rot%d.png", i]]];
         }
-//        CCLOG(@"#######play: (%f,%f)",play.position.x,play.position.y);
         
         CCAnimation *playRunAnimation = [CCAnimation animationWithSpriteFrames:bgAnimFrames delay:0.1f];
         CCAction *playRunAction = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation: playRunAnimation]];
@@ -109,9 +105,6 @@ CCFiniteTimeAction *moveAction4;
         [playButtonBatchNode addChild:play z:1];
         play.position = ccp(344, 0);
         
-//        NSLog(@"X: %f, Y: %f", winSize.width/2 -40, winSize.height/2 - 525);
-//        CCLOG(@"here1");
-//         CCLOG(@"#######play: (%f,%f)",play.position.x,play.position.y);
         caption = [CCSprite spriteWithSpriteFrameName:@"caption0.png"];
         NSMutableArray *caAnimFrames = [NSMutableArray array];
         for(int i = 0; i <= 11; ++i) {
@@ -127,7 +120,6 @@ CCFiniteTimeAction *moveAction4;
         caption.anchorPoint = ccp(0, 0);
         [captionBatchNode addChild:caption z:1];
         caption.position = ccp(264, 462);
-//        CCLOG(@"#######caption: (%f,%f)",caption.position.x,caption.position.y);
         
         joker=[CCSprite spriteWithSpriteFrameName:@"joker1.png"];
         enemy1=[CCSprite spriteWithSpriteFrameName:@"green_monster0.png"];
@@ -139,7 +131,6 @@ CCFiniteTimeAction *moveAction4;
         enemy2.position=ccp(-250,300);
         enemy3.position=ccp(-350,160);
         
-//        CCLOG(@"here2");
         NSMutableArray *jokerrunAnimFrames = [NSMutableArray array];
         for(int i = 1; i <= 14; ++i) {
             [jokerrunAnimFrames addObject:
@@ -155,7 +146,6 @@ CCFiniteTimeAction *moveAction4;
         joker.scale=1.5;
         [joker runAction:moveAction1];
         
-        CCLOG(@"here3");
         NSMutableArray *enemy1runAnimFrames = [NSMutableArray array];
         for(int i = 0; i <= 7; ++i) {
             [enemy1runAnimFrames addObject:
@@ -170,7 +160,6 @@ CCFiniteTimeAction *moveAction4;
         moveAction2=[CCRepeat actionWithAction: [CCMoveTo actionWithDuration:6.0f position:ccp(winSize.width+500,160)] times:1];
         [enemy1 runAction: moveAction2];
         
-        CCLOG(@"here4");
         NSMutableArray *enemy2runAnimFrames = [NSMutableArray array];
         for(int i = 0; i <= 9; ++i) {
             [enemy2runAnimFrames addObject:
@@ -186,7 +175,6 @@ CCFiniteTimeAction *moveAction4;
         moveAction3=[CCRepeat actionWithAction: [CCMoveTo actionWithDuration:6.0f position:ccp(winSize.width+500,300)] times:1];
         [enemy2 runAction: moveAction3];
         
-        CCLOG(@"here5");
         NSMutableArray *enemy3runAnimFrames = [NSMutableArray array];
         for(int i = 0; i <= 7; ++i) {
             [enemy3runAnimFrames addObject:
@@ -221,7 +209,6 @@ CCFiniteTimeAction *moveAction4;
         CCMenu *Menu2 = [CCMenu menuWithItems:helpButton, nil];
         Menu2.position=ccp(920, 80);
         
-//        Menu.opacity = 0;
         [self addChild:Menu2 z:1];
 
         helpMenu = [CCSprite spriteWithFile:@"help_menu.png"];
@@ -230,52 +217,94 @@ CCFiniteTimeAction *moveAction4;
         helpMenu.scale = 0.8;
 
         helpMenu.position = ccp(20, 140);
-        [self addChild:helpMenu z:300];
+        [self addChild:helpMenu z:100];
         
-//        [self schedule:@selector(updateObject:) interval:10.0f];
+        // Cloud Left
+        cloudLeft0 = [CCSprite spriteWithFile:@"cloud_left0.png"];
+        cloudLeft0.anchorPoint = ccp(0,0);
+        cloudLeft0.position = ccp(-700, 100);
+        [self addChild:cloudLeft0 z:-5];
         
-        //        [CCMenuItemImage itemWithNormalImage:@"button_play_sel.png" selectedImage:@"button_play_sel.png" target:self selector:@selector(buttonReplayAction:)];
+        cloudLeft1 = [CCSprite spriteWithFile:@"cloud_left1.png"];
+        cloudLeft1.anchorPoint = ccp(0,0);
+        cloudLeft1.position = ccp(-700, 100);
+        [self addChild:cloudLeft1 z:-4];
+
+        cloudLeft2 = [CCSprite spriteWithFile:@"cloud_left2.png"];
+        cloudLeft2.anchorPoint = ccp(0,0);
+        cloudLeft2.position = ccp(-600, 100);
+        [self addChild:cloudLeft2 z:-3];
         
+        cloudLeft3 = [CCSprite spriteWithFile:@"cloud_left3.png"];
+        cloudLeft3.anchorPoint = ccp(0,0);
+        cloudLeft3.position = ccp(-600, 70);
+        [self addChild:cloudLeft3 z:-2];
+
+        // Cloud Right
+        cloudRight0 = [CCSprite spriteWithFile:@"cloud_right0.png"];
+        cloudRight0.anchorPoint = ccp(0, 0);
+        cloudRight0.position = ccp(winSize.width/2 + 650, 100);
+        [self addChild:cloudRight0 z:-5];
         
-        /*[[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"StartMenu_default.plist"];
-         bgBatchNode=[CCSpriteBatchNode batchNodeWithFile:@"StartMenu_default.png"];
-         [self addChild:bgBatchNode z:0];
-         
-         bg=[CCSprite spriteWithSpriteFrameName:@"StartMenu0.png"];
-         NSMutableArray *bgAnimFrames = [NSMutableArray array];
-         for(int i = 0; i <= 1; ++i) {
-         [bgAnimFrames addObject:
-         [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:
-         [NSString stringWithFormat:@"StartMenu%d.png", i]]];
-         }
-         
-         CCAnimation *bgRunAnimation = [CCAnimation animationWithSpriteFrames:bgAnimFrames delay:0.5f];
-         CCAction *bgRunAction = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation: bgRunAnimation]];
-         [bg setTexture:[bgBatchNode texture]];
-         [bg runAction:bgRunAction];
-         bg.anchorPoint = ccp(0, 0);
-         [bgBatchNode addChild:bg z:1];*/
+        cloudRight1 = [CCSprite spriteWithFile:@"cloud_right1.png"];
+        cloudRight1.anchorPoint = ccp(0, 0);
+        cloudRight1.position = ccp(winSize.width/2 + 650, 100);
+        [self addChild:cloudRight1 z:-4];
+
+        cloudRight2 = [CCSprite spriteWithFile:@"cloud_right2.png"];
+        cloudRight2.anchorPoint = ccp(0, 0);
+        cloudRight2.position = ccp(winSize.width/2 + 650, 100);
+        [self addChild:cloudRight2 z:-3];
+
+        cloudRight3 = [CCSprite spriteWithFile:@"cloud_right3.png"];
+        cloudRight3.anchorPoint = ccp(0, 0);
+        cloudRight3.position = ccp(winSize.width/2 + 650, 70);
         
+        [self addChild:cloudRight3 z:-2];
+
+
+        [self schedule:@selector(updateCloudMoveIn:) interval:2.0f];
         
+        cloudL0 = [CCMoveTo actionWithDuration:4.0f position:ccp(winSize.width/2 - 600,100)];
+        [cloudLeft0 runAction:cloudL0];
         
-        /*// Create Replay Button
-         CCMenuItem *buttonPlay = [CCMenuItemImage itemWithNormalImage:@"button_play_sel.png" selectedImage:@"button_play_sel.png" target:self selector:@selector(buttonReplayAction:)];
-         
-         // Create Option Button
-         CCMenuItem *buttonOption = [CCMenuItemImage itemWithNormalImage:@"button_option_sel.png" selectedImage:@"button_option_sel.png" target:self selector:@selector(buttonOptionAction:)];
-         
-         // Create About Button
-         CCMenuItem *buttonAbout = [CCMenuItemImage itemWithNormalImage:@"button_about_sel.png" selectedImage:@"button_about_sel.png" target:self selector:@selector(buttonAboutAction:)];
-         
-         CCMenu *Menu = [CCMenu menuWithItems:buttonPlay, buttonOption, buttonAbout, nil];
-         //        Menu.position=ccp(winSize.width/2 + 400, winSize.height/2 - 200);
-         Menu.position=ccp(820, 250);
-         
-         [Menu alignItemsVertically];
-         [self addChild:Menu z:1];*/
-        
+        cloudR0 = [CCMoveTo actionWithDuration:4.0f position:ccp(winSize.width/2 + 200, 100)];
+        [cloudRight0 runAction:cloudR0];
     }
     return self;
+}
+
+- (void)updateCloudMoveIn:(ccTime) dt
+{
+    cloudCount++;
+    switch (cloudCount) {
+        case 1:
+            cloudL1 = [CCMoveTo actionWithDuration:4.0f position:ccp(winSize.width/2 - 500,100)];
+            [cloudLeft1 runAction:cloudL1];
+            
+            cloudR1 = [CCMoveTo actionWithDuration:4.0f position:ccp(winSize.width/2 + 210, 100)];
+            [cloudRight1 runAction:cloudR1];
+            break;
+        case 2:
+            cloudL2 = [CCMoveTo actionWithDuration:4.0f position:ccp(winSize.width/2 - 410,100)];
+            [cloudLeft2 runAction:cloudL2];
+            
+            cloudR2 = [CCMoveTo actionWithDuration:4.0f position:ccp(winSize.width/2 + 220, 100)];
+            [cloudRight2 runAction:cloudR2];
+
+            break;
+        case 3:
+            cloudL3 = [CCMoveTo actionWithDuration:4.0f position:ccp(winSize.width/2 - 410,70)];
+            [cloudLeft3 runAction:cloudL3];
+            
+            cloudR3 = [CCMoveTo actionWithDuration:4.0f position:ccp(winSize.width/2 + 220, 70)];
+            [cloudRight3 runAction:cloudR3];
+
+            break;
+        default:
+            [self unschedule:@selector(updateCloudMoveIn:)];
+            break;
+    }
 }
 
 - (void)updateObject:(ccTime) dt
