@@ -47,6 +47,7 @@ bool gravity3 = false;
 +(GameLayer3*) getGameLayer3 {
     return self;
 }
+//lv3_background.mp3
 
 -(void)setGravityEffect {
     if(self.isAccelerometerEnabled == YES) {
@@ -109,12 +110,12 @@ bool gravity3 = false;
     [[SimpleAudioEngine sharedEngine] preloadEffect:@"Collect_Coin.wav"];
     SimpleAudioEngine *sae = [SimpleAudioEngine sharedEngine];
     if (sae != nil) {
-        [sae preloadBackgroundMusic:@"background_music.mp3"];
+        [sae preloadBackgroundMusic:@"lv3_background.mp3"];
         if (sae.willPlayBackgroundMusic) {
             sae.backgroundMusicVolume = 0.5f;
         }
     }
-    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"background_music.mp3"];
+    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"lv3_background.mp3"];
 }
 
 - (void) initTiledMaps {
