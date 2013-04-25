@@ -70,6 +70,7 @@
     BOOL jokerAcc;
 }
 +(GameLayer3*) getGameLayer3;
+-(void)setGravityEffect;
 - (void) makeBox2dObjAt:(CGPoint)p
                withSize:(CGPoint)size
                 dynamic:(BOOL)d

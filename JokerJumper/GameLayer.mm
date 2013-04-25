@@ -62,11 +62,11 @@ bool gravity = false;
 }
 
 -(void)setGravityEffect {
-    if(self.isTouchEnabled == YES) {
-        self.isTouchEnabled = NO;
+    if(self.isAccelerometerEnabled == YES) {
+        self.isAccelerometerEnabled = NO;
     }
     else {
-        self.isTouchEnabled = YES;
+        self.isAccelerometerEnabled = YES;
     }
 }
 

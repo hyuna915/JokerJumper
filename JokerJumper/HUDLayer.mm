@@ -136,15 +136,16 @@ int hudLevel;
             break;
         case GAME_STATE_TWO:
             gameLayer2 = (GameLayer2*)[scene getChildByTag:GAME_LAYER_TAG];
+            [gameLayer2 setGravityEffect];
             break;
         case GAME_STATE_THREE:
             gameLayer3 = (GameLayer3*)[scene getChildByTag:GAME_LAYER_TAG];
+            [gameLayer3 setGravityEffect];
             break;
         default:
             break;
     }
 }
-
 
 -(void) updateLifeCounter:(int)amount
 {

@@ -48,6 +48,9 @@
 -(id) init
 {
 	if( (self=[super init])) {
+        CCSprite *bg = [CCSprite spriteWithFile:@"start_menu_.png"];
+        bg.anchorPoint = ccp(0, 0);
+        [self addChild:bg];
         // get screen size
         CGSize screenSize = [CCDirector sharedDirector].winSize;
         
@@ -57,14 +60,14 @@
         // create a blank layer for page 1
         CCLayer *pageOne = [[CCLayer alloc] init];
         // create an image button for page 1
-        CCMenuItem *button1 = [CCMenuItemImage itemWithNormalImage:@"level1.png" selectedImage:@"level1.png" target:self selector:@selector(buttonAction1:)];
+        CCMenuItem *button1 = [CCMenuItemImage itemWithNormalImage:@"start_menu_level1.png" selectedImage:@"start_menu_level1.png" target:self selector:@selector(buttonAction1:)];
         button1.scale = 0.8;
         CCMenu *Menu1 = [CCMenu menuWithItems:button1, nil];
         Menu1.position=ccp(screenSize.width/2, screenSize.height/2);
         [Menu1 alignItemsHorizontally];
         [pageOne addChild:Menu1];
         // create a label for page 1
-        CCLabelTTF *label1 = [CCLabelTTF labelWithString:@"Stage 1" fontName:@"Arial Rounded MT Bold" fontSize:44];
+        CCLabelTTF *label1 = [CCLabelTTF labelWithString:@"Jungle" fontName:@"Arial Rounded MT Bold" fontSize:44];
         label1.position =  ccp( screenSize.width /2 , 50 );
         // add label to page 1 layer
         [pageOne addChild:label1];
@@ -75,14 +78,14 @@
         // create a blank layer for page 2
         CCLayer *pageTwo = [[CCLayer alloc] init];
         // create an image button for page 2
-        CCMenuItem *button2 = [CCMenuItemImage itemWithNormalImage:@"level2.png" selectedImage:@"level2.png" target:self selector:@selector(buttonAction2:)];
+        CCMenuItem *button2 = [CCMenuItemImage itemWithNormalImage:@"start_menu_level2.png" selectedImage:@"start_menu_level2.png" target:self selector:@selector(buttonAction2:)];
         button2.scale = 0.8;
         CCMenu *Menu2 = [CCMenu menuWithItems:button2, nil];
         Menu2.position=ccp(screenSize.width/2, screenSize.height/2);
         [Menu2 alignItemsHorizontally];
         [pageTwo addChild:Menu2];
         // create a label for page 2
-        CCLabelTTF *label2 = [CCLabelTTF labelWithString:@"Stage 2" fontName:@"Arial Rounded MT Bold" fontSize:44];
+        CCLabelTTF *label2 = [CCLabelTTF labelWithString:@"Fire" fontName:@"Arial Rounded MT Bold" fontSize:44];
         label2.position =  ccp( screenSize.width /2 , 50 );
         // add label to page 2 layer
         [pageTwo addChild:label2];
@@ -99,7 +102,7 @@
         [Menu3 alignItemsHorizontally];
         [pageThree addChild:Menu3];
         // create a label for page 3
-        CCLabelTTF *label3 = [CCLabelTTF labelWithString:@"Stage 3" fontName:@"Arial Rounded MT Bold" fontSize:44];
+        CCLabelTTF *label3 = [CCLabelTTF labelWithString:@"Ice" fontName:@"Arial Rounded MT Bold" fontSize:44];
         label3.position =  ccp( screenSize.width /2 , 50 );
         // add label to page 3 layer
         [pageThree addChild:label3];

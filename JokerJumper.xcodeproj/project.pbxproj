@@ -36,6 +36,9 @@
 		A4810E7917057C1700C61964 /* GameScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = A4810E7817057C1700C61964 /* GameScene.mm */; };
 		A4810E8117062B6900C61964 /* map5.95_copy.tmx in Resources */ = {isa = PBXBuildFile; fileRef = A4810E8017062B6900C61964 /* map5.95_copy.tmx */; };
 		A4838D66172912510057B491 /* btn_gravity.png in Resources */ = {isa = PBXBuildFile; fileRef = A4838D65172912510057B491 /* btn_gravity.png */; };
+		A4838D6A172922770057B491 /* start_menu_.png in Resources */ = {isa = PBXBuildFile; fileRef = A4838D67172922770057B491 /* start_menu_.png */; };
+		A4838D6B172922770057B491 /* start_menu_level1.png in Resources */ = {isa = PBXBuildFile; fileRef = A4838D68172922770057B491 /* start_menu_level1.png */; };
+		A4838D6C172922770057B491 /* start_menu_level2.png in Resources */ = {isa = PBXBuildFile; fileRef = A4838D69172922770057B491 /* start_menu_level2.png */; };
 		A485FF9D1707B0DE00688F1E /* GameLayer2.mm in Sources */ = {isa = PBXBuildFile; fileRef = A485FF9C1707B0DE00688F1E /* GameLayer2.mm */; };
 		A49F61B41726AA1100A98432 /* GameOptionsScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = A49F61B31726AA1100A98432 /* GameOptionsScene.mm */; };
 		A49F61B91726C21800A98432 /* start_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = A49F61B81726C21800A98432 /* start_menu.png */; };
@@ -433,6 +436,9 @@
 		A4810E7817057C1700C61964 /* GameScene.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = GameScene.mm; sourceTree = "<group>"; };
 		A4810E8017062B6900C61964 /* map5.95_copy.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = map5.95_copy.tmx; sourceTree = "<group>"; };
 		A4838D65172912510057B491 /* btn_gravity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_gravity.png; sourceTree = "<group>"; };
+		A4838D67172922770057B491 /* start_menu_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start_menu_.png; sourceTree = "<group>"; };
+		A4838D68172922770057B491 /* start_menu_level1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start_menu_level1.png; sourceTree = "<group>"; };
+		A4838D69172922770057B491 /* start_menu_level2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start_menu_level2.png; sourceTree = "<group>"; };
 		A485FF9B1707B0DE00688F1E /* GameLayer2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLayer2.h; sourceTree = "<group>"; };
 		A485FF9C1707B0DE00688F1E /* GameLayer2.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameLayer2.mm; sourceTree = "<group>"; };
 		A49F61B21726AA1100A98432 /* GameOptionsScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOptionsScene.h; sourceTree = "<group>"; };
@@ -1040,6 +1046,9 @@
 		A433BD2016F0804D003CD7CE /* Background */ = {
 			isa = PBXGroup;
 			children = (
+				A4838D67172922770057B491 /* start_menu_.png */,
+				A4838D68172922770057B491 /* start_menu_level1.png */,
+				A4838D69172922770057B491 /* start_menu_level2.png */,
 				A4FE6A8E1728ED5900FD4401 /* dead_menu.png */,
 				A45B18571727D27A00D854E0 /* level2end.png */,
 				A45B18581727D27A00D854E0 /* level3end.png */,
@@ -2265,6 +2274,9 @@
 				DC2B5B4A1729042800087399 /* all_character_default.png in Resources */,
 				DC2B5B4C1729059E00087399 /* Bubble.png in Resources */,
 				A4838D66172912510057B491 /* btn_gravity.png in Resources */,
+				A4838D6A172922770057B491 /* start_menu_.png in Resources */,
+				A4838D6B172922770057B491 /* start_menu_level1.png in Resources */,
+				A4838D6C172922770057B491 /* start_menu_level2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

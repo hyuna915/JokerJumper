@@ -48,6 +48,15 @@ bool gravity3 = false;
     return self;
 }
 
+-(void)setGravityEffect {
+    if(self.isAccelerometerEnabled == YES) {
+        self.isAccelerometerEnabled = NO;
+    }
+    else {
+        self.isAccelerometerEnabled = YES;
+    }
+}
+
 -(void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration {
     lastLastAccelerationY = lastAccelerationY;
     lastAccelerationY = accelerationY;
