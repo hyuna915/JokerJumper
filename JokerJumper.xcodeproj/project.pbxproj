@@ -24,6 +24,7 @@
 		A4419EC816E962C6009A441C /* JokerActions.png in Resources */ = {isa = PBXBuildFile; fileRef = A4419EC616E962C6009A441C /* JokerActions.png */; };
 		A457A28D172A2AB80021976C /* btn_pause.PNG in Resources */ = {isa = PBXBuildFile; fileRef = A457A28C172A2AB80021976C /* btn_pause.PNG */; };
 		A457A28F172A37200021976C /* loading_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = A457A28E172A37200021976C /* loading_menu.png */; };
+		A457A291172A389F0021976C /* MountainsofChristmas.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A457A290172A389F0021976C /* MountainsofChristmas.ttf */; };
 		A4581665170DEA23000162FA /* map8.0.tmx in Resources */ = {isa = PBXBuildFile; fileRef = A4581663170DEA23000162FA /* map8.0.tmx */; };
 		A4581666170DEA23000162FA /* map9.0.tmx in Resources */ = {isa = PBXBuildFile; fileRef = A4581664170DEA23000162FA /* map9.0.tmx */; };
 		A45B18531727BEC000D854E0 /* btn_play_rot_default.plist in Resources */ = {isa = PBXBuildFile; fileRef = A45B184F1727BEC000D854E0 /* btn_play_rot_default.plist */; };
@@ -435,6 +436,7 @@
 		A4419EC616E962C6009A441C /* JokerActions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JokerActions.png; sourceTree = "<group>"; };
 		A457A28C172A2AB80021976C /* btn_pause.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_pause.PNG; sourceTree = "<group>"; };
 		A457A28E172A37200021976C /* loading_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading_menu.png; sourceTree = "<group>"; };
+		A457A290172A389F0021976C /* MountainsofChristmas.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MountainsofChristmas.ttf; sourceTree = "<group>"; };
 		A4581663170DEA23000162FA /* map8.0.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = map8.0.tmx; sourceTree = "<group>"; };
 		A4581664170DEA23000162FA /* map9.0.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = map9.0.tmx; sourceTree = "<group>"; };
 		A45B184F1727BEC000D854E0 /* btn_play_rot_default.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = btn_play_rot_default.plist; sourceTree = "<group>"; };
@@ -2067,6 +2069,7 @@
 		A4F03AA016D1A88C0068D7C8 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				A457A290172A389F0021976C /* MountainsofChristmas.ttf */,
 				A4F03AA116D1A88C0068D7C8 /* Arial-hd.fnt */,
 				A4F03AA216D1A88C0068D7C8 /* Arial-hd.png */,
 				A4F03AA316D1A88C0068D7C8 /* Arial.fnt */,
@@ -2329,6 +2332,7 @@
 				A4838D841729373F0057B491 /* cloud_right3.png in Resources */,
 				A457A28D172A2AB80021976C /* btn_pause.PNG in Resources */,
 				A457A28F172A37200021976C /* loading_menu.png in Resources */,
+				A457A291172A389F0021976C /* MountainsofChristmas.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

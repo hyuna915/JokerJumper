@@ -82,14 +82,14 @@ CCSprite* winJoker;
         [winJoker runAction:winMoveAction];
         
         NSString *coinStr = [NSString stringWithFormat:@"%2d", 0];
-        labelCoin = [CCLabelTTF labelWithString:coinStr fontName:@"Marker Felt" fontSize:40];
+        labelCoin = [CCLabelTTF labelWithString:coinStr fontName:@"Mountains of Christmas" fontSize:40];
         labelCoin.color = ccRED;
 		labelCoin.position = CGPointMake(500, 540);
 		[self addChild:labelCoin z:3];
         
         NSString *disStr = [NSString stringWithFormat:@"%2d", 0];
         
-        labelDistance = [CCLabelTTF labelWithString:disStr fontName:@"Marker Felt" fontSize:40];
+        labelDistance = [CCLabelTTF labelWithString:disStr fontName:@"Mountains of Christmas" fontSize:40];
         labelDistance.color = ccRED;
 		labelDistance.position = CGPointMake(500, 455);
 		[self addChild:labelDistance z:3];

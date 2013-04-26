@@ -86,35 +86,35 @@ BOOL mainSelected;
         [self addChild:bg z:-1];
         
         // Create a label for display purposes
-        CCLabelTTF *label = [CCLabelTTF labelWithString:@"You Lose!" fontName:@"Marker Felt" fontSize:60];
+        CCLabelTTF *label = [CCLabelTTF labelWithString:@"You Lose!" fontName:@"Mountains of Christmas" fontSize:60];
         label.color = ccWHITE;
 		label.position = CGPointMake(winSize.width/2,winSize.height/2+200);
 		[self addChild:label z:0];
         
         NSString *coinStr = [NSString stringWithFormat:@"Coin:%2d", 0];
         
-        labelCoin = [CCLabelTTF labelWithString:coinStr fontName:@"Marker Felt" fontSize:40];
+        labelCoin = [CCLabelTTF labelWithString:coinStr fontName:@"Mountains of Christmas" fontSize:40];
         labelCoin.color = ccWHITE;
 		labelCoin.position = CGPointMake(winSize.width/2 - 200,winSize.height/2+100);
 		[self addChild:labelCoin z:0];
         
         NSString *disStr = [NSString stringWithFormat:@"Distance:%2d", 0];
         
-        labelDistance = [CCLabelTTF labelWithString:disStr fontName:@"Marker Felt" fontSize:40];
+        labelDistance = [CCLabelTTF labelWithString:disStr fontName:@"Mountains of Christmas" fontSize:40];
         labelDistance.color = ccWHITE;
 		labelDistance.position = CGPointMake(winSize.width/2 + 200,winSize.height/2+100);
 		[self addChild:labelDistance z:0];
         
         // Create Replay Button
         buttonReplay = [CCMenuItemImage itemWithNormalImage:@"btn_transparent.png" selectedImage:@"btn_transparent.png" target:self selector:@selector(buttonReplayAction:)];
-        labelReplay = [CCLabelTTF labelWithString:@"Replay" fontName:@"Marker Felt" fontSize:55];
+        labelReplay = [CCLabelTTF labelWithString:@"Replay" fontName:@"Mountains of Christmas" fontSize:55];
         labelReplay.color = ccBLACK;
         labelReplay.position = ccp(510, 330);
         [self addChild:labelReplay z:1];
         
         // Create Mainmenu Button
         buttonMain = [CCMenuItemImage itemWithNormalImage:@"btn_transparent.png" selectedImage:@"btn_transparent.png" target:self selector:@selector(buttonMainAction:)];
-        labelMain = [CCLabelTTF labelWithString:@"Menu" fontName:@"Marker Felt" fontSize:55];
+        labelMain = [CCLabelTTF labelWithString:@"Menu" fontName:@"Mountains of Christmas" fontSize:55];
         labelMain.color = ccBLACK;
         labelMain.position = ccp(510, 243);
         [self addChild:labelMain z:1];

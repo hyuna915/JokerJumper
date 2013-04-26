@@ -38,9 +38,9 @@ int pauseStat;
                 
         // These values are hard coded for Drivers Ed, should be refacotred for more flexability
             
-        statusLabel = [CCLabelTTF labelWithString:@"0.0" fontName:@"Marker Felt" fontSize:20];
-        lifeLabel=[CCLabelTTF labelWithString:@"0" fontName:@"Marker Felt" fontSize:20];
-        coinLabel=[CCLabelTTF labelWithString:@"0" fontName:@"Marker Felt" fontSize:20];
+        statusLabel = [CCLabelTTF labelWithString:@"0.0" fontName:@"Mountains of Christmas" fontSize:20];
+        lifeLabel=[CCLabelTTF labelWithString:@"0" fontName:@"Mountains of Christmas" fontSize:20];
+        coinLabel=[CCLabelTTF labelWithString:@"0" fontName:@"Mountains of Christmas" fontSize:20];
         [statusLabel setColor:ccORANGE];
         [lifeLabel setColor:ccORANGE];
         [coinLabel setColor:ccORANGE];
@@ -84,9 +84,9 @@ int pauseStat;
         
         // These values are hard coded for Drivers Ed, should be refacotred for more flexability
         
-        statusLabel = [CCLabelTTF labelWithString:@"0.0" fontName:@"Marker Felt" fontSize:20];
-        lifeLabel=[CCLabelTTF labelWithString:@"0" fontName:@"Marker Felt" fontSize:20];
-        coinLabel=[CCLabelTTF labelWithString:@"0" fontName:@"Marker Felt" fontSize:20];
+        statusLabel = [CCLabelTTF labelWithString:@"0.0" fontName:@"Mountains of Christmas" fontSize:40];
+        lifeLabel=[CCLabelTTF labelWithString:@"0" fontName:@"Mountains of Christmas" fontSize:40];
+        coinLabel=[CCLabelTTF labelWithString:@"0" fontName:@"Mountains of Christmas" fontSize:40];
         [statusLabel setColor:ccORANGE];
         [lifeLabel setColor:ccORANGE];
         [coinLabel setColor:ccORANGE];

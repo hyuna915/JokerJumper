@@ -26,7 +26,7 @@ int pauseLevel;
         self.tag=PAUSE_LAYER_TAG;
         buttonSelected = 0;
         CGSize screenSize = [[CCDirector sharedDirector] winSize];
-        CCLabelTTF *label = [CCLabelTTF labelWithString:@"Game Paused!" fontName:@"Marker Felt" fontSize:65];
+        CCLabelTTF *label = [CCLabelTTF labelWithString:@"Game Paused!" fontName:@"Mountains of Christmas" fontSize:65];
 		label.color = ccWHITE;
 		label.position = CGPointMake(screenSize.width/2,screenSize.height/2+200);
 		//label.anchorPoint = CGPointMake(0.5f, 1);
@@ -34,20 +34,20 @@ int pauseLevel;
         
         // Resume Button
         resume = [CCMenuItemImage itemWithNormalImage:@"btn_transparent.png" selectedImage:@"btn_transparent.png" target:self selector:@selector(resumeButtonSelected)];
-        labelResume = [CCLabelTTF labelWithString:@"Resume" fontName:@"Marker Felt" fontSize:55];
+        labelResume = [CCLabelTTF labelWithString:@"Resume" fontName:@"Mountains of Christmas" fontSize:55];
         labelResume.color = ccBLACK;
         labelResume.position = ccp(510, 470);
         [self addChild:labelResume z:1];
         
         // Restart Button
         restart = [CCMenuItemImage itemWithNormalImage:@"btn_transparent.png" selectedImage:@"btn_transparent.png" target:self selector:@selector(restartButtonSelected)];
-        restartResume = [CCLabelTTF labelWithString:@"Restart" fontName:@"Marker Felt" fontSize:55];
+        restartResume = [CCLabelTTF labelWithString:@"Restart" fontName:@"Mountains of Christmas" fontSize:55];
         restartResume.color = ccBLACK;
         restartResume.position = ccp(510, 385);
         [self addChild:restartResume z:1];
         
         main = [CCMenuItemImage itemWithNormalImage:@"btn_transparent.png" selectedImage:@"btn_transparent.png" target:self selector:@selector(mainButtonSelected)];
-        mainResume = [CCLabelTTF labelWithString:@"Menu" fontName:@"Marker Felt" fontSize:55];
+        mainResume = [CCLabelTTF labelWithString:@"Menu" fontName:@"Mountains of Christmas" fontSize:55];
         mainResume.color = ccBLACK;
         mainResume.position = ccp(515, 300);
         [self addChild:mainResume z:1];
@@ -70,7 +70,7 @@ int pauseLevel;
         self.tag=PAUSE_LAYER_TAG;
         buttonSelected = 0;
         CGSize screenSize = [[CCDirector sharedDirector] winSize];
-        CCLabelTTF *label = [CCLabelTTF labelWithString:@"Game Paused!" fontName:@"Marker Felt" fontSize:65];
+        CCLabelTTF *label = [CCLabelTTF labelWithString:@"Game Paused!" fontName:@"Mountains of Christmas" fontSize:65];
 		label.color = ccWHITE;
 		label.position = CGPointMake(screenSize.width/2,screenSize.height/2+200);
 		//label.anchorPoint = CGPointMake(0.5f, 1);
@@ -78,20 +78,20 @@ int pauseLevel;
         
         // Resume Button
         resume = [CCMenuItemImage itemWithNormalImage:@"btn_transparent.png" selectedImage:@"btn_transparent.png" target:self selector:@selector(resumeButtonSelected)];
-        labelResume = [CCLabelTTF labelWithString:@"Resume" fontName:@"Marker Felt" fontSize:55];
+        labelResume = [CCLabelTTF labelWithString:@"Resume" fontName:@"Mountains of Christmas" fontSize:55];
         labelResume.color = ccBLACK;
         labelResume.position = ccp(510, 470);
         [self addChild:labelResume z:1];
         
         // Restart Button
         restart = [CCMenuItemImage itemWithNormalImage:@"btn_transparent.png" selectedImage:@"btn_transparent.png" target:self selector:@selector(restartButtonSelected)];
-        restartResume = [CCLabelTTF labelWithString:@"Restart" fontName:@"Marker Felt" fontSize:55];
+        restartResume = [CCLabelTTF labelWithString:@"Restart" fontName:@"Mountains of Christmas" fontSize:55];
         restartResume.color = ccBLACK;
         restartResume.position = ccp(510, 385);
         [self addChild:restartResume z:1];
         
         main = [CCMenuItemImage itemWithNormalImage:@"btn_transparent.png" selectedImage:@"btn_transparent.png" target:self selector:@selector(mainButtonSelected)];
-        mainResume = [CCLabelTTF labelWithString:@"Menu" fontName:@"Marker Felt" fontSize:55];
+        mainResume = [CCLabelTTF labelWithString:@"Menu" fontName:@"Mountains of Christmas" fontSize:55];
         mainResume.color = ccBLACK;
         mainResume.position = ccp(515, 300);
         [self addChild:mainResume z:1];

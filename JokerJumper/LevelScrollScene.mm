@@ -67,7 +67,7 @@
         [Menu1 alignItemsHorizontally];
         [pageOne addChild:Menu1];
         // create a label for page 1
-        CCLabelTTF *label1 = [CCLabelTTF labelWithString:@"Jungle" fontName:@"Arial Rounded MT Bold" fontSize:44];
+        CCLabelTTF *label1 = [CCLabelTTF labelWithString:@"Jungle" fontName:@"Mountains of Christmas" fontSize:44];
         label1.position =  ccp( screenSize.width /2 , 50 );
         // add label to page 1 layer
         [pageOne addChild:label1];
@@ -85,7 +85,7 @@
         [Menu2 alignItemsHorizontally];
         [pageTwo addChild:Menu2];
         // create a label for page 2
-        CCLabelTTF *label2 = [CCLabelTTF labelWithString:@"Cemetery" fontName:@"Arial Rounded MT Bold" fontSize:44];
+        CCLabelTTF *label2 = [CCLabelTTF labelWithString:@"Cemetery" fontName:@"Mountains of Christmas" fontSize:44];
         label2.position =  ccp( screenSize.width /2 , 50 );
         // add label to page 2 layer
         [pageTwo addChild:label2];
@@ -102,7 +102,7 @@
         [Menu3 alignItemsHorizontally];
         [pageThree addChild:Menu3];
         // create a label for page 3
-        CCLabelTTF *label3 = [CCLabelTTF labelWithString:@"Whiteout" fontName:@"Arial Rounded MT Bold" fontSize:44];
+        CCLabelTTF *label3 = [CCLabelTTF labelWithString:@"Whiteout" fontName:@"Mountains of Christmas" fontSize:44];
         label3.position =  ccp( screenSize.width /2 , 50 );
         // add label to page 3 layer
         [pageThree addChild:label3];
