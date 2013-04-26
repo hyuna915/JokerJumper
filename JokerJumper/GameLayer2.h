@@ -38,6 +38,9 @@
     Joker *joker;
     Joker *emeny;
     GameObject *fly;
+    GameObject *bubble;
+    GameObject *accerate;
+    float timer;
     ContactListener2 *contactListener;
     float fallPos;
     int flyPos;

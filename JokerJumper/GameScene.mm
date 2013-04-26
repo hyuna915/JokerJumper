@@ -42,7 +42,7 @@ int gameSceneLevel;
 	// 'layer' is an autorelease object.
 	GameLayer *gameLayer = [GameLayer node];
 	// add layer as a child to scene
-	[scene addChild: gameLayer z:1];
+	[scene addChild: gameLayer z:1 ];
     
     HUDLayer *hudLayer = [HUDLayer node];
 	// add layer as a child to scene
@@ -66,7 +66,7 @@ int gameSceneLevel;
             // 'layer' is an autorelease object.
             GameLayer *gameLayer = [GameLayer node];
             // add layer as a child to scene
-            [scene addChild: gameLayer z:1];
+            [scene addChild: gameLayer z:1 tag:GAME_LAYER_TAG];
             
 //            HUDLayer *hudLayer = [HUDLayer node];
             HUDLayer *hudLayer = [[HUDLayer alloc] initWithLevel: 1];
@@ -82,7 +82,7 @@ int gameSceneLevel;
             // 'layer' is an autorelease object.
             GameLayer *gameLayer = [GameLayer2 node];
             // add layer as a child to scene
-            [scene addChild: gameLayer z:1];
+            [scene addChild: gameLayer z:1 tag:GAME_LAYER2_TAG];
             
 //            HUDLayer *hudLayer = [HUDLayer node];
             HUDLayer *hudLayer = [[HUDLayer alloc] initWithLevel: 2];
@@ -98,7 +98,7 @@ int gameSceneLevel;
             // 'layer' is an autorelease object.
             GameLayer *gameLayer = [GameLayer3 node];
             // add layer as a child to scene
-            [scene addChild: gameLayer z:1];
+            [scene addChild: gameLayer z:1 tag:GAME_LAYER_TAG];
             
 //            HUDLayer *hudLayer = [HUDLayer node];
             HUDLayer *hudLayer = [[HUDLayer alloc] initWithLevel: 3];

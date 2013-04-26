@@ -52,12 +52,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "JokerJumper/GameLayer2.mm"
-         timestampString = "387881619.11395"
+         timestampString = "388648241.369866"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "986"
-         endingLineNumber = "986"
-         landmarkName = "-seekWithVelocity:selfVel:"
+         startingLineNumber = "1003"
+         endingLineNumber = "1003"
+         landmarkName = "-updateEmeny:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

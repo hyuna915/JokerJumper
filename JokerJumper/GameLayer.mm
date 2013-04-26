@@ -54,7 +54,7 @@
 @synthesize jumpVec;
 @synthesize hudLayer;
 
-NSString *map = @"map9.2.tmx";
+NSString *map = @"map_lv1_trial3.tmx";
 bool gravity = false;
 
 +(GameLayer*) getGameLayer {
@@ -230,7 +230,7 @@ bool gravity = false;
     else if(type==kGameObjectPlatform2)
     {
         platform=[[GameObject alloc] init];
-        // platform = [GameObject spriteWithFile:@"brick_grass_hd.png"];
+        platform = [GameObject spriteWithFile:@"brick_grass_hd.png"];
         //        [platform setVisible:false];
         [platform setType:type];
         [self addChild:platform z:2];
@@ -633,6 +633,7 @@ bool gravity = false;
                 bodyType:kGameObjectFalling
      ];
     
+    
 }
 
 /*
@@ -771,14 +772,14 @@ bool gravity = false;
         [self addChild:bubble z:100];
         [bubble setVisible:false];
          
-        accerate=[GameObject spriteWithSpriteFrameName:@"acceration0.png"];
+        accerate=[GameObject spriteWithSpriteFrameName:@"acceleration0.png"];
         NSMutableArray *animFrames = [NSMutableArray array];
-        for(int i = 0; i <= 4; ++i) {
+        for(int i = 0; i <= 5; ++i) {
             [animFrames addObject:
              [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:
-              [NSString stringWithFormat:@"acceration%d.png", i]]];
+              [NSString stringWithFormat:@"acceleration%d.png", i]]];
         }
-        CCAnimation *animation = [CCAnimation animationWithSpriteFrames:animFrames delay:0.09f];
+        CCAnimation *animation = [CCAnimation animationWithSpriteFrames:animFrames delay:0.02f];
         CCAction* accerateAction = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation: animation]];
         [accerate runAction:accerateAction];
         [self addChild:accerate];
@@ -946,7 +947,7 @@ bool gravity = false;
     if(jokerAcc)
     {
         timer+=dt;
-        accerate.position=ccp(joker.position.x+80,joker.position.y);
+        accerate.position=ccp(joker.position.x-40,joker.position.y);
         [accerate setVisible:true];
         if(timer>50)
         {

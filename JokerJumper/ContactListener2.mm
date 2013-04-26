@@ -37,25 +37,7 @@ void ContactListener2::BeginContact(b2Contact *contact) {
         {
             GameObject *coinSprite=(spriteA.type==kGameObjectJoker)?spriteB:spriteA;
             CCScene* scene = [[CCDirector sharedDirector] runningScene];
-            GameLayer2 * layer = (GameLayer2*)[scene getChildByTag:GAME_LAYER_TAG];
-            
-            CCParticleSystem *ps = [CCParticleExplosion node];
-            [layer addChild:ps z:12];
-            ps.texture = [[CCTextureCache sharedTextureCache] addImage:@"stars.png"];
-            ps.position = coinSprite.position;
-            ps.blendAdditive = YES;
-            ps.life = 0.2f;
-            ps.lifeVar = 0.2f;
-            ps.totalParticles = 30.0f;
-            ps.autoRemoveOnFinish = YES;
-            
-        }
-
-        if(IS_COINTYPE(spriteA, spriteB))
-        {
-            GameObject *coinSprite=(spriteA.type==kGameObjectJoker)?spriteB:spriteA;
-            CCScene* scene = [[CCDirector sharedDirector] runningScene];
-            GameLayer2 * layer = (GameLayer2*)[scene getChildByTag:GAME_LAYER_TAG];
+            GameLayer2 * layer = (GameLayer2*)[scene getChildByTag:GAME_LAYER2_TAG];
             
             CCParticleSystem *ps = [CCParticleExplosion node];
             [layer addChild:ps z:12];
@@ -72,8 +54,9 @@ void ContactListener2::BeginContact(b2Contact *contact) {
         {
             GameObject *coinSprite=(spriteA.type==kGameObjectJoker)?spriteB:spriteA;
             CCScene* scene = [[CCDirector sharedDirector] runningScene];
-            GameLayer2 * layer = (GameLayer2*)[scene getChildByTag:GAME_LAYER_TAG];
+            GameLayer2 * layer = (GameLayer2*)[scene getChildByTag:GAME_LAYER2_TAG];
             layer.coinCount++;
+            CCLOG(@"coin: %d",layer.coinCount);
             [layer removeChild:coinSprite cleanup:YES];
             coinSprite.visible = false;
             [[SimpleAudioEngine sharedEngine] playEffect:@"Collect_Coin.wav"];
@@ -83,8 +66,10 @@ void ContactListener2::BeginContact(b2Contact *contact) {
         {
             GameObject *coinSprite=(spriteA.type==kGameObjectJoker)?spriteB:spriteA;
             CCScene* scene = [[CCDirector sharedDirector] runningScene];
-            GameLayer2 * layer = (GameLayer2*)[scene getChildByTag:GAME_LAYER_TAG];
+            GameLayer2 * layer = (GameLayer2*)[scene getChildByTag:GAME_LAYER2_TAG];
             layer.lifeCount++;
+            CCLOG(@"life: %d",layer.lifeCount);
+            
             [layer removeChild:coinSprite cleanup:YES];
             coinSprite.visible = false;
             [[SimpleAudioEngine sharedEngine] playEffect:@"Collect_Coin.wav"];
@@ -92,7 +77,7 @@ void ContactListener2::BeginContact(b2Contact *contact) {
         else if(IS_PLATTYPE(spriteA, spriteB))
         {
             CCScene* scene = [[CCDirector sharedDirector] runningScene];
-            GameLayer2 * layer = (GameLayer2*)[scene getChildByTag:GAME_LAYER_TAG];
+            GameLayer2 * layer = (GameLayer2*)[scene getChildByTag:GAME_LAYER2_TAG];
             //b2Body *jokerBody=(spriteA.type==kGameObjectJoker)?bodyA:bodyB;
             if(layer.joker.jokerJumping == true)
             {
@@ -230,7 +215,7 @@ void ContactListener2::EndContact(b2Contact *contact)
         if(IS_PLAT5TYPE(spriteA, spriteB)||IS_PLAT6TYPE(spriteA, spriteB))
         {
             CCScene* scene = [[CCDirector sharedDirector] runningScene];
-            GameLayer2 * layer = (GameLayer2*)[scene getChildByTag:GAME_LAYER_TAG];
+            GameLayer2 * layer = (GameLayer2*)[scene getChildByTag:GAME_LAYER2_TAG];
             b2Body *jokerBody=(spriteA.type==kGameObjectJoker)?bodyA:bodyB;
             if(layer.joker.jokerJumping == false)
             {

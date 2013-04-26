@@ -831,8 +831,8 @@ bool gravity2 = false;
         accelerationY = 0;
         lastAccelerationY = 0;
         
-        self.tag = GAME_LAYER_TAG;
-        self.coinCount=0;
+        self.tag = GAME_LAYER2_TAG;
+        self.coinCount=1;
         self.lifeCount=1;
         self.fall1=false;
         self.fall2=false;
@@ -851,6 +851,23 @@ bool gravity2 = false;
         [joker initAnimation:allBatchNode character:0];
         joker.position = ccp(jokerLocationX, jokerLocationY);
         [joker createBox2dObject:world];
+        
+        
+        bubble=[GameObject spriteWithFile:@"Bubble.png"];
+        [self addChild:bubble z:100];
+        [bubble setVisible:false];
+        
+        accerate=[GameObject spriteWithSpriteFrameName:@"acceleration0.png"];
+        NSMutableArray *animFrames = [NSMutableArray array];
+        for(int i = 0; i <= 5; ++i) {
+            [animFrames addObject:
+             [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:
+              [NSString stringWithFormat:@"acceleration%d.png", i]]];
+        }
+        CCAnimation *animation = [CCAnimation animationWithSpriteFrames:animFrames delay:0.02f];
+        CCAction* accerateAction = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation: animation]];
+        [accerate runAction:accerateAction];
+        [self addChild:accerate];
         
         //        moon=[CCSprite spriteWithSpriteFrameName:@"moon0.png"];
         //        NSMutableArray *moonAnimFrames = [NSMutableArray array];
@@ -1024,6 +1041,7 @@ bool gravity2 = false;
     hudLayer  = (HUDLayer*)[scene getChildByTag:HUD_LAYER_TAG];
     
     [hudLayer updateCoinCounter:coinCount];
+    CCLOG(@"!!!!!!coin: %d",coinCount);
     [hudLayer updateLifeCounter:lifeCount];
     [hudLayer updateStatusCounter:distance];
     
@@ -1039,6 +1057,37 @@ bool gravity2 = false;
         }
     }
     [joker adjust];
+    
+    if(jokerAcc)
+    {
+        timer+=dt;
+        accerate.position=ccp(joker.position.x-40,joker.position.y);
+        [accerate setVisible:true];
+        if(timer>50)
+        {
+            jokerAcc=false;
+            timer=0;
+        }
+    }
+    else
+    {
+        [accerate setVisible:false];
+    }
+    
+    if(loseGravity)
+    {
+        bubble.position=joker.position;
+        [bubble setVisible:true];
+    }
+    else
+    {
+        [bubble setVisible:false];
+    }
+
+    
+    
+    
+    
     //[emeny adjust];
     
     //ghost.position=ccp(joker.position.x-200,joker.position.y);
@@ -1443,7 +1492,7 @@ bool gravity2 = false;
     // accelerate
     if ((endLocation.x - startLocation.x) >= 200 ) {
         // Swipe
-        if(coinCount > 0) {
+        if(coinCount > -1) {
             if(!loseGravity) {
                 coinCount--;
                 b2Body *jokerBody = [joker getBody];
@@ -1457,7 +1506,7 @@ bool gravity2 = false;
         }
     } // deccelerate
     else if((startLocation.x - endLocation.x) >= 200 ) {
-        if(coinCount > 0) {
+        if(coinCount > -1) {
             if(!loseGravity) {
                 coinCount--;
                 b2Body *jokerBody = [joker getBody];
@@ -1475,7 +1524,7 @@ bool gravity2 = false;
             joker.jokerBody->SetGravityScale(-1);
         }
         if(!loseGravity && !joker.jokerFlip) {
-            if(lifeCount > 0) {
+            if(lifeCount > -1) {
                 lifeCount--;
                 loseGravity = true;
                 joker.jokerBody->SetGravityScale(0);
@@ -1494,7 +1543,7 @@ bool gravity2 = false;
             joker.jokerBody->SetGravityScale(1);
         }
         if(!loseGravity && joker.jokerFlip) {
-            if(lifeCount > 0) {
+            if(lifeCount > -1) {
                 lifeCount--;
                 loseGravity = true;
                 joker.jokerBody->SetGravityScale(0);
