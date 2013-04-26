@@ -23,11 +23,16 @@
     if (( self = [ super init]))
     {
         GameStage = gameStage;
-        CGSize size = [[CCDirector sharedDirector] winSize];
-        label = [CCLabelTTF labelWithString: @"Loading ..." fontName: @"Marker Felt" fontSize: 64 ];
-        label.position=ccp(size.width/2,size.height/ 2);
-        count=1;
-        [ self addChild:label];
+//        CGSize size = [[CCDirector sharedDirector] winSize];
+//        label = [CCLabelTTF labelWithString: @"Loading ..." fontName: @"Marker Felt" fontSize: 64 ];
+//        label.position=ccp(size.width/2,size.height/ 2);
+//        count=1;
+//        [ self addChild:label];
+        
+        CCSprite *bg = [CCSprite spriteWithFile:@"loading_menu.png"];
+        bg.anchorPoint = ccp(0, 0);
+        [self addChild:bg];
+        
         //[self schedule:@selector(updateCount:) interval:0.2f];
         //[self schedule:@selector(update:) interval:3.0f];
         [ self scheduleUpdate];

@@ -192,12 +192,12 @@ int pauseStat;
 
 -(void) zoomCoin
 {
-    [self schedule:@selector(updateZoomCoin:) interval:0.1f];
+    [self schedule:@selector(updateZoomCoin:) interval:0.05f];
 }
 
 -(void) zoomLife
 {
-    [self schedule:@selector(updateZoomLife:) interval:0.1f];
+    [self schedule:@selector(updateZoomLife:) interval:0.05f];
 }
 
 - (void)updateZoomCoin:(ccTime) dt {

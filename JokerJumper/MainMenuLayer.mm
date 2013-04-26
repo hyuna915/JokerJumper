@@ -43,6 +43,7 @@ CCFiniteTimeAction *moveAction3;
 CCFiniteTimeAction *moveAction4;
 
 int cloudCount;
+int cloudMoveOutCount;
 CGSize winSize;
 
 @implementation MainMenuLayer
@@ -303,6 +304,7 @@ CGSize winSize;
             break;
         default:
             [self unschedule:@selector(updateCloudMoveIn:)];
+            cloudCount = 0;
             break;
     }
 }
@@ -328,10 +330,64 @@ CGSize winSize;
         helpMenu.visible = true;
 }
 
+- (void)updateCloudMoveOut:(ccTime) dt
+{
+    cloudMoveOutCount++;
+    switch (cloudMoveOutCount) {
+        case 1:
+            [cloudLeft1 stopAllActions];
+            cloudL1 = [CCMoveTo actionWithDuration:0.5f position:ccp(-700, 100)];
+            [cloudLeft1 runAction:cloudL1];
+            
+            [cloudRight1 stopAllActions];
+            cloudR1 = [CCMoveTo actionWithDuration:0.5f position:ccp(1234, 100)];
+            [cloudRight1 runAction:cloudR1];
+            break;
+        case 2:
+            [cloudLeft2 stopAllActions];
+            cloudL2 = [CCMoveTo actionWithDuration:0.5f position:ccp(-600, 100)];
+            [cloudLeft2 runAction:cloudL2];
+            
+            [cloudRight2 stopAllActions];
+            cloudR2 = [CCMoveTo actionWithDuration:0.5f position:ccp(1234, 100)];
+            [cloudRight2 runAction:cloudR2];
+            
+            break;
+        case 3:
+            [cloudLeft3 stopAllActions];
+            cloudL3 = [CCMoveTo actionWithDuration:0.5f position:ccp(-600, 70)];
+            [cloudLeft3 runAction:cloudL3];
+            
+            [cloudRight3 stopAllActions];
+            cloudR3 = [CCMoveTo actionWithDuration:0.5f position:ccp(1034, 70)];
+            [cloudRight3 runAction:cloudR3];
+            
+            break;
+        default:
+            [self unschedule:@selector(updateCloudMoveOut:)];
+            cloudMoveOutCount = 0;
+            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[LevelScrollScene scene]]];
+            break;
+    }
+}
+
 
 -(void) buttonReplayAction:(id)sender {
-    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[LevelScrollScene scene]]];
+    cloudCount = 0;
+    
+    [self unschedule:@selector(updateCloudMoveIn:)];
+    
+    [cloudLeft0 stopAllActions];
+    cloudL0 = [CCMoveTo actionWithDuration:0.5f position:ccp(-700, 100)];
+    [cloudLeft0 runAction:cloudL0];
+    
+    [cloudRight0 stopAllActions];
+    cloudR0 = [CCMoveTo actionWithDuration:0.5f position:ccp(1234, 100)];
+    [cloudRight0 runAction:cloudR0];
+    [self schedule:@selector(updateCloudMoveOut:) interval:0.5f];
 }
+
+
 
 -(void) buttonOptionAction:(id)sender {
     [[CCDirector sharedDirector] replaceScene:[CCTransitionFlipAngular transitionWithDuration:1.0 scene:[CCBReader sceneWithNodeGraphFromFile:@"OptionsScene.ccbi"]]];
