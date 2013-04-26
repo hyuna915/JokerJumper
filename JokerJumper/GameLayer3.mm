@@ -78,6 +78,7 @@ bool gravity3 = false;
                     stateVec.push_back(curState);
                     //world->SetGravity(b2Vec2(0.0,-world->GetGravity().y));
                     [joker jump:jokerCharge];
+                    [self generateSmoke:joker];
                     jumpVec=b2Vec2(joker.jokerBody->GetLinearVelocity().x,0);
                 }
             }
@@ -91,6 +92,7 @@ bool gravity3 = false;
                     stateVec.push_back(curState);
                     //world->SetGravity(b2Vec2(0.0,-world->GetGravity().y));
                     [joker jump:jokerCharge];
+                    [self generateSmoke:joker];
                     jumpVec=b2Vec2(joker.jokerBody->GetLinearVelocity().x,0);
                     jokerStartCharge = false;
                 }
@@ -739,6 +741,24 @@ bool gravity3 = false;
         [emeny initAnimation: allBatchNode character:2];
         emeny.position = ccp(emenyLocationX, emenyLocationY);
         [emeny createBox2dObject:world];
+        
+        
+        bubble=[GameObject spriteWithFile:@"Bubble.png"];
+        [self addChild:bubble z:100];
+        [bubble setVisible:false];
+        
+        accerate=[GameObject spriteWithSpriteFrameName:@"acceleration0.png"];
+        NSMutableArray *animFrames = [NSMutableArray array];
+        for(int i = 0; i <= 3; ++i) {
+            [animFrames addObject:
+             [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:
+              [NSString stringWithFormat:@"acceleration%d.png", i]]];
+        }
+        CCAnimation *animation = [CCAnimation animationWithSpriteFrames:animFrames delay:0.01f];
+        CCAction* accerateAction = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation: animation]];
+        [accerate runAction:accerateAction];
+        [self addChild:accerate];
+        
         CCLOG(@"here5");
         flyPos=0;
         CCScene* scene = [[CCDirector sharedDirector] runningScene];
@@ -858,6 +878,32 @@ bool gravity3 = false;
     }
     [joker adjust];
     [emeny adjust];
+    if(jokerAcc)
+    {
+        timer+=dt;
+        accerate.position=ccp(joker.position.x-40,joker.position.y);
+        [accerate setVisible:true];
+        if(timer>1.5)
+        {
+            jokerAcc=false;
+            timer=0;
+        }
+    }
+    else
+    {
+        [accerate setVisible:false];
+    }
+    
+    if(loseGravity)
+    {
+        bubble.position=joker.position;
+        [bubble setVisible:true];
+    }
+    else
+    {
+        [bubble setVisible:false];
+    }
+    
     if(joker.position.x>FALLING_WOOD1-FALLING_OFFSET&&fall1==false)
     {
         [self updateFalling:FALLING_WOOD1];
@@ -970,7 +1016,7 @@ bool gravity3 = false;
                         [actor runAction:Action];
                     }
                 }
-                if((b->GetPosition().x<(joker.position.x-DESTORY_DISTANCE)/PTM_RATIO)&&actor.type!=kGameObjectEmeny1&&actor.type!=kGameObjectEmeny2)
+                if((b->GetPosition().x*PTM_RATIO<(joker.position.x-DESTORY_DISTANCE))&&actor.type!=kGameObjectEmeny1&&actor.type!=kGameObjectEmeny2)
                 {
                     toDestroy.push_back(b);
                 }
@@ -1007,6 +1053,7 @@ bool gravity3 = false;
             emeny.jokerFlip=stateVec.front().flipState;
             emeny.jokerBody->SetLinearVelocity(stateVec.front().velocity);
             [emeny jump:false];
+            [self generateSmoke:emeny];
             CCLOG(@"emeny position: %f",emeny.position.x);
             CCLOG(@"joker last jump position: %f",stateVec.front().position.x);
             stateVec.pop_front();
@@ -1018,6 +1065,7 @@ bool gravity3 = false;
             emeny.jokerFlip=stateVec.front().flipState;
             emeny.jokerBody->SetLinearVelocity(stateVec.front().velocity);
             [emeny jump:false];
+            [self generateSmoke:emeny];
             CCLOG(@"emeny position: %f",emeny.position.x);
             CCLOG(@"joker last jump position: %f",stateVec.front().position.x);
             stateVec.pop_front();
@@ -1028,6 +1076,7 @@ bool gravity3 = false;
             emeny.jokerFlip=stateVec.front().flipState;
             emeny.jokerBody->SetLinearVelocity(stateVec.front().velocity);
             [emeny jump:false];
+            [self generateSmoke:emeny];
             CCLOG(@"emeny position: %f",emeny.position.x);
             CCLOG(@"joker last jump position: %f",stateVec.front().position.x);
             stateVec.pop_front();
@@ -1069,6 +1118,46 @@ bool gravity3 = false;
      }
      */
     [self updateAcceleration];
+}
+
+-(void)generateSmoke:(Joker*) character
+{
+    if(!character.jokerFlip)
+    {
+        CCParticleSystem *ps = [CCParticleFireworks node];
+        [self addChild:ps z:12];
+        ccColor4F color = {255,255 , 255, 255};
+        
+        ps.texture = [[CCTextureCache sharedTextureCache] addImage:@"smoke1.png"];
+        ps.position = ccp(character.position.x-character.contentSize.width/2,character.position.y-character.contentSize.height/2);
+        //ps.blendAdditive = YES;
+        ps.life = 0.2f;
+        ps.lifeVar = 0.0f;
+        ps.startColor=color;
+        ps.endColor=color;
+        ps.startSize=40;
+        ps.endSize=0;
+        ps.totalParticles = 5.0f;
+        ps.autoRemoveOnFinish = YES;
+    }
+    else
+    {
+        CCParticleSystem *ps = [CCParticleFireworks node];
+        [self addChild:ps z:12];
+        ccColor4F color = { 255,255 , 255, 255};
+        ps.texture = [[CCTextureCache sharedTextureCache] addImage:@"smoke1.png"];
+        ps.position = ccp(character.position.x-character.contentSize.width/2,character.position.y+character.contentSize.height/2);
+        //ps.blendAdditive = YES;
+        ps.life = 0.2f;
+        ps.lifeVar = 0.0f;
+        ps.startColor=color;
+        ps.endColor=color;
+        ps.startSize=40;
+        ps.endSize=0;
+        ps.totalParticles = 5.0f;
+        ps.autoRemoveOnFinish = YES;
+    }
+    
 }
 
 
@@ -1283,6 +1372,7 @@ bool gravity3 = false;
             stateVec.push_back(curState);
             //world->SetGravity(b2Vec2(0.0,-world->GetGravity().y));
             [joker jump:jokerCharge];
+            [self generateSmoke:joker];
             jumpVec=b2Vec2(joker.jokerBody->GetLinearVelocity().x,0);
         }
         

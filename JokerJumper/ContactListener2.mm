@@ -38,7 +38,13 @@ void ContactListener2::BeginContact(b2Contact *contact) {
             GameObject *coinSprite=(spriteA.type==kGameObjectJoker)?spriteB:spriteA;
             CCScene* scene = [[CCDirector sharedDirector] runningScene];
             GameLayer2 * layer = (GameLayer2*)[scene getChildByTag:GAME_LAYER2_TAG];
-            
+            if(coinSprite.type==kGameObjectCoin)
+                layer.coinCount++;
+            if(coinSprite.type==kGameObjectCoin1)
+                layer.lifeCount++;
+            CCLOG(@"layer tag: %d",layer.tag);
+            CCLOG(@"#####coin: %d",layer.coinCount);
+            CCLOG(@"#####life: %d",layer.lifeCount);
             CCParticleSystem *ps = [CCParticleExplosion node];
             [layer addChild:ps z:12];
             ps.texture = [[CCTextureCache sharedTextureCache] addImage:@"stars.png"];
@@ -48,32 +54,34 @@ void ContactListener2::BeginContact(b2Contact *contact) {
             ps.lifeVar = 0.2f;
             ps.totalParticles = 30.0f;
             ps.autoRemoveOnFinish = YES;
-            
-        }
-        if (IS_COIN0TYPE(spriteA, spriteB))
-        {
-            GameObject *coinSprite=(spriteA.type==kGameObjectJoker)?spriteB:spriteA;
-            CCScene* scene = [[CCDirector sharedDirector] runningScene];
-            GameLayer2 * layer = (GameLayer2*)[scene getChildByTag:GAME_LAYER2_TAG];
-            layer.coinCount++;
-            CCLOG(@"coin: %d",layer.coinCount);
-            [layer removeChild:coinSprite cleanup:YES];
             coinSprite.visible = false;
             [[SimpleAudioEngine sharedEngine] playEffect:@"Collect_Coin.wav"];
             
         }
-        else if(IS_COIN1TYPE(spriteA, spriteB))
-        {
-            GameObject *coinSprite=(spriteA.type==kGameObjectJoker)?spriteB:spriteA;
-            CCScene* scene = [[CCDirector sharedDirector] runningScene];
-            GameLayer2 * layer = (GameLayer2*)[scene getChildByTag:GAME_LAYER2_TAG];
-            layer.lifeCount++;
-            CCLOG(@"life: %d",layer.lifeCount);
-            
-            [layer removeChild:coinSprite cleanup:YES];
-            coinSprite.visible = false;
-            [[SimpleAudioEngine sharedEngine] playEffect:@"Collect_Coin.wav"];
-        }
+//        if (IS_COIN0TYPE(spriteA, spriteB))
+//        {
+//            GameObject *coinSprite=(spriteA.type==kGameObjectJoker)?spriteB:spriteA;
+//            CCScene* scene = [[CCDirector sharedDirector] runningScene];
+//            GameLayer2 * layer = (GameLayer2*)[scene getChildByTag:GAME_LAYER2_TAG];
+//            layer.coinCount++;
+//            CCLOG(@"coin: %d",layer.coinCount);
+//            [layer removeChild:coinSprite cleanup:YES];
+//            coinSprite.visible = false;
+//            [[SimpleAudioEngine sharedEngine] playEffect:@"Collect_Coin.wav"];
+//            
+//        }
+//        else if(IS_COIN1TYPE(spriteA, spriteB))
+//        {
+//            GameObject *coinSprite=(spriteA.type==kGameObjectJoker)?spriteB:spriteA;
+//            CCScene* scene = [[CCDirector sharedDirector] runningScene];
+//            GameLayer2 * layer = (GameLayer2*)[scene getChildByTag:GAME_LAYER2_TAG];
+//            layer.lifeCount++;
+//            CCLOG(@"life: %d",layer.lifeCount);
+//            
+//            [layer removeChild:coinSprite cleanup:YES];
+//            coinSprite.visible = false;
+//            [[SimpleAudioEngine sharedEngine] playEffect:@"Collect_Coin.wav"];
+//        }
         else if(IS_PLATTYPE(spriteA, spriteB))
         {
             CCScene* scene = [[CCDirector sharedDirector] runningScene];

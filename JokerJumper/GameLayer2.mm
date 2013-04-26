@@ -47,7 +47,7 @@
 @synthesize hudLayer;
 @synthesize positionVec;
 
-NSString *map2 = @"map_lv2_trial2.tmx";
+NSString *map2 = @"map_lv2_trial3.tmx";
 
 bool gravity2 = false;
 
@@ -84,6 +84,7 @@ bool gravity2 = false;
                     stateVec.push_back(curState);
                     //world->SetGravity(b2Vec2(0.0,-world->GetGravity().y));
                     [joker jump:jokerCharge];
+                    [self generateSmoke:joker];
                     jumpVec=b2Vec2(joker.jokerBody->GetLinearVelocity().x,0);
                 }
             }
@@ -97,6 +98,7 @@ bool gravity2 = false;
                     stateVec.push_back(curState);
                     //world->SetGravity(b2Vec2(0.0,-world->GetGravity().y));
                     [joker jump:jokerCharge];
+                    [self generateSmoke:joker];
                     jumpVec=b2Vec2(joker.jokerBody->GetLinearVelocity().x,0);
                     jokerStartCharge = false;
                 }
@@ -683,7 +685,7 @@ bool gravity2 = false;
                  dynamic:false
                 rotation:0
                 friction:0.0f
-                 density:2.0f
+                 density:50.0f
              restitution:0
                    boxId:-1
                 bodyType:kGameObjectFalling
@@ -832,7 +834,7 @@ bool gravity2 = false;
         lastAccelerationY = 0;
         
         self.tag = GAME_LAYER2_TAG;
-        self.coinCount=1;
+        self.coinCount=0;
         self.lifeCount=1;
         self.fall1=false;
         self.fall2=false;
@@ -859,7 +861,7 @@ bool gravity2 = false;
         
         accerate=[GameObject spriteWithSpriteFrameName:@"acceleration0.png"];
         NSMutableArray *animFrames = [NSMutableArray array];
-        for(int i = 0; i <= 5; ++i) {
+        for(int i = 0; i <= 3; ++i) {
             [animFrames addObject:
              [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:
               [NSString stringWithFormat:@"acceleration%d.png", i]]];
@@ -936,12 +938,11 @@ bool gravity2 = false;
         [self schedule:@selector(update:)];
         [self schedule:@selector(updateObject:) interval:1.0f];
         [self schedule:@selector(updateGhost:) interval:0.5f];
-        [self schedule:@selector(updateFire:) interval:0.2f];
+        //[self schedule:@selector(updateFire:) interval:0.2f];
         //[self schedule:@selector(updateFlower:) interval:2.0f];
         //[self schedule:@selector(updateEmeny:) interval:0.2f];
         //[self schedule:@selector(jokerCharging:) interval:0.2f];
         
-        //TAOHU
         /*[self runAction:[CCSequence actions:
          [CCDelayTime actionWithDuration:1.0],
          [CCCallFunc actionWithTarget: self selector:@selector(updateFalling:)],
@@ -990,6 +991,49 @@ bool gravity2 = false;
     
 }
 
+-(void)generateSmoke:(Joker*) character
+{
+    if(!character.jokerFlip)
+    {
+        CCParticleSystem *ps = [CCParticleFireworks node];
+        [self addChild:ps z:12];
+        ccColor4F color = {255,255 , 255, 255};
+        
+        ps.texture = [[CCTextureCache sharedTextureCache] addImage:@"smoke1.png"];
+        ps.position = ccp(character.position.x-character.contentSize.width/2,character.position.y-character.contentSize.height/2);
+        //ps.blendAdditive = YES;
+        ps.life = 0.2f;
+        ps.lifeVar = 0.0f;
+        ps.startColor=color;
+        ps.endColor=color;
+        ps.startSize=40;
+        ps.endSize=0;
+        ps.totalParticles = 5.0f;
+        ps.autoRemoveOnFinish = YES;
+    }
+    else
+    {
+        CCParticleSystem *ps = [CCParticleFireworks node];
+        [self addChild:ps z:12];
+        ccColor4F color = { 255,255 , 255, 255};
+        ps.texture = [[CCTextureCache sharedTextureCache] addImage:@"smoke1.png"];
+        ps.position = ccp(character.position.x-character.contentSize.width/2,character.position.y+character.contentSize.height/2);
+        //ps.blendAdditive = YES;
+        ps.life = 0.2f;
+        ps.lifeVar = 0.0f;
+        ps.startColor=color;
+        ps.endColor=color;
+        ps.startSize=40;
+        ps.endSize=0;
+        ps.totalParticles = 5.0f;
+        ps.autoRemoveOnFinish = YES;
+    }
+    
+}
+
+
+
+
 - (void)updateEmeny:(ccTime) dt
 {
     CGPoint diff=[self seekWithPosition:joker.position selfPos:emeny.position];
@@ -1026,7 +1070,7 @@ bool gravity2 = false;
     delayReplaceTime++;
     if (delayReplaceTime >= 5) {
         [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
-        [[CCDirector sharedDirector] replaceScene:[CCTransitionProgressRadialCCW transitionWithDuration:1.0 scene:[GameOverScene sceneWithLevel:GAME_STATE_TWO Coin:coinCount Distance:distance]]];
+        [[CCDirector sharedDirector] replaceScene:[CCTransitionProgressRadialCCW transitionWithDuration:1.0 scene:[GameOverScene sceneWithLevel:GAME_STATE_TWO Coin:self.coinCount Distance:distance]]];
     }
 }
 
@@ -1040,10 +1084,10 @@ bool gravity2 = false;
     CCScene* scene = [[CCDirector sharedDirector] runningScene];
     hudLayer  = (HUDLayer*)[scene getChildByTag:HUD_LAYER_TAG];
     
-    [hudLayer updateCoinCounter:coinCount];
-    CCLOG(@"!!!!!!coin: %d",coinCount);
-    [hudLayer updateLifeCounter:lifeCount];
-    [hudLayer updateStatusCounter:distance];
+    [hudLayer updateCoinCounter:self.coinCount];
+    CCLOG(@"!!!!!!coin: %d",self.coinCount);
+    [hudLayer updateLifeCounter:self.lifeCount];
+    [hudLayer updateStatusCounter:self.distance];
     
     if(joker.jokerBody->GetLinearVelocity().x<0.2)
     {
@@ -1063,7 +1107,7 @@ bool gravity2 = false;
         timer+=dt;
         accerate.position=ccp(joker.position.x-40,joker.position.y);
         [accerate setVisible:true];
-        if(timer>50)
+        if(timer>1.5)
         {
             jokerAcc=false;
             timer=0;
@@ -1125,7 +1169,7 @@ bool gravity2 = false;
     
     if(!CGRectIsNull(CGRectIntersection([self positionRect:joker],[self positionRect:fly])))
     {
-        lifeCount--;
+        self.lifeCount--;
         [[SimpleAudioEngine sharedEngine] playEffect:@"Pain-SoundBible.com-1883168362.wav"];
     }
     if(!CGRectIsNull(CGRectIntersection([self positionRect:joker],[self positionRect:emeny])))
@@ -1138,7 +1182,7 @@ bool gravity2 = false;
         //        [self unschedule:@selector(update:)];
         [self unscheduleAllSelectors];
         [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
-        [[CCDirector sharedDirector] replaceScene:[CCTransitionProgressRadialCCW transitionWithDuration:1.0 scene:[GameOverScene sceneWithLevel:GAME_STATE_TWO Coin:coinCount Distance:distance]]];
+        [[CCDirector sharedDirector] replaceScene:[CCTransitionProgressRadialCCW transitionWithDuration:1.0 scene:[GameOverScene sceneWithLevel:GAME_STATE_TWO Coin:self.coinCount Distance:distance]]];
     }
     // Joker caught by enemy
     if(!CGRectIsNull(CGRectIntersection([self positionRect:joker],[self positionRect:ghost]))||joker.position.x<ghost.position.x + 50) {
@@ -1165,7 +1209,7 @@ bool gravity2 = false;
     if(joker.position.x >= MAP_LENGTH * PTM_RATIO * MAP_LEVEL2_NUMS) {
         [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
         // CCTransitionFadeBL, lose: CCTransitionProgressRadialCCW
-        [[CCDirector sharedDirector] replaceScene:[CCTransitionFadeBL transitionWithDuration:1.0 scene:[GameWinScene sceneWithLevel:GAME_STATE_TWO Coin:coinCount Distance:distance]]];
+        [[CCDirector sharedDirector] replaceScene:[CCTransitionFadeBL transitionWithDuration:1.0 scene:[GameWinScene sceneWithLevel:GAME_STATE_TWO Coin:self.coinCount Distance:distance]]];
     }
     
 	int32 velocityIterations = 8;
@@ -1234,7 +1278,7 @@ bool gravity2 = false;
                  }
                  }
                  */
-                if((b->GetPosition().x<(joker.position.x-DESTORY_DISTANCE)/PTM_RATIO)&&actor.type!=kGameObjectEmeny1&&actor.type!=kGameObjectEmeny2)
+                if((b->GetPosition().x*PTM_RATIO<(joker.position.x-DESTORY_DISTANCE))&&actor.type!=kGameObjectEmeny1&&actor.type!=kGameObjectEmeny2)
                 {
                     toDestroy.push_back(b);
                 }
@@ -1492,9 +1536,9 @@ bool gravity2 = false;
     // accelerate
     if ((endLocation.x - startLocation.x) >= 200 ) {
         // Swipe
-        if(coinCount > -1) {
+        if(self.coinCount > 0) {
             if(!loseGravity) {
-                coinCount--;
+                self.coinCount--;
                 b2Body *jokerBody = [joker getBody];
                 b2Vec2 impulse = b2Vec2(jokerBody->GetLinearVelocity().x+10.0f, jokerBody->GetLinearVelocity().y);
                 jokerBody->SetLinearVelocity(impulse);
@@ -1506,9 +1550,9 @@ bool gravity2 = false;
         }
     } // deccelerate
     else if((startLocation.x - endLocation.x) >= 200 ) {
-        if(coinCount > -1) {
+        if(self.coinCount > 0) {
             if(!loseGravity) {
-                coinCount--;
+                self.coinCount--;
                 b2Body *jokerBody = [joker getBody];
                 b2Vec2 impulse = b2Vec2(jokerBody->GetLinearVelocity().x-10.0f, jokerBody->GetLinearVelocity().y);
                 jokerBody->SetLinearVelocity(impulse);
@@ -1524,8 +1568,8 @@ bool gravity2 = false;
             joker.jokerBody->SetGravityScale(-1);
         }
         if(!loseGravity && !joker.jokerFlip) {
-            if(lifeCount > -1) {
-                lifeCount--;
+            if(self.lifeCount > 0) {
+                self.lifeCount--;
                 loseGravity = true;
                 joker.jokerBody->SetGravityScale(0);
                 b2Body *jokerBody = [joker getBody];
@@ -1543,8 +1587,8 @@ bool gravity2 = false;
             joker.jokerBody->SetGravityScale(1);
         }
         if(!loseGravity && joker.jokerFlip) {
-            if(lifeCount > -1) {
-                lifeCount--;
+            if(self.lifeCount > 0) {
+                self.lifeCount--;
                 loseGravity = true;
                 joker.jokerBody->SetGravityScale(0);
                 b2Body *jokerBody = [joker getBody];
@@ -1565,6 +1609,7 @@ bool gravity2 = false;
             stateVec.push_back(curState);
             //world->SetGravity(b2Vec2(0.0,-world->GetGravity().y));
             [joker jump:jokerCharge];
+            [self generateSmoke:joker];
             jumpVec=b2Vec2(joker.jokerBody->GetLinearVelocity().x,0);
         }
         

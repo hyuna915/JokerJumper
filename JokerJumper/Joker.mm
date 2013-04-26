@@ -9,6 +9,7 @@
 #import "Joker.h"
 #import "Constants.h"
 #import "SimpleAudioEngine.h"
+#import "Constants.h"
 
 @implementation Joker
 @synthesize jokerBody;

@@ -52,12 +52,38 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "JokerJumper/GameLayer2.mm"
-         timestampString = "388648241.369866"
+         timestampString = "388710846.445894"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1003"
-         endingLineNumber = "1003"
+         startingLineNumber = "1047"
+         endingLineNumber = "1047"
          landmarkName = "-updateEmeny:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "JokerJumper/ContactListener2.mm"
+         timestampString = "388710959.229242"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "57"
+         endingLineNumber = "57"
+         landmarkName = "ContactListener2::BeginContact(b2Contact *contact)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "JokerJumper/GameLayer2.mm"
+         timestampString = "388710510.094239"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "938"
+         endingLineNumber = "938"
+         landmarkName = "-init"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
