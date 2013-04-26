@@ -243,32 +243,32 @@ CGSize winSize;
         // Cloud Right
         cloudRight0 = [CCSprite spriteWithFile:@"cloud_right0.png"];
         cloudRight0.anchorPoint = ccp(0, 0);
-        cloudRight0.position = ccp(winSize.width/2 + 650, 100);
+        cloudRight0.position = ccp(1034, 100);
         [self addChild:cloudRight0 z:-5];
         
         cloudRight1 = [CCSprite spriteWithFile:@"cloud_right1.png"];
         cloudRight1.anchorPoint = ccp(0, 0);
-        cloudRight1.position = ccp(winSize.width/2 + 650, 100);
+        cloudRight1.position = ccp(1034, 100);
         [self addChild:cloudRight1 z:-4];
 
         cloudRight2 = [CCSprite spriteWithFile:@"cloud_right2.png"];
         cloudRight2.anchorPoint = ccp(0, 0);
-        cloudRight2.position = ccp(winSize.width/2 + 650, 100);
+        cloudRight2.position = ccp(1034, 100);
         [self addChild:cloudRight2 z:-3];
 
         cloudRight3 = [CCSprite spriteWithFile:@"cloud_right3.png"];
         cloudRight3.anchorPoint = ccp(0, 0);
-        cloudRight3.position = ccp(winSize.width/2 + 650, 70);
+        cloudRight3.position = ccp(1034, 70);
         
         [self addChild:cloudRight3 z:-2];
 
 
         [self schedule:@selector(updateCloudMoveIn:) interval:2.0f];
         
-        cloudL0 = [CCMoveTo actionWithDuration:4.0f position:ccp(winSize.width/2 - 600,100)];
+        cloudL0 = [CCMoveTo actionWithDuration:4.0f position:ccp(-216,100)];
         [cloudLeft0 runAction:cloudL0];
         
-        cloudR0 = [CCMoveTo actionWithDuration:4.0f position:ccp(winSize.width/2 + 200, 100)];
+        cloudR0 = [CCMoveTo actionWithDuration:4.0f position:ccp(584, 100)];
         [cloudRight0 runAction:cloudR0];
     }
     return self;
@@ -279,25 +279,25 @@ CGSize winSize;
     cloudCount++;
     switch (cloudCount) {
         case 1:
-            cloudL1 = [CCMoveTo actionWithDuration:4.0f position:ccp(winSize.width/2 - 500,100)];
+            cloudL1 = [CCMoveTo actionWithDuration:4.0f position:ccp(-116,100)];
             [cloudLeft1 runAction:cloudL1];
             
-            cloudR1 = [CCMoveTo actionWithDuration:4.0f position:ccp(winSize.width/2 + 210, 100)];
+            cloudR1 = [CCMoveTo actionWithDuration:4.0f position:ccp(594, 100)];
             [cloudRight1 runAction:cloudR1];
             break;
         case 2:
-            cloudL2 = [CCMoveTo actionWithDuration:4.0f position:ccp(winSize.width/2 - 410,100)];
+            cloudL2 = [CCMoveTo actionWithDuration:4.0f position:ccp(-26,100)];
             [cloudLeft2 runAction:cloudL2];
             
-            cloudR2 = [CCMoveTo actionWithDuration:4.0f position:ccp(winSize.width/2 + 220, 100)];
+            cloudR2 = [CCMoveTo actionWithDuration:4.0f position:ccp(604, 100)];
             [cloudRight2 runAction:cloudR2];
 
             break;
         case 3:
-            cloudL3 = [CCMoveTo actionWithDuration:4.0f position:ccp(winSize.width/2 - 410,70)];
+            cloudL3 = [CCMoveTo actionWithDuration:4.0f position:ccp(-26,70)];
             [cloudLeft3 runAction:cloudL3];
             
-            cloudR3 = [CCMoveTo actionWithDuration:4.0f position:ccp(winSize.width/2 + 220, 70)];
+            cloudR3 = [CCMoveTo actionWithDuration:4.0f position:ccp(604, 70)];
             [cloudRight3 runAction:cloudR3];
 
             break;

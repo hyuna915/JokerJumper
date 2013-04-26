@@ -1009,7 +1009,7 @@ bool gravity2 = false;
     delayReplaceTime++;
     if (delayReplaceTime >= 5) {
         [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
-        [[CCDirector sharedDirector] replaceScene:[CCTransitionProgressRadialCCW transitionWithDuration:1.0 scene:[GameOverScene sceneWithLevel:GAME_STATE_ONE Coin:coinCount Distance:distance]]];
+        [[CCDirector sharedDirector] replaceScene:[CCTransitionProgressRadialCCW transitionWithDuration:1.0 scene:[GameOverScene sceneWithLevel:GAME_STATE_TWO Coin:coinCount Distance:distance]]];
     }
 }
 
@@ -1089,7 +1089,7 @@ bool gravity2 = false;
         //        [self unschedule:@selector(update:)];
         [self unscheduleAllSelectors];
         [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
-        [[CCDirector sharedDirector] replaceScene:[CCTransitionProgressRadialCCW transitionWithDuration:1.0 scene:[GameOverScene sceneWithLevel:GAME_STATE_ONE Coin:coinCount Distance:distance]]];
+        [[CCDirector sharedDirector] replaceScene:[CCTransitionProgressRadialCCW transitionWithDuration:1.0 scene:[GameOverScene sceneWithLevel:GAME_STATE_TWO Coin:coinCount Distance:distance]]];
     }
     // Joker caught by enemy
     if(!CGRectIsNull(CGRectIntersection([self positionRect:joker],[self positionRect:ghost]))||joker.position.x<ghost.position.x + 50) {

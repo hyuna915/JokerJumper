@@ -19,6 +19,8 @@
 @synthesize tileMapNode,
 showingPausedMenu = showingPausedMenu_;
 
+int gameSceneLevel;
+
 // Helper class method that creates a Scene with the HelloWorldLayer as the only child.
 +(CCScene *) scene
 {
@@ -54,6 +56,7 @@ showingPausedMenu = showingPausedMenu_;
 	CCScene *scene = [CCScene node];
     GameScene *layer = [GameScene node];
     [scene addChild:layer z:3];
+    gameSceneLevel = state;
     switch (state) {
         case GAME_STATE_ONE:
         {
@@ -135,7 +138,8 @@ static GameScene* instanceOfGameScene;
 }
 
 - (void)showPausedMenu {
-    PauseLayer *pauzy = [PauseLayer node];
+    PauseLayer *pauzy = [[PauseLayer alloc] initWithLevel: gameSceneLevel];
+    
     [self addChild:pauzy z:1 tag:PAUSE_LAYER_TAG];
     //    CCScene* scene = [[CCDirector sharedDirector] runningScene];
     //    [scene addChild:pauzy z:4 tag:PAUSE_LAYER_TAG];

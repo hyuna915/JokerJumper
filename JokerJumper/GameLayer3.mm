@@ -116,6 +116,7 @@ bool gravity3 = false;
         }
     }
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"lv3_background.mp3"];
+    [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume:3];
 }
 
 - (void) initTiledMaps {
@@ -824,7 +825,7 @@ bool gravity3 = false;
     delayReplaceTime++;
     if (delayReplaceTime >= 5) {
         [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
-        [[CCDirector sharedDirector] replaceScene:[CCTransitionProgressRadialCCW transitionWithDuration:1.0 scene:[GameOverScene sceneWithLevel:GAME_STATE_ONE Coin:coinCount Distance:distance]]];
+        [[CCDirector sharedDirector] replaceScene:[CCTransitionProgressRadialCCW transitionWithDuration:1.0 scene:[GameOverScene sceneWithLevel:GAME_STATE_THREE Coin:coinCount Distance:distance]]];
     }
 }
 
@@ -897,7 +898,7 @@ bool gravity3 = false;
         //        [self unschedule:@selector(update:)];
         [self unscheduleAllSelectors];
         [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
-        [[CCDirector sharedDirector] replaceScene:[CCTransitionProgressRadialCCW transitionWithDuration:1.0 scene:[GameOverScene sceneWithLevel:GAME_STATE_ONE Coin:coinCount Distance:distance]]];
+        [[CCDirector sharedDirector] replaceScene:[CCTransitionProgressRadialCCW transitionWithDuration:1.0 scene:[GameOverScene sceneWithLevel:GAME_STATE_THREE Coin:coinCount Distance:distance]]];
     }
     // Joker caught by enemy
     if(!CGRectIsNull(CGRectIntersection([self positionRect:joker],[self positionRect:emeny]))||joker.position.x<emeny.position.x) {
@@ -1037,7 +1038,7 @@ bool gravity3 = false;
         //    if(joker.position.x >= 1000) {
         [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
         // CCTransitionFadeBL, lose: CCTransitionProgressRadialCCW
-        [[CCDirector sharedDirector] replaceScene:[CCTransitionFadeBL transitionWithDuration:1.0 scene:[GameWinScene sceneWithLevel:GAME_STATE_ONE Coin:coinCount Distance:distance]]];
+        [[CCDirector sharedDirector] replaceScene:[CCTransitionFadeBL transitionWithDuration:1.0 scene:[GameWinScene sceneWithLevel:GAME_STATE_THREE Coin:coinCount Distance:distance]]];
     }
     /*
      if((joker.position.x-emeny.position.x>AI_RESET_DISTANCE||(emeny.position.y<=0)||(emeny.position.y>=winSize.height))&&(emeny.position.x>stateVec.front().position.x))

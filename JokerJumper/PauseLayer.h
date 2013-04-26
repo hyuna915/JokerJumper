@@ -20,4 +20,6 @@
     CCLabelTTF *mainResume;
 }
 
+- (id) initWithLevel:(int)level;
+
 @end
