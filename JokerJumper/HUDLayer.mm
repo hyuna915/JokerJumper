@@ -15,6 +15,7 @@
 //@synthesize    coinLabel;
 
 int hudLevel;
+int pauseStat;
 
 +(HUDLayer*) getHUDLayer {
     return self;
@@ -96,17 +97,23 @@ int hudLevel;
         [coinLabel setPosition:ccp(COIN_LABEL_X+OFFSET_X,screenSize.height-30)];
         [lifeLabel setPosition:ccp(LIFE_LABEL_X+OFFSET_X,screenSize.height-30)];
         
-        pause = [CCMenuItemImage itemWithNormalImage:@"pauseButton.png" selectedImage:@"pauseButtonPressed.png" target:self selector:@selector(pauseButtonSelected)];
+        pause = [CCMenuItemImage itemWithNormalImage:@"btn_pause.PNG" selectedImage:@"btn_pause.PNG" target:self selector:@selector(pauseButtonSelected)];
         CCMenu *menu = [CCMenu menuWithItems:pause, nil];
-        menu.position = CGPointMake(35, screenSize.height - 30);
+        menu.position = CGPointMake(35, screenSize.height - 28);
         
         gravityButton = [CCMenuItemImage itemWithNormalImage:@"btn_gravity.png" selectedImage:@"btn_gravity.png" target:self selector:@selector(gravityButtonSelected)];
         
         CCMenu *menu2 = [CCMenu menuWithItems:gravityButton, nil];
         menu2.position = CGPointMake(95, screenSize.height - 25);
         
+        pauseButton = [CCMenuItemImage itemWithNormalImage:@"btn_pause.PNG" selectedImage:@"btn_pause.PNG" target:self selector:@selector(pauseInvisibleButtonSelected)];
+        CCMenu *menu3 = [CCMenu menuWithItems:pauseButton, nil];
+        menu3.position = CGPointMake(950, 50);
+
+        
         [self addChild:menu z:100];
         [self addChild:menu2 z:100];
+        [self addChild:menu3 z:100];
         [self addChild:coinBar z:100];
         [self addChild:disBar z:100];
         [self addChild:lifeBar z:100];
@@ -116,6 +123,18 @@ int hudLevel;
     }
     return self;
 }
+
+- (void)pauseInvisibleButtonSelected {
+    if(pauseStat == 0) {
+        [[CCDirector sharedDirector] pause];
+        pauseStat++;
+    }
+    else {
+        [[CCDirector sharedDirector] resume];
+        pauseStat--;
+    }
+}
+
 
 - (void)pauseButtonSelected {
     
@@ -183,7 +202,7 @@ int hudLevel;
 
 - (void)updateZoomCoin:(ccTime) dt {
     coinBar.scale += 0.1;
-    if(coinBar.scale >= 1.2) {
+    if(coinBar.scale >= 1.5) {
         coinBar.scale = 1;
         [self unscheduleAllSelectors];
     }
@@ -191,7 +210,7 @@ int hudLevel;
 
 - (void)updateZoomLife:(ccTime) dt {
     lifeBar.scale += 0.1;
-    if(lifeBar.scale >= 1.2) {
+    if(lifeBar.scale >= 1.5) {
         lifeBar.scale = 1;
         [self unscheduleAllSelectors];
     }

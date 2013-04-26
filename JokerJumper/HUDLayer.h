@@ -20,6 +20,7 @@
     CCLabelTTF *coinLabel;
     CCMenuItemImage *pause;
     CCMenuItemImage *gravityButton;
+    CCMenuItemImage *pauseButton;
     CCSprite *coinBar;
     CCSprite *disBar;
     CCSprite *lifeBar;
