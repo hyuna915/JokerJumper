@@ -819,6 +819,7 @@ bool gravity2 = false;
     [self addChild:skullBatchNode z:20];
     [self addChild:stoneBatchNode z:15];
     [self addChild:moonBatchNode z:-1];
+    [self addChild:heartBatchNode z:10];
     
 }
 
@@ -835,7 +836,7 @@ bool gravity2 = false;
         
         self.tag = GAME_LAYER2_TAG;
         self.coinCount=0;
-        self.lifeCount=1;
+        self.lifeCount=0;
         self.fall1=false;
         self.fall2=false;
         jokerStartCharge = false;

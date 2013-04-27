@@ -52,11 +52,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "JokerJumper/GameLayer2.mm"
-         timestampString = "388710846.445894"
+         timestampString = "388724544.330338"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1047"
-         endingLineNumber = "1047"
+         startingLineNumber = "1048"
+         endingLineNumber = "1048"
          landmarkName = "-updateEmeny:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -78,12 +78,38 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "JokerJumper/GameLayer2.mm"
-         timestampString = "388710510.094239"
+         timestampString = "388724544.330338"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "938"
-         endingLineNumber = "938"
+         startingLineNumber = "939"
+         endingLineNumber = "939"
          landmarkName = "-init"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "JokerJumper/GameLayer2.mm"
+         timestampString = "388724249.450907"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "229"
+         endingLineNumber = "229"
+         landmarkName = "-makeBox2dObjAt:withSize:dynamic:rotation:friction:density:restitution:boxId:bodyType:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "JokerJumper/GameLayer.mm"
+         timestampString = "388724283.39677"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "296"
+         endingLineNumber = "296"
+         landmarkName = "-makeBox2dObjAt:withSize:dynamic:rotation:friction:density:restitution:boxId:bodyType:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

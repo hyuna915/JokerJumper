@@ -684,11 +684,13 @@ bool gravity3 = false;
     diamondBatchNode = [CCSpriteBatchNode batchNodeWithFile:@"diamond_default.png"];
     leafBatchNode=[CCSpriteBatchNode batchNodeWithFile:@"snow_flower_default.png"];
     flowerBatchNode=[CCSpriteBatchNode batchNodeWithFile:@"leaf_default.png"];
+    
     /*
      brick1BatchNode.scale=4;
      brick2BatchNode.scale=4;
      brick3BatchNode.scale=4;
      */
+    [self addChild:heartBatchNode z:10];
     [self addChild:jokerBatchNode z:10];
     [self addChild:emenyBatchNode z:9];
     [self addChild:brick1BatchNode z:2];
@@ -713,7 +715,7 @@ bool gravity3 = false;
         
         self.tag = GAME_LAYER_TAG;
         self.coinCount=0;
-        self.lifeCount=1;
+        self.lifeCount=0;
         self.fall1=false;
         self.fall2=false;
         jokerStartCharge = false;

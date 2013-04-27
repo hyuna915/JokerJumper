@@ -710,6 +710,7 @@ bool gravity = false;
     [self addChild:diamondBatchNode z:3];
     [self addChild:leafBatchNode z:11];
     [self addChild:flowerBatchNode z:10];
+    [self addChild:heartBatchNode z:10];
     
 }
 
@@ -739,7 +740,7 @@ bool gravity = false;
         }
         self.tag = GAME_LAYER_TAG;
         self.coinCount=0;
-        self.lifeCount=1;
+        self.lifeCount=0;
         self.fall1=false;
         self.fall2=false;
         jokerStartCharge = false;
