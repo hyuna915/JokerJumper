@@ -138,7 +138,7 @@ bool gravity3 = false;
     [self drawCoinTiles:tileMapNode withOffset:offset];
     [self drawCoin1Tiles:tileMapNode withOffset:offset];
     [self drawCoin2Tiles:tileMapNode withOffset:offset];
-    [self drawCoin3Tiles:tileMapNode withOffset:offset];
+    [self drawIcicleTiles:tileMapNode withOffset:offset];
     //    [self drawFlowerTiles:tileMapNode withOffset:offset];
     [self drawCollision1Tiles:tileMapNode withOffset:offset];
     [self drawCollision2Tiles:tileMapNode withOffset:offset];
@@ -300,9 +300,9 @@ bool gravity3 = false;
         [platform setType:type];
         [self addChild:platform z:5];
     }
-    else if(type==kGameObjectCoin3)
+    else if(type==kGameObjectIcicle)
     {
-        platform = [GameObject spriteWithFile:@"spade.png"];
+         platform=[[GameObject alloc] init];
         [platform setType:type];
         [self addChild:platform z:6];
     }
@@ -626,8 +626,8 @@ bool gravity3 = false;
 /*
  *draw magic club collision layer
  */
-- (void) drawCoin3Tiles:(CCTMXTiledMap *)tileMapNode withOffset:(int)offset {
-	CCTMXObjectGroup *objects = [tileMapNode objectGroupNamed:@"club"];
+- (void) drawIcicleTiles:(CCTMXTiledMap *)tileMapNode withOffset:(int)offset {
+	CCTMXObjectGroup *objects = [tileMapNode objectGroupNamed:@"icicle"];
 	NSMutableDictionary * objPoint;
     
 	float x, y, w, h;
@@ -648,7 +648,7 @@ bool gravity3 = false;
 					 density:0.0f
 				 restitution:0
 					   boxId:-1
-                    bodyType:kGameObjectCoin3
+                    bodyType:kGameObjectIcicle
          ];
 	}
 }
@@ -1017,6 +1017,26 @@ bool gravity3 = false;
                         [actor setTexture:[flowerBatchNode texture]];
                         [actor runAction:Action];
                     }
+                }
+                else if(actor.type==kGameObjectIcicle&&!CGRectIsNull(CGRectIntersection([self positionRect:joker],[self positionRect:actor])))
+                {
+                    [self unscheduleAllSelectors];
+                    [self schedule:@selector(delayReplaceScene:) interval:0.1f];
+                    
+                    NSMutableArray *jokerrunDeadFrames = [NSMutableArray array];
+                    for(int i = 1; i <= 9; ++i) {
+                        [jokerrunDeadFrames addObject:
+                         [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:
+                          [NSString stringWithFormat:@"dead%d.png", i]]];
+                    }
+                    
+                    [joker stopAllActions];
+                    //        [joker stopActionByTag:jokerRunActionTag];
+                    
+                    CCAnimation *jokerDeadAnimation = [CCAnimation animationWithSpriteFrames:jokerrunDeadFrames delay:0.09f];
+                    CCAction *jokerDeadAction = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation: jokerDeadAnimation]];
+                    
+                    [joker runAction:jokerDeadAction];
                 }
                 if((b->GetPosition().x*PTM_RATIO<(joker.position.x-DESTORY_DISTANCE))&&actor.type!=kGameObjectEmeny1&&actor.type!=kGameObjectEmeny2)
                 {

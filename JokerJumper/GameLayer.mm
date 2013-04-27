@@ -1077,6 +1077,28 @@ bool gravity = false;
             if([myActor isMemberOfClass:[GameObject class]])
             {
                 GameObject*actor=(GameObject*)myActor;
+                if(actor.type==kGameObjectFlower&&!CGRectIsNull(CGRectIntersection([self positionRect:joker],[self positionRect:actor])))
+                {
+                    [self unscheduleAllSelectors];
+                    [self schedule:@selector(delayReplaceScene:) interval:0.1f];
+                    
+                    NSMutableArray *jokerrunDeadFrames = [NSMutableArray array];
+                    for(int i = 1; i <= 9; ++i) {
+                        [jokerrunDeadFrames addObject:
+                         [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:
+                          [NSString stringWithFormat:@"dead%d.png", i]]];
+                    }
+                    
+                    [joker stopAllActions];
+                    //        [joker stopActionByTag:jokerRunActionTag];
+                    
+                    CCAnimation *jokerDeadAnimation = [CCAnimation animationWithSpriteFrames:jokerrunDeadFrames delay:0.09f];
+                    CCAction *jokerDeadAction = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation: jokerDeadAnimation]];
+                    
+                    [joker runAction:jokerDeadAction];
+                }
+
+                
                 /*
                  if(actor.type==kGameObjectFlower)
                  {
