@@ -10,6 +10,7 @@
 #import "GameScene.h"
 #import "BackgroundLayer.h"
 #import "Constants.h"
+#import "MainMenuScene.h"
 
 int stageLevel;
 int coinNum;
@@ -63,7 +64,21 @@ CCSprite* winJoker;
         [self addChild:winCharacterBatchNode z:1];
         
         winJoker = [CCSprite spriteWithSpriteFrameName:@"joker1.png"];
-        winJoker.position = ccp(80, 255);
+        
+        switch (stageLevel) {
+            case GAME_STATE_ONE:
+                winJoker.position = ccp(80, 255);
+                break;
+            case GAME_STATE_TWO:
+                 winJoker.position = ccp(80, 60);
+                break;
+            case GAME_STATE_THREE:
+                 winJoker.position = ccp(80, 60);
+                break;
+                
+            default:
+                break;
+        }
         
         NSMutableArray *jokerrunAnimFrames = [NSMutableArray array];
         for(int i = 1; i <= 14; ++i) {
@@ -77,7 +92,25 @@ CCSprite* winJoker;
         jokerRunAction.tag = jokerRunActionTag;
         [winJoker runAction:jokerRunAction];
         [winCharacterBatchNode addChild:winJoker];
-        CCFiniteTimeAction *winMoveAction = [CCMoveTo actionWithDuration:6.0f position:ccp(winSize.width - 100, 255)];
+        
+        CCFiniteTimeAction *winMoveAction;
+
+        switch (stageLevel) {
+            case GAME_STATE_ONE:
+                winMoveAction = [CCMoveTo actionWithDuration:6.0f position:ccp(winSize.width - 100, 255)];
+                break;
+            case GAME_STATE_TWO:
+                winMoveAction = [CCMoveTo actionWithDuration:6.0f position:ccp(winSize.width - 100, 60)];
+                break;
+            case GAME_STATE_THREE:
+                winMoveAction = [CCMoveTo actionWithDuration:6.0f position:ccp(winSize.width - 100, 60)];
+                break;
+                
+            default:
+                break;
+        }
+        
+        
         winJoker.scale=1.5;
         [winJoker runAction:winMoveAction];
         
@@ -102,7 +135,7 @@ CCSprite* winJoker;
                 button = [CCMenuItemImage itemWithNormalImage:@"level2end.png" selectedImage:@"level2end.png" target:self selector:@selector(buttonNextAction:)];
                 break;
             case GAME_STATE_THREE:
-                button = [CCMenuItemImage itemWithNormalImage:@"level3end.png" selectedImage:@"level3end.png" target:self selector:@selector(buttonNextAction:)];
+                button = [CCMenuItemImage itemWithNormalImage:@"level3end2.png" selectedImage:@"level3end2.png" target:self selector:@selector(buttonNextAction:)];
                 break;
 
             default:
@@ -206,7 +239,8 @@ CCSprite* winJoker;
             [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[GameScene sceneWithState:GAME_STATE_THREE]]];
             break;
         case 3:
-            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[GameScene sceneWithState:GAME_STATE_ONE]]];
+//            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[GameScene sceneWithState:GAME_STATE_ONE]]];
+            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[MainMenuScene scene]]];
             break;
         default:
             break;

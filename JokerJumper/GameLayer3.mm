@@ -118,7 +118,7 @@ bool gravity3 = false;
         }
     }
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"lv3_background.mp3"];
-    [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume:3];
+    [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume:2];
 }
 
 - (void) initTiledMaps {
@@ -1084,7 +1084,7 @@ bool gravity3 = false;
         
     }
     if(joker.position.x >= MAP_LENGTH * PTM_RATIO * MAP_LEVEL1_NUMS) {
-        //    if(joker.position.x >= 1000) {
+//    if(joker.position.x >= 1000) {
         [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
         // CCTransitionFadeBL, lose: CCTransitionProgressRadialCCW
         [[CCDirector sharedDirector] replaceScene:[CCTransitionFadeBL transitionWithDuration:1.0 scene:[GameWinScene sceneWithLevel:GAME_STATE_THREE Coin:coinCount Distance:distance]]];
@@ -1299,7 +1299,7 @@ bool gravity3 = false;
     // accelerate
     if ((endLocation.x - startLocation.x) >= 200 ) {
         // Swipe
-        if(coinCount > 0) {
+//        if(coinCount > 0) {
             if(!loseGravity) {
                 coinCount--;
                 b2Body *jokerBody = [joker getBody];
@@ -1307,10 +1307,10 @@ bool gravity3 = false;
                 jokerBody->SetLinearVelocity(impulse);
                 jokerAcc = true;
             }
-        }
-        else {
-            [hudLayer zoomCoin];
-        }
+//        }
+//        else {
+//            [hudLayer zoomCoin];
+//        }
     } // deccelerate
     else if((startLocation.x - endLocation.x) >= 200 ) {
         if(coinCount > 0) {

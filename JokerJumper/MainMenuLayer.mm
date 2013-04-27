@@ -12,6 +12,7 @@
 #import "LevelScrollScene.h"
 #import "GameScene.h"
 #import "Constants.h"
+#import "SimpleAudioEngine.h"
 
 #define PLAY_BUTTON_TAG 1
 #define OPTIONS_BUTTON_TAG 2
@@ -48,10 +49,24 @@ CGSize winSize;
 
 @implementation MainMenuLayer
 
+- (void)preLoadSoundFiles
+{
+    SimpleAudioEngine *sae = [SimpleAudioEngine sharedEngine];
+    if (sae != nil) {
+        [sae preloadBackgroundMusic:@"background_music.mp3"];
+        if (sae.willPlayBackgroundMusic) {
+            sae.backgroundMusicVolume = 0.5f;
+        }
+    }
+    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"background_music.mp3"];
+}
+
 - (id) init {
     self = [super init];
     if (self) {
         winSize = [[CCDirector sharedDirector] winSize];
+        
+        [self preLoadSoundFiles];
         
         bg = [CCSprite spriteWithFile:@"bg.png"];
         bg.anchorPoint = ccp(0, 0);
