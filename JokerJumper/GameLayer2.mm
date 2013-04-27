@@ -1154,7 +1154,7 @@ bool gravity2 = false;
     
     if(joker.position.x>100*32-300 && hand1==false)
     {
-        [self updateFlower:ccp(100*32,(24-16)*32)];
+        [self updateFlower:ccp(100*32,(24-17)*32)];
         hand1=true;
     }
     if(joker.position.x>150*32-300 && hand2==false)
@@ -1298,7 +1298,7 @@ bool gravity2 = false;
                  */
                 if((b->GetPosition().x*PTM_RATIO<(joker.position.x-DESTORY_DISTANCE))&&actor.type!=kGameObjectEmeny1&&actor.type!=kGameObjectEmeny2)
                 {
-                    toDestroy.push_back(b);
+                    //toDestroy.push_back(b);
                 }
             }
 		}

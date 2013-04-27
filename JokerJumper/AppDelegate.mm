@@ -12,6 +12,7 @@
 #import "IntroLayer.h"
 #import "CCBReader.h"
 #import "MainMenuScene.h"
+#import "LevelScrollScene.h"
 
 @implementation AppController
 
@@ -86,7 +87,8 @@
     
     // Then add the scene to the stack. The director will run it when it automatically when the view is displayed.
 //	[director_ pushScene: mainScene];
-	[director_ pushScene: [MainMenuScene scene]];
+//	[director_ pushScene: [MainMenuScene scene]];
+    [director_ pushScene: [LevelScrollScene scene]];
 	
 	// Create a Navigation Controller with the Director
 	navController_ = [[UINavigationController alloc] initWithRootViewController:director_];

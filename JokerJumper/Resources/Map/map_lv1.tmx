@@ -90,7 +90,6 @@
   <object x="9600" y="480"/>
   <object x="10560" y="480"/>
   <object x="6016" y="320"/>
-  <object x="8224" y="640"/>
  </objectgroup>
  <objectgroup name="heart" width="400" height="24">
   <object x="2880" y="544"/>

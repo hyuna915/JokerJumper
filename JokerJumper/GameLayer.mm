@@ -54,7 +54,7 @@
 @synthesize jumpVec;
 @synthesize hudLayer;
 
-NSString *map = @"map_lv1.tmx";
+NSString *map = @"lv1.tmx";
 bool gravity = false;
 
 +(GameLayer*) getGameLayer {
@@ -631,7 +631,7 @@ bool gravity = false;
                 friction:0.0f
                  density:2.0f
              restitution:0
-                   boxId:-1
+                   boxId:-1 
                 bodyType:kGameObjectFalling
      ];
     
@@ -984,19 +984,19 @@ bool gravity = false;
         fall2=true;
     }
     
-    if(joker.position.x>100*32-300 && flower1==false)
+    if(joker.position.x>36*32-300 && flower1==false)
     {
-        [self updateFlower:ccp(100*32,(24-20)*32)];
+        [self updateFlower:ccp(32*36,(24-18)*32)];
         flower1=true;
     }
     if(joker.position.x>156*32-300 && flower2==false)
     {
-        [self updateFlower:ccp(156*32,(24-17)*32)];
+        //[self updateFlower:ccp(156*32,(24-12)*32)];
         flower2=true;
     }
     if(joker.position.x>216*32/2-300 && flower3==false)
     {
-        [self updateFlower:ccp(216*32,(24-19)*32)];
+        //[self updateFlower:ccp(216*32,(24-12)*32)];
         flower3=true;
     }
     

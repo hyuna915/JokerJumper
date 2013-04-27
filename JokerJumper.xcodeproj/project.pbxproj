@@ -352,10 +352,10 @@
 		DC3C9B0816F015FB002178AF /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = DC3C9B0716F015FB002178AF /* heart.png */; };
 		DC4C0ADD171D28BB006EB975 /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = DC4C0ADC171D28BB006EB975 /* fire.png */; };
 		DC62117D172B79C800AB6E40 /* map_lv3_trial4.tmx in Resources */ = {isa = PBXBuildFile; fileRef = DC62117C172B79C800AB6E40 /* map_lv3_trial4.tmx */; };
-		DC62117F172B7AD700AB6E40 /* map_lv3_trial3.tmx in Resources */ = {isa = PBXBuildFile; fileRef = DC62117E172B7AD700AB6E40 /* map_lv3_trial3.tmx */; };
 		DC621181172B7B5200AB6E40 /* brick3.png in Resources */ = {isa = PBXBuildFile; fileRef = DC621180172B7B5200AB6E40 /* brick3.png */; };
-		DC621184172B86F900AB6E40 /* map_lv2.tmx in Resources */ = {isa = PBXBuildFile; fileRef = DC621182172B86F900AB6E40 /* map_lv2.tmx */; };
-		DC621185172B86F900AB6E40 /* map_lv1.tmx in Resources */ = {isa = PBXBuildFile; fileRef = DC621183172B86F900AB6E40 /* map_lv1.tmx */; };
+		DC62118B172B8CC700AB6E40 /* map_lv1.tmx in Resources */ = {isa = PBXBuildFile; fileRef = DC62118A172B8CC700AB6E40 /* map_lv1.tmx */; };
+		DC621193172B962600AB6E40 /* map_lv2.tmx in Resources */ = {isa = PBXBuildFile; fileRef = DC621192172B962600AB6E40 /* map_lv2.tmx */; };
+		DC621195172B970B00AB6E40 /* map_lv3_trial3.tmx in Resources */ = {isa = PBXBuildFile; fileRef = DC621194172B970B00AB6E40 /* map_lv3_trial3.tmx */; };
 		DC7E1993171BF5FC00DA84A0 /* skull_default.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC7E1991171BF5FC00DA84A0 /* skull_default.plist */; };
 		DC7E1994171BF5FC00DA84A0 /* skull_default.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7E1992171BF5FC00DA84A0 /* skull_default.png */; };
 		DC7E1996171BF60200DA84A0 /* level2_moon.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7E1995171BF60200DA84A0 /* level2_moon.png */; };
@@ -995,10 +995,10 @@
 		DC3C9B0716F015FB002178AF /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
 		DC4C0ADC171D28BB006EB975 /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
 		DC62117C172B79C800AB6E40 /* map_lv3_trial4.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = map_lv3_trial4.tmx; sourceTree = "<group>"; };
-		DC62117E172B7AD700AB6E40 /* map_lv3_trial3.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = map_lv3_trial3.tmx; sourceTree = "<group>"; };
 		DC621180172B7B5200AB6E40 /* brick3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brick3.png; sourceTree = "<group>"; };
-		DC621182172B86F900AB6E40 /* map_lv2.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = map_lv2.tmx; sourceTree = "<group>"; };
-		DC621183172B86F900AB6E40 /* map_lv1.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = map_lv1.tmx; sourceTree = "<group>"; };
+		DC62118A172B8CC700AB6E40 /* map_lv1.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = map_lv1.tmx; sourceTree = "<group>"; };
+		DC621192172B962600AB6E40 /* map_lv2.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = map_lv2.tmx; sourceTree = "<group>"; };
+		DC621194172B970B00AB6E40 /* map_lv3_trial3.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = map_lv3_trial3.tmx; sourceTree = "<group>"; };
 		DC7E1991171BF5FC00DA84A0 /* skull_default.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = skull_default.plist; sourceTree = "<group>"; };
 		DC7E1992171BF5FC00DA84A0 /* skull_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skull_default.png; sourceTree = "<group>"; };
 		DC7E1995171BF60200DA84A0 /* level2_moon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level2_moon.png; sourceTree = "<group>"; };
@@ -1273,21 +1273,20 @@
 				DC07CC1C172B20C2009E4B56 /* lv1.tmx */,
 				A4581664170DEA23000162FA /* map9.0.tmx */,
 				DC07CC1E172B2108009E4B56 /* map_lv2_trial3.tmx */,
-				DC621182172B86F900AB6E40 /* map_lv2.tmx */,
-				DC621183172B86F900AB6E40 /* map_lv1.tmx */,
 				A4ABCA251707FC3000FB4623 /* map7.3.tmx */,
 				A4ABCA231707FC2200FB4623 /* bg_layer1.png */,
-				DC62117E172B7AD700AB6E40 /* map_lv3_trial3.tmx */,
 				E988177F171D18DB00269E7A /* map_lv2_trial.tmx */,
 				A478BF841707DA4C00F40FB5 /* map7.2_copy.tmx */,
 				DC7E1997171BF62E00DA84A0 /* map_lv2_1.0.tmx */,
 				DC62117C172B79C800AB6E40 /* map_lv3_trial4.tmx */,
 				DCA232D4170C281800EA70E0 /* map8.2.tmx */,
 				DCA232D2170C27BC00EA70E0 /* map8.3_flower.tmx */,
+				DC62118A172B8CC700AB6E40 /* map_lv1.tmx */,
 				DC621180172B7B5200AB6E40 /* brick3.png */,
 				A4810E8017062B6900C61964 /* map5.95_copy.tmx */,
 				DCB5648517001A0A0089936A /* map5.9_3.tmx */,
 				DC146AEC171E4659004B27FE /* brick2.png */,
+				DC621194172B970B00AB6E40 /* map_lv3_trial3.tmx */,
 				DCB56483170019170089936A /* map5.9_2.tmx */,
 				A4DF532716F0AB3D00720555 /* tilemap5.5.png */,
 				E951845517077FA200F72200 /* map7.1.tmx */,
@@ -1299,6 +1298,7 @@
 				DCF791C51708309700C173BC /* fallingBrick4.png */,
 				DCB5643816FF8C7E0089936A /* tilemap6.png */,
 				A4DF532216F0A81F00720555 /* map5.tmx */,
+				DC621192172B962600AB6E40 /* map_lv2.tmx */,
 				A4DF532316F0A81F00720555 /* tilemap5.png */,
 				A4DCA7F516F062F200819798 /* fly.png */,
 				DC1F25F7170369D40014F3AC /* map5.96.tmx */,
@@ -2365,10 +2365,10 @@
 				A4F1BC4A172B47EF0069DE8D /* level3end2.png in Resources */,
 				A4F1BC4C172B4C320069DE8D /* lv1_background.mp3 in Resources */,
 				DC62117D172B79C800AB6E40 /* map_lv3_trial4.tmx in Resources */,
-				DC62117F172B7AD700AB6E40 /* map_lv3_trial3.tmx in Resources */,
 				DC621181172B7B5200AB6E40 /* brick3.png in Resources */,
-				DC621184172B86F900AB6E40 /* map_lv2.tmx in Resources */,
-				DC621185172B86F900AB6E40 /* map_lv1.tmx in Resources */,
+				DC62118B172B8CC700AB6E40 /* map_lv1.tmx in Resources */,
+				DC621193172B962600AB6E40 /* map_lv2.tmx in Resources */,
+				DC621195172B970B00AB6E40 /* map_lv3_trial3.tmx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
