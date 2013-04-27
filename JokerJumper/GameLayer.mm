@@ -232,7 +232,7 @@ bool gravity = false;
     else if(type==kGameObjectPlatform2)
     {
         platform=[[GameObject alloc] init];
-        platform = [GameObject spriteWithFile:@"brick_grass_hd.png"];
+        //platform = [GameObject spriteWithFile:@"brick_grass_hd.png"];
         //        [platform setVisible:false];
         [platform setType:type];
         [self addChild:platform z:2];
