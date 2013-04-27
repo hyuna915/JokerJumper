@@ -1298,7 +1298,7 @@ bool gravity2 = false;
                  */
                 if((b->GetPosition().x*PTM_RATIO<(joker.position.x-DESTORY_DISTANCE))&&actor.type!=kGameObjectEmeny1&&actor.type!=kGameObjectEmeny2)
                 {
-                    //toDestroy.push_back(b);
+                    toDestroy.push_back(b);
                 }
             }
 		}
