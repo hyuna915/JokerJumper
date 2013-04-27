@@ -125,12 +125,12 @@ bool gravity = false;
     [[SimpleAudioEngine sharedEngine] preloadEffect:@"Collect_Coin.wav"];
     SimpleAudioEngine *sae = [SimpleAudioEngine sharedEngine];
     if (sae != nil) {
-        [sae preloadBackgroundMusic:@"lv1_background.mp3"];
+        [sae preloadBackgroundMusic:@"DST-Canopy.mp3"];
         if (sae.willPlayBackgroundMusic) {
             sae.backgroundMusicVolume = 0.5f;
         }
     }
-    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"lv1_background.mp3"];
+    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"DST-Canopy.mp3"];
     [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume:1.2];
 }
 
