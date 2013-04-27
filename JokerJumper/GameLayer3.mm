@@ -906,16 +906,16 @@ bool gravity3 = false;
         [bubble setVisible:false];
     }
     
-    if(joker.position.x>FALLING_WOOD1-FALLING_OFFSET&&fall1==false)
-    {
-        [self updateFalling:FALLING_WOOD1];
-        fall1=true;
-    }
-    if(joker.position.x>FALLING_WOOD2-FALLING_OFFSET&&fall2==false)
-    {
-        [self updateFalling:FALLING_WOOD2];
-        fall2=true;
-    }
+//    if(joker.position.x>FALLING_WOOD1-FALLING_OFFSET&&fall1==false)
+//    {
+//        [self updateFalling:FALLING_WOOD1];
+//        fall1=true;
+//    }
+//    if(joker.position.x>FALLING_WOOD2-FALLING_OFFSET&&fall2==false)
+//    {
+//        [self updateFalling:FALLING_WOOD2];
+//        fall2=true;
+//    }
     
     if(!CGRectIsNull(CGRectIntersection([self positionRect:joker],[self positionRect:fly])))
     {

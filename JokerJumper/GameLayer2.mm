@@ -47,7 +47,7 @@
 @synthesize hudLayer;
 @synthesize positionVec;
 
-NSString *map2 = @"map_lv2_trial3.tmx";
+NSString *map2 = @"map_lv2.tmx";
 
 bool gravity2 = false;
 

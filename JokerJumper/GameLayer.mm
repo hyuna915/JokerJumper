@@ -54,7 +54,7 @@
 @synthesize jumpVec;
 @synthesize hudLayer;
 
-NSString *map = @"lv1.tmx";
+NSString *map = @"map_lv1.tmx";
 bool gravity = false;
 
 +(GameLayer*) getGameLayer {
