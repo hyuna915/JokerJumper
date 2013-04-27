@@ -131,6 +131,7 @@ bool gravity = false;
         }
     }
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"lv1_background.mp3"];
+    [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume:1.2];
 }
 
 - (void) initTiledMaps {
@@ -1004,7 +1005,7 @@ bool gravity = false;
     if(!CGRectIsNull(CGRectIntersection([self positionRect:joker],[self positionRect:fly])))
     {
         lifeCount--;
-        [[SimpleAudioEngine sharedEngine] playEffect:@"Pain-SoundBible.com-1883168362.wav"];
+        [[SimpleAudioEngine sharedEngine] playEffect:@"Pain.wav"];
     }
     if(!CGRectIsNull(CGRectIntersection([self positionRect:joker],[self positionRect:emeny])))
     {

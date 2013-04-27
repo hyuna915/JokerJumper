@@ -118,12 +118,12 @@ bool gravity2 = false;
     [[SimpleAudioEngine sharedEngine] preloadEffect:@"Collect_Coin.wav"];
     SimpleAudioEngine *sae = [SimpleAudioEngine sharedEngine];
     if (sae != nil) {
-        [sae preloadBackgroundMusic:@"1.wav"];
+        [sae preloadBackgroundMusic:@"lv2_background.wav"];
         if (sae.willPlayBackgroundMusic) {
             sae.backgroundMusicVolume = 0.5f;
         }
     }
-    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"1.wav"];
+    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"lv2_background.wav"];
 }
 
 - (void) initTiledMaps {
@@ -159,7 +159,7 @@ bool gravity2 = false;
     CCLOG(@"here.5");
     [self drawCollision1Tiles:tileMapNode withOffset:offset];
     CCLOG(@"here.6");
-    //[self drawCollision2Tiles:tileMapNode withOffset:offset];
+    [self drawCollision2Tiles:tileMapNode withOffset:offset];
     CCLOG(@"here.7");
     [self drawCollision3Tiles:tileMapNode withOffset:offset];
     CCLOG(@"here.8");
@@ -1171,7 +1171,7 @@ bool gravity2 = false;
     if(!CGRectIsNull(CGRectIntersection([self positionRect:joker],[self positionRect:fly])))
     {
         self.lifeCount--;
-        [[SimpleAudioEngine sharedEngine] playEffect:@"Pain-SoundBible.com-1883168362.wav"];
+        [[SimpleAudioEngine sharedEngine] playEffect:@"Pain.wav"];
     }
     if(!CGRectIsNull(CGRectIntersection([self positionRect:joker],[self positionRect:emeny])))
     {
