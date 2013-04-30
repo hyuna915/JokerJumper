@@ -10,7 +10,8 @@
 #import "cocos2d.h"
 
 @interface MainMenuLayer : CCLayer {
-    CCSprite *helpMenu;
+//    CCSprite *helpMenu;
+    CCMenuItem *helpMenuButton;
     
     CCSprite *cloudLeft0;
     CCSprite *cloudLeft1;

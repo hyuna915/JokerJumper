@@ -225,15 +225,25 @@ CGSize winSize;
         CCMenu *Menu2 = [CCMenu menuWithItems:helpButton, nil];
         Menu2.position=ccp(920, 80);
         
-        [self addChild:Menu2 z:1];
+        [self addChild:Menu2 z:10];
 
-        helpMenu = [CCSprite spriteWithFile:@"help_menu.png"];
-        helpMenu.anchorPoint = ccp(0, 0);
-        helpMenu.visible = false;
-        helpMenu.scale = 0.8;
+//        helpMenu = [CCSprite spriteWithFile:@"help_menu.png"];
+//        helpMenu.anchorPoint = ccp(0, 0);
+//        helpMenu.visible = false;
 
-        helpMenu.position = ccp(20, 140);
-        [self addChild:helpMenu z:100];
+        helpMenuButton = [CCMenuItemImage itemWithNormalImage:@"help_menu.png" selectedImage:@"help_menu.png" target:self selector:@selector(helpMenuAction:)];
+        helpMenuButton.anchorPoint = ccp(0, 0);
+        helpMenuButton.visible = false;
+        
+        CCMenu *Menu3 = [CCMenu menuWithItems:helpMenuButton, nil];
+        Menu3.anchorPoint = ccp(0, 0);
+        Menu3.position=ccp(0, 0);
+        
+        
+//        helpMenu.scale = 0.8;
+
+//        helpMenu.position = ccp(20, 140);
+        [self addChild:Menu3 z:20];
         
         // Cloud Left
         cloudLeft0 = [CCSprite spriteWithFile:@"cloud_left0.png"];
@@ -338,11 +348,15 @@ CGSize winSize;
     
 }
 
+-(void) helpMenuAction:(id)sender {
+    helpMenuButton.visible = false;
+}
+
 -(void) buttonHelpAction:(id)sender {
-    if(helpMenu.visible == true)
-        helpMenu.visible = false;
+    if(helpMenuButton.visible == true)
+        helpMenuButton.visible = false;
     else
-        helpMenu.visible = true;
+        helpMenuButton.visible = true;
 }
 
 - (void)updateCloudMoveOut:(ccTime) dt
@@ -381,9 +395,35 @@ CGSize winSize;
         default:
             [self unschedule:@selector(updateCloudMoveOut:)];
             cloudMoveOutCount = 0;
-            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[LevelScrollScene scene]]];
+//            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[LevelScrollScene scene]]];
             break;
     }
+}
+
+-(void)allCloudMoveOut {
+    [cloudLeft1 stopAllActions];
+    cloudL1 = [CCMoveTo actionWithDuration:0.5f position:ccp(-700, 100)];
+    [cloudLeft1 runAction:cloudL1];
+    
+    [cloudRight1 stopAllActions];
+    cloudR1 = [CCMoveTo actionWithDuration:0.5f position:ccp(1234, 100)];
+    [cloudRight1 runAction:cloudR1];
+    
+    [cloudLeft2 stopAllActions];
+    cloudL2 = [CCMoveTo actionWithDuration:0.5f position:ccp(-600, 100)];
+    [cloudLeft2 runAction:cloudL2];
+    
+    [cloudRight2 stopAllActions];
+    cloudR2 = [CCMoveTo actionWithDuration:0.5f position:ccp(1234, 100)];
+    [cloudRight2 runAction:cloudR2];
+    
+    [cloudLeft3 stopAllActions];
+    cloudL3 = [CCMoveTo actionWithDuration:0.5f position:ccp(-600, 70)];
+    [cloudLeft3 runAction:cloudL3];
+    
+    [cloudRight3 stopAllActions];
+    cloudR3 = [CCMoveTo actionWithDuration:0.5f position:ccp(1034, 70)];
+    [cloudRight3 runAction:cloudR3];
 }
 
 
@@ -399,9 +439,10 @@ CGSize winSize;
     [cloudRight0 stopAllActions];
     cloudR0 = [CCMoveTo actionWithDuration:0.5f position:ccp(1234, 100)];
     [cloudRight0 runAction:cloudR0];
-    [self schedule:@selector(updateCloudMoveOut:) interval:0.5f];
+    [self allCloudMoveOut];
+//    [self schedule:@selector(updateCloudMoveOut:) interval:0.5f];
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[LevelScrollScene scene]]];
 }
-
 
 
 -(void) buttonOptionAction:(id)sender {

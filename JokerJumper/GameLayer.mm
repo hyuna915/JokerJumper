@@ -626,7 +626,7 @@ bool gravity = false;
 {
     CGSize screenSize = [CCDirector sharedDirector].winSize;
     [self makeBox2dObjAt:ccp(x,screenSize.height+50)
-                withSize:ccp(256,40)
+                withSize:ccp(300,40)
                  dynamic:false
                 rotation:0
                 friction:0.0f
