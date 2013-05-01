@@ -834,9 +834,10 @@ bool gravity2 = false;
         accelerationY = 0;
         lastAccelerationY = 0;
         
+        
         self.tag = GAME_LAYER2_TAG;
-        self.coinCount=0;
-        self.lifeCount=0;
+        self.coinCount=10;
+        self.lifeCount=10;
         self.fall1=false;
         self.fall2=false;
         jokerStartCharge = false;
@@ -1162,9 +1163,9 @@ bool gravity2 = false;
         [self updateFlower:ccp(150*32,(24-16)*32)];
         hand2=true;
     }
-    if(joker.position.x>214*32/2-300 && hand3==false)
+    if(joker.position.x>245*32/2-300 && hand3==false)
     {
-        [self updateFlower:ccp(214*32,(24-15)*32)];
+        [self updateFlower:ccp(245*32,(24-15)*32)];
         hand3=true;
     }
     
@@ -1552,7 +1553,7 @@ bool gravity2 = false;
     
     // Compare difference in distance
     // accelerate
-    if ((endLocation.x - startLocation.x) >= 200 ) {
+    if ((endLocation.x - startLocation.x) >= 100 ) {
         // Swipe
         if(self.coinCount > 0) {
             if(!loseGravity) {
@@ -1567,7 +1568,7 @@ bool gravity2 = false;
             [hudLayer zoomCoin];
         }
     } // deccelerate
-    else if((startLocation.x - endLocation.x) >= 200 ) {
+    else if((startLocation.x - endLocation.x) >= 100 ) {
         if(self.coinCount > 0) {
             if(!loseGravity) {
                 self.coinCount--;
@@ -1580,7 +1581,7 @@ bool gravity2 = false;
             [hudLayer zoomCoin];
         }
     } // lose gravity
-    else if((endLocation.y - startLocation.y) >= 200 ) {
+    else if((endLocation.y - startLocation.y) >= 100 ) {
         if(loseGravity && joker.jokerFlip) {
             loseGravity = false;
             joker.jokerBody->SetGravityScale(-1);
@@ -1599,7 +1600,7 @@ bool gravity2 = false;
             }
         }
     } // get gravity
-    else if((startLocation.y - endLocation.y) >= 200) {
+    else if((startLocation.y - endLocation.y) >= 100) {
         if(loseGravity && !joker.jokerFlip) {
             loseGravity = false;
             joker.jokerBody->SetGravityScale(1);

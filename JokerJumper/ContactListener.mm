@@ -149,7 +149,7 @@ void ContactListener::BeginContact(b2Contact *contact) {
             CCLayer * layer = (CCLayer*)[scene getChildByTag:GAME_LAYER_TAG];
             GameObject* accerate=[GameObject spriteWithFile:@"acceleration.png"];
             [accerate setType:kGameObjectAccerate];
-            accerate.opacity=50.0f;
+            accerate.opacity=100.0f;
             accerate.position=jokerSprite.position;
             
             [layer addChild:accerate z:30];

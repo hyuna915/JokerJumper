@@ -906,7 +906,7 @@ bool gravity = false;
     //    id sequence = [CCSequence actions:Action1, Action2, nil];
     //    [actor setTexture:[flowerBatchNode texture]];
     
-    [self addChild:actor z:10];
+    [self addChild:actor z:20];
     [actor runAction:Action1];
 }
 
@@ -987,26 +987,26 @@ bool gravity = false;
     
     if(joker.position.x>36*32-300 && flower1==false)
     {
-        [self updateFlower:ccp(32*36,(24-18)*32)];
+        [self updateFlower:ccp(32*36,(24-18)*32+32)];
         flower1=true;
     }
-    if(joker.position.x>156*32-300 && flower2==false)
+    if(joker.position.x>220*32-300 && flower2==false)
     {
-        //[self updateFlower:ccp(156*32,(24-12)*32)];
+        [self updateFlower:ccp(220*32,(24-19)*32)];
         flower2=true;
     }
-    if(joker.position.x>216*32/2-300 && flower3==false)
+    if(joker.position.x>331*32-300 && flower3==false)
     {
-        //[self updateFlower:ccp(216*32,(24-12)*32)];
+        [self updateFlower:ccp(331*32,(24-14)*32)];
         flower3=true;
     }
     
     
-    if(!CGRectIsNull(CGRectIntersection([self positionRect:joker],[self positionRect:fly])))
-    {
-        lifeCount--;
-        [[SimpleAudioEngine sharedEngine] playEffect:@"Pain.wav"];
-    }
+//    if(!CGRectIsNull(CGRectIntersection([self positionRect:joker],[self positionRect:fly])))
+//    {
+//        lifeCount--;
+//        [[SimpleAudioEngine sharedEngine] playEffect:@"Pain.wav"];
+//    }
     if(!CGRectIsNull(CGRectIntersection([self positionRect:joker],[self positionRect:emeny])))
     {
         //        [[SimpleAudioEngine sharedEngine] playEffect:@"Cartoon clown laugh.wav"];
@@ -1354,7 +1354,7 @@ bool gravity = false;
     
     // Compare difference in distance
     // accelerate
-    if ((endLocation.x - startLocation.x) >= 200 ) {
+    if ((endLocation.x - startLocation.x) >= 100 ) {
         // Swipe
         if(coinCount > 0) {
             if(!loseGravity) {
@@ -1369,7 +1369,7 @@ bool gravity = false;
             [hudLayer zoomCoin];
         }
     } // deccelerate
-    else if((startLocation.x - endLocation.x) >= 200 ) {
+    else if((startLocation.x - endLocation.x) >= 100 ) {
         if(coinCount > 0) {
             if(!loseGravity) {
                 coinCount--;
@@ -1382,7 +1382,7 @@ bool gravity = false;
             [hudLayer zoomCoin];
         }
     } // lose gravity
-    else if((endLocation.y - startLocation.y) >= 200 ) {
+    else if((endLocation.y - startLocation.y) >= 100 ) {
         if(loseGravity && joker.jokerFlip) {
             loseGravity = false;
             joker.jokerBody->SetGravityScale(-1);
@@ -1401,7 +1401,7 @@ bool gravity = false;
             }            
         }
     } // get gravity
-    else if((startLocation.y - endLocation.y) >= 200) {
+    else if((startLocation.y - endLocation.y) >= 100) {
         if(loseGravity && !joker.jokerFlip) {
             loseGravity = false;
             joker.jokerBody->SetGravityScale(1);

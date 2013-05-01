@@ -31,6 +31,13 @@
   <object x="8000" y="96" width="128" height="64"/>
   <object x="8800" y="224" width="128" height="64"/>
   <object x="7040" y="320"/>
+  <object x="11456" y="160" width="128" height="64"/>
+  <object x="11904" y="96" width="128" height="64"/>
+  <object x="11264" y="416" width="128" height="64"/>
+  <object x="11680" y="480" width="128" height="64"/>
+  <object x="12160" y="544" width="128" height="64"/>
+  <object x="12384" y="32" width="192" height="64"/>
+  <object x="12672" y="608" width="128" height="64"/>
  </objectgroup>
  <objectgroup name="brick_ice" width="400" height="24">
   <object x="1632" y="544" width="64" height="64"/>
@@ -91,13 +98,6 @@
   <object x="10784" y="512" width="64" height="64"/>
   <object x="10592" y="512" width="64" height="64"/>
   <object x="10848" y="512" width="64" height="64"/>
-  <object x="11264" y="416" width="128" height="64"/>
-  <object x="11456" y="160" width="128" height="64"/>
-  <object x="11680" y="480" width="128" height="64"/>
-  <object x="11904" y="96" width="128" height="64"/>
-  <object x="12160" y="544" width="128" height="64"/>
-  <object x="12384" y="32" width="128" height="64"/>
-  <object x="12672" y="608" width="128" height="64"/>
  </objectgroup>
  <objectgroup name="diamond" width="400" height="24">
   <object x="480" y="512"/>
@@ -130,7 +130,7 @@
  <objectgroup name="club" width="400" height="24"/>
  <layer name="Wall" width="400" height="24">
   <data encoding="base64" compression="zlib">
-   eJzt3LlOxDAQgOGFHnrOjmN5/wfEEqKJdsFO5p7/kywXJBSxnXjGoz2dAADo4WG0x4keADCny/vzbbT3ib6zm9FuD/QAeuH9iV93o90f6PE/i2+v1J6wy96yO8YZyMHi2yu1J6y0t5zNX0v1mWL5SuOM2qzXsde5V4T3gpeI+9nZ/LVU7xHLR3zugCTrdex17tU5x5dlP/sy2qvCtRr3z8jy3AELUmtOc+12jjMkeO6Zz6N9KVwreT8xRS0r+Y/Za6/9vXuN8dE1K/1/LukcZ0hgz/w3nk8tK/mP2Wuv/Z0aYwAAAMC/Vsa7tia6bQ0hAEThXSvjXVsT3baGsIun0Z4N7gEQT4YaOcT1MdqnwT3Yp3teQArP8TKvGjnY8c5lkuP0kyUvYBHHHol7szxHQJp3LpMcp4zK31+LONY67q08XgByyfb97f77V9nGS4PGWafEuK7mRMipQArn/3M6/P6VhkrvJI2YT2JcV3MiUjmV1Tpd6nrr2bsmKr0XoEcjbvE+6+Rs9Mdqne7eut5osbiFCHNLc55nyGd0nHcVbeep91knZ6O2qsTiKyLMre7zvOO8q6j6PAUAAAAAAEAt33PnZfU=
+   eJzt3LlOxDAQgOGFHnrOjvP9HxBLK5poA/Zm7vk/yXJBQhHbiWc82tMJAIAeHkZ7nOgBAHO6vEffRnuf6Du7Ge32QA+gF96j+HU32v2BHv+z+PZK7QWr7ylxxjgDOVh8e6X2gpX2lLP5a6k+UyxfaZxRm/U69jr3ivBe8BJxPzubv5bqPWL5iM8dkGS9jr3OvTrn+LLsZ19Ge1W4VuP+GVmeO2BBas1prt3OcYYEzz3z12jfCtdK3k9MUctK/mP22r2/d6mN23N0zUr/n0s6xxkS2DP/jedTy0r+Y/bavb9TGwcAAAD418p419ZEt60hBIAovGtlvGtrotvWEHbxNNqzwT0A4slQI4e4Pkb7NLgH1+meF5DCc7zMq0YOdrxzmeQ4/WTJC1jEsUfi3izPEZDmncskxymj8vfXIo61jnsrjxeAXLJ9f7v//lW28dKgcdYpMa6rORFyKpDC+f+cDr9/paXKe0kj5pMY19WciFROZbVOl7reeq5dE1XeCdAnHbt4n3VyNnq2Wqd7bV1vtFjcQoS5pTnPM+QzOs67irbz1Pusk7NRW5Vi8VkR5lb3ed5x3lVUfZ4CAAAAAACglh9czWZz
   </data>
  </layer>
  <objectgroup name="icicle" width="400" height="24">

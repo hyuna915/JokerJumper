@@ -123,7 +123,7 @@ bool gravity3 = false;
 
 - (void) initTiledMaps {
     //    NSMutableArray *mapArray = [[NSMutableArray alloc] initWithCapacity:MAP_LEVEL1_NUMS];
-    for(int i = 0; i < MAP_LEVEL1_NUMS; i++) {
+    for(int i = 0; i < MAP_LEVEL3_NUMS; i++) {
         CCTMXTiledMap *tileMapNode = [CCTMXTiledMap tiledMapWithTMXFile:map3];
         tileMapNode.anchorPoint = ccp(0, 0);
         int offset = MAP_LENGTH * PTM_RATIO * i;
@@ -138,7 +138,7 @@ bool gravity3 = false;
     [self drawCoinTiles:tileMapNode withOffset:offset];
     [self drawCoin1Tiles:tileMapNode withOffset:offset];
     [self drawCoin2Tiles:tileMapNode withOffset:offset];
-    [self drawIcicleTiles:tileMapNode withOffset:offset];
+    //[self drawIcicleTiles:tileMapNode withOffset:offset];
     //    [self drawFlowerTiles:tileMapNode withOffset:offset];
     [self drawCollision1Tiles:tileMapNode withOffset:offset];
     [self drawCollision2Tiles:tileMapNode withOffset:offset];
@@ -1101,7 +1101,7 @@ bool gravity3 = false;
         }
         
     }
-    if(joker.position.x >= MAP_LENGTH * PTM_RATIO * MAP_LEVEL1_NUMS) {
+    if(joker.position.x >= MAP_LENGTH * PTM_RATIO * MAP_LEVEL3_NUMS) {
 //    if(joker.position.x >= 1000) {
         [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
         // CCTransitionFadeBL, lose: CCTransitionProgressRadialCCW
@@ -1315,7 +1315,7 @@ bool gravity3 = false;
     
     // Compare difference in distance
     // accelerate
-    if ((endLocation.x - startLocation.x) >= 200 ) {
+    if ((endLocation.x - startLocation.x) >= 100 ) {
         // Swipe
 //        if(coinCount > 0) {
             if(!loseGravity) {
@@ -1330,7 +1330,7 @@ bool gravity3 = false;
 //            [hudLayer zoomCoin];
 //        }
     } // deccelerate
-    else if((startLocation.x - endLocation.x) >= 200 ) {
+    else if((startLocation.x - endLocation.x) >= 100 ) {
         if(coinCount > 0) {
             if(!loseGravity) {
                 coinCount--;
@@ -1343,7 +1343,7 @@ bool gravity3 = false;
             [hudLayer zoomCoin];
         }
     } // lose gravity
-    else if((endLocation.y - startLocation.y) >= 200 ) {
+    else if((endLocation.y - startLocation.y) >= 100 ) {
         if(loseGravity && joker.jokerFlip) {
             loseGravity = false;
             joker.jokerBody->SetGravityScale(-1);
@@ -1362,7 +1362,7 @@ bool gravity3 = false;
             }
         }
     } // get gravity
-    else if((startLocation.y - endLocation.y) >= 200) {
+    else if((startLocation.y - endLocation.y) >= 100) {
         if(loseGravity && !joker.jokerFlip) {
             loseGravity = false;
             joker.jokerBody->SetGravityScale(1);
