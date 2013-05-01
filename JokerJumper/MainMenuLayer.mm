@@ -366,30 +366,30 @@ CGSize winSize;
     switch (cloudMoveOutCount) {
         case 1:
             [cloudLeft1 stopAllActions];
-            cloudL1 = [CCMoveTo actionWithDuration:0.5f position:ccp(-700, 100)];
+            cloudL1 = [CCMoveTo actionWithDuration:0.1f position:ccp(-700, 100)];
             [cloudLeft1 runAction:cloudL1];
             
             [cloudRight1 stopAllActions];
-            cloudR1 = [CCMoveTo actionWithDuration:0.5f position:ccp(1234, 100)];
+            cloudR1 = [CCMoveTo actionWithDuration:0.1f position:ccp(1234, 100)];
             [cloudRight1 runAction:cloudR1];
             break;
         case 2:
             [cloudLeft2 stopAllActions];
-            cloudL2 = [CCMoveTo actionWithDuration:0.5f position:ccp(-600, 100)];
+            cloudL2 = [CCMoveTo actionWithDuration:0.1f position:ccp(-600, 100)];
             [cloudLeft2 runAction:cloudL2];
             
             [cloudRight2 stopAllActions];
-            cloudR2 = [CCMoveTo actionWithDuration:0.5f position:ccp(1234, 100)];
+            cloudR2 = [CCMoveTo actionWithDuration:0.1f position:ccp(1234, 100)];
             [cloudRight2 runAction:cloudR2];
             
             break;
         case 3:
             [cloudLeft3 stopAllActions];
-            cloudL3 = [CCMoveTo actionWithDuration:0.5f position:ccp(-600, 70)];
+            cloudL3 = [CCMoveTo actionWithDuration:0.1f position:ccp(-600, 70)];
             [cloudLeft3 runAction:cloudL3];
             
             [cloudRight3 stopAllActions];
-            cloudR3 = [CCMoveTo actionWithDuration:0.5f position:ccp(1034, 70)];
+            cloudR3 = [CCMoveTo actionWithDuration:0.1f position:ccp(1034, 70)];
             [cloudRight3 runAction:cloudR3];
             
             break;
@@ -397,6 +397,7 @@ CGSize winSize;
             [self unschedule:@selector(updateCloudMoveOut:)];
             cloudMoveOutCount = 0;
 //            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[LevelScrollScene scene]]];
+            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[VideoScene scene]]];
             break;
     }
 }
@@ -434,16 +435,16 @@ CGSize winSize;
     [self unschedule:@selector(updateCloudMoveIn:)];
     
     [cloudLeft0 stopAllActions];
-    cloudL0 = [CCMoveTo actionWithDuration:0.5f position:ccp(-700, 100)];
+    cloudL0 = [CCMoveTo actionWithDuration:0.1f position:ccp(-700, 100)];
     [cloudLeft0 runAction:cloudL0];
     
     [cloudRight0 stopAllActions];
-    cloudR0 = [CCMoveTo actionWithDuration:0.5f position:ccp(1234, 100)];
+    cloudR0 = [CCMoveTo actionWithDuration:0.1f position:ccp(1234, 100)];
     [cloudRight0 runAction:cloudR0];
     [self allCloudMoveOut];
-//    [self schedule:@selector(updateCloudMoveOut:) interval:0.5f];
+    [self schedule:@selector(updateCloudMoveOut:) interval:0.1f];
 //    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[LevelScrollScene scene]]];
-    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[VideoScene scene]]];
+//    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[VideoScene scene]]];
 }
 
 

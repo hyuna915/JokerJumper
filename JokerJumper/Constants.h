@@ -60,7 +60,7 @@
 #define MAP_LENGTH 400
 #define MAP_LEVEL1_NUMS 1
 #define MAP_LEVEL2_NUMS 1
-#define MAP_LEVEL3_NUMS 1
+#define MAP_LEVEL3_NUMS 2
 
 struct State {
     CGPoint position;

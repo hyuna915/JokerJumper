@@ -107,6 +107,7 @@ int pauseStat;
         menu2.position = CGPointMake(95, screenSize.height - 25);
         
         pauseButton = [CCMenuItemImage itemWithNormalImage:@"btn_pause.PNG" selectedImage:@"btn_pause.PNG" target:self selector:@selector(pauseInvisibleButtonSelected)];
+        pauseButton.scale = 2;
         CCMenu *menu3 = [CCMenu menuWithItems:pauseButton, nil];
         menu3.position = CGPointMake(950, 50);
 
@@ -125,6 +126,8 @@ int pauseStat;
 }
 
 - (void)pauseInvisibleButtonSelected {
+//    [self zoomPauseButton];
+    
     if(pauseStat == 0) {
         [[CCDirector sharedDirector] pause];
         pauseStat++;
@@ -137,6 +140,7 @@ int pauseStat;
 
 
 - (void)pauseButtonSelected {
+//    [self zoomPause];
     
     if (![[GameScene sharedGameScene] isShowingPausedMenu]) {
         [[GameScene sharedGameScene] setShowingPausedMenu:YES];
@@ -147,6 +151,8 @@ int pauseStat;
 }
 
 - (void)gravityButtonSelected {
+    [self zoomGravityButton];
+    
     CCScene* scene = [[CCDirector sharedDirector] runningScene];
     switch (hudLevel) {
         case GAME_STATE_ONE:
@@ -179,6 +185,7 @@ int pauseStat;
         NSString *amounts = [NSString stringWithFormat:@"%d", amount];
         [lifeLabel setString:amounts];
 }
+
 -(void) updateCoinCounter:(int)amount
 {
         NSString *amounts = [NSString stringWithFormat:@"%d", amount];
@@ -200,6 +207,7 @@ int pauseStat;
     [self schedule:@selector(updateZoomLife:) interval:0.05f];
 }
 
+
 - (void)updateZoomCoin:(ccTime) dt {
     coinBar.scale += 0.1;
     if(coinBar.scale >= 1.5) {
@@ -212,6 +220,44 @@ int pauseStat;
     lifeBar.scale += 0.1;
     if(lifeBar.scale >= 1.5) {
         lifeBar.scale = 1;
+        [self unscheduleAllSelectors];
+    }
+}
+
+-(void) zoomGravityButton
+{
+    [self schedule:@selector(updateZoomGravityButton:) interval:0.05f];
+}
+
+-(void) updateZoomGravityButton:(ccTime) dt {
+    gravityButton.scale += 0.1;
+    if(gravityButton.scale >= 1.5) {
+        gravityButton.scale = 1;
+        [self unscheduleAllSelectors];
+    }
+}
+
+-(void) zoomPause
+{
+    [self schedule:@selector(updateZoomPause:) interval:0.05f];
+}
+
+-(void) updateZoomPause:(ccTime) dt {
+    pause.scale += 0.1;
+    if(pause.scale >= 1.5) {
+        pause.scale = 1;
+        [self unscheduleAllSelectors];
+    }
+}
+
+-(void) zoomPauseButton {
+    [self schedule:@selector(updateZoomPauseButton:) interval:0.05f];
+}
+
+-(void) updateZoomPauseButton:(ccTime) dt {
+    pauseButton.scale -= 0.1;
+    if(pauseButton.scale <= 1.5) {
+        pauseButton.scale = 2;
         [self unscheduleAllSelectors];
     }
 }
