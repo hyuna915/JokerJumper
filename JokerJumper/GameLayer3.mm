@@ -285,7 +285,7 @@ bool gravity3 = false;
         platform = [GameObject spriteWithFile:@"brick_wood_hd.png"];
         [platform setType:type];
         [self addChild:platform z:2];
-        CCLOG(@"x: %f y: %f",size.x,size.y);
+//        CCLOG(@"x: %f y: %f",size.x,size.y);
     }
     else if(type==kGameObjectDisable)
     {
@@ -721,23 +721,23 @@ bool gravity3 = false;
         jokerStartCharge = false;
         jokerCharge = 1;
         CGSize screenSize = [CCDirector sharedDirector].winSize;
-		CCLOG(@"Screen width %0.2f screen height %0.2f",screenSize.width,screenSize.height);
+//		CCLOG(@"Screen width %0.2f screen height %0.2f",screenSize.width,screenSize.height);
         
         [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
         [self preLoadSoundFiles];
 		[self setupPhysicsWorld];
-        CCLOG(@"here1");
+//        CCLOG(@"here1");
         [self initBatchNode];
-        CCLOG(@"here2");
+//        CCLOG(@"here2");
         [self initTiledMaps];
-        CCLOG(@"here3");
+//        CCLOG(@"here3");
         joker = [Joker spriteWithSpriteFrameName:@"joker1.png"];
         //        joker = [[Joker alloc] init];
         [joker setType:kGameObjectJoker];
         [joker initAnimation:allBatchNode character:0];
         joker.position = ccp(jokerLocationX, jokerLocationY);
         [joker createBox2dObject:world];
-        CCLOG(@"here4");
+//        CCLOG(@"here4");
         emeny = [Joker spriteWithSpriteFrameName:@"enermy0.png"];
         [emeny setType:kGameObjectEmeny2];
         [emeny initAnimation: allBatchNode character:2];
@@ -761,14 +761,10 @@ bool gravity3 = false;
         [accerate runAction:accerateAction];
         [self addChild:accerate];
         
-        CCLOG(@"here5");
+//        CCLOG(@"here5");
         flyPos=0;
         CCScene* scene = [[CCDirector sharedDirector] runningScene];
         hudLayer = (HUDLayer*)[scene getChildByTag:HUD_LAYER_TAG];
-        if(hudLayer!=NULL)
-        {
-            CCLOG(@"1");
-        }
         [hudLayer updateCoinCounter:self.coinCount];
         [hudLayer updateLifeCounter:self.lifeCount];
         [hudLayer updateStatusCounter:self.distance];

@@ -42,9 +42,9 @@ void ContactListener2::BeginContact(b2Contact *contact) {
                 layer.coinCount++;
             if(coinSprite.type==kGameObjectCoin1)
                 layer.lifeCount++;
-            CCLOG(@"layer tag: %d",layer.tag);
-            CCLOG(@"#####coin: %d",layer.coinCount);
-            CCLOG(@"#####life: %d",layer.lifeCount);
+//            CCLOG(@"layer tag: %d",layer.tag);
+//            CCLOG(@"#####coin: %d",layer.coinCount);
+//            CCLOG(@"#####life: %d",layer.lifeCount);
             CCParticleSystem *ps = [CCParticleExplosion node];
             [layer addChild:ps z:12];
             ps.texture = [[CCTextureCache sharedTextureCache] addImage:@"stars.png"];

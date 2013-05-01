@@ -130,43 +130,43 @@ bool gravity2 = false;
     //    NSMutableArray *mapArray = [[NSMutableArray alloc] initWithCapacity:MAP_LEVEL1_NUMS];
     for(int i = 0; i < MAP_LEVEL2_NUMS; i++) {
         CCTMXTiledMap *tileMapNode = [CCTMXTiledMap tiledMapWithTMXFile:map2];
-        CCLOG(@"here2");
+        //CCLOG(@"here2");
         tileMapNode.anchorPoint = ccp(0, 0);
-        CCLOG(@"here3");
+        //CCLOG(@"here3");
         int offset = MAP_LENGTH * PTM_RATIO * i;
-        CCLOG(@"here4");
+        //CCLOG(@"here4");
         tileMapNode.position = ccp(offset, 0);
-        CCLOG(@"here5");
+        //CCLOG(@"here5");
         tileMapNode.scale = 2;
-        CCLOG(@"here6");
+//        CCLOG(@"here6");
         [self addChild:tileMapNode z:-1];
-        CCLOG(@"here7");
+//        CCLOG(@"here7");
         [self drawCollisions:tileMapNode withOffset:offset];
-        CCLOG(@"here8");
+//        CCLOG(@"here8");
     }
 }
 
 - (void) drawCollisions:(CCTMXTiledMap *)tileMapNode withOffset:(int)offset {
-    CCLOG(@"here.1");
+//    CCLOG(@"here.1");
     [self drawCoinTiles:tileMapNode withOffset:offset];
-    CCLOG(@"here.2");
+//    CCLOG(@"here.2");
     [self drawCoin1Tiles:tileMapNode withOffset:offset];
-    CCLOG(@"here.3");
+//    CCLOG(@"here.3");
     [self drawCoin2Tiles:tileMapNode withOffset:offset];
-    CCLOG(@"here.4");
+//    CCLOG(@"here.4");
     [self drawCoin3Tiles:tileMapNode withOffset:offset];
     //[self drawFlowerTiles:tileMapNode withOffset:offset];
-    CCLOG(@"here.5");
+//    CCLOG(@"here.5");
     [self drawCollision1Tiles:tileMapNode withOffset:offset];
-    CCLOG(@"here.6");
+//    CCLOG(@"here.6");
     [self drawCollision2Tiles:tileMapNode withOffset:offset];
-    CCLOG(@"here.7");
+//    CCLOG(@"here.7");
     [self drawCollision3Tiles:tileMapNode withOffset:offset];
-    CCLOG(@"here.8");
+//    CCLOG(@"here.8");
     [self drawCollision4Tiles:tileMapNode withOffset:offset];
-    CCLOG(@"here.9");
+//    CCLOG(@"here.9");
     [self drawCollision5Tiles:tileMapNode withOffset:offset];
-    CCLOG(@"here1.0");
+//    CCLOG(@"here1.0");
     [self drawCollision6Tiles:tileMapNode withOffset:offset];
 }
 
@@ -327,7 +327,7 @@ bool gravity2 = false;
         //platform = [GameObject spriteWithFile:@"brick_wood_hd.png"];
         [platform setType:type];
         [self addChild:platform z:2];
-        CCLOG(@"x: %f y: %f",size.x,size.y);
+//        CCLOG(@"x: %f y: %f",size.x,size.y);
     }
     else if(type==kGameObjectDisable)
     {
@@ -696,7 +696,7 @@ bool gravity2 = false;
 - (void)updateFlower:(CGPoint)point
 {
     CGSize winSize = [CCDirector sharedDirector].winSize;
-    CCLOG(@"winSize: height: %f width: %f",winSize.height,winSize.width);
+//    CCLOG(@"winSize: height: %f width: %f",winSize.height,winSize.width);
     
     b2BodyDef bodyDef;
     bodyDef.position.Set((point.x+32)/PTM_RATIO, (point.y-32)/PTM_RATIO);
@@ -1086,7 +1086,7 @@ bool gravity2 = false;
     hudLayer  = (HUDLayer*)[scene getChildByTag:HUD_LAYER_TAG];
     
     [hudLayer updateCoinCounter:self.coinCount];
-    CCLOG(@"!!!!!!coin: %d",self.coinCount);
+//    CCLOG(@"!!!!!!coin: %d",self.coinCount);
     [hudLayer updateLifeCounter:self.lifeCount];
     [hudLayer updateStatusCounter:self.distance];
     
@@ -1154,7 +1154,7 @@ bool gravity2 = false;
     
     if(joker.position.x>100*32-300 && hand1==false)
     {
-        [self updateFlower:ccp(100*32,(24-17)*32)];
+        [self updateFlower:ccp(100*32,(24-17)*32-32)];
         hand1=true;
     }
     if(joker.position.x>150*32-300 && hand2==false)

@@ -8,27 +8,13 @@
   <object x="3136" y="672" width="64" height="64"/>
   <object x="6880" y="64" width="64" height="64"/>
   <object x="6816" y="64" width="64" height="64"/>
-  <object x="12672" y="224" width="64" height="64"/>
-  <object x="12736" y="224" width="64" height="64"/>
   <object x="12736" y="512" width="64" height="64"/>
   <object x="12672" y="512" width="64" height="64"/>
-  <object x="9568" y="480" width="64" height="64"/>
-  <object x="9952" y="480" width="64" height="64"/>
   <object x="10272" y="480" width="64" height="64"/>
-  <object x="1280" y="352" width="64" height="64"/>
-  <object x="1280" y="608" width="64" height="64"/>
   <object x="1632" y="32" width="64" height="64"/>
   <object x="2336" y="608" width="64" height="64"/>
   <object x="1568" y="32" width="64" height="64"/>
-  <object x="2752" y="576" width="64" height="64"/>
-  <object x="2816" y="576" width="64" height="64"/>
-  <object x="2880" y="576" width="64" height="64"/>
-  <object x="1216" y="608" width="64" height="64"/>
-  <object x="1344" y="608" width="64" height="64"/>
-  <object x="2688" y="576" width="64" height="64"/>
-  <object x="2624" y="576" width="64" height="64"/>
-  <object x="3040" y="0" width="64" height="64"/>
-  <object x="2976" y="0" width="64" height="64"/>
+  <object x="1216" y="608" width="192" height="64"/>
  </objectgroup>
  <objectgroup name="brick_grass" width="400" height="24">
   <object x="0" y="352" width="1280" height="64"/>
@@ -37,7 +23,7 @@
   <object x="10304" y="160" width="832" height="64"/>
   <object x="10464" y="416" width="896" height="64"/>
   <object x="4160" y="608" width="512" height="64"/>
-  <object x="4544" y="32" width="512" height="64"/>
+  <object x="4416" y="32" width="640" height="64"/>
   <object x="4672" y="608" width="512" height="64"/>
   <object x="11520" y="160" width="384" height="64"/>
   <object x="11904" y="576" width="192" height="64"/>
@@ -46,12 +32,26 @@
   <object x="2208" y="608" width="128" height="64"/>
   <object x="6016" y="96" width="256" height="64"/>
   <object x="1696" y="32" width="64" height="64"/>
-  <object x="12448" y="512" width="64" height="64"/>
-  <object x="12320" y="576" width="192" height="64"/>
+  <object x="12416" y="512" width="64" height="64"/>
+  <object x="12288" y="576" width="192" height="64"/>
+  <object x="2624" y="608" width="320" height="64"/>
+  <object x="2976" y="0" width="128" height="64"/>
+  <object x="5184" y="608" width="576" height="64"/>
+  <object x="1696" y="320" width="128" height="64"/>
+  <object x="1952" y="448" width="128" height="64"/>
+  <object x="11136" y="160" width="384" height="64"/>
+  <object x="11360" y="416" width="384" height="64"/>
+  <object x="6944" y="64" width="192" height="64"/>
+  <object x="7168" y="544" width="128" height="64"/>
+  <object x="7264" y="96" width="128" height="64"/>
+  <object x="7520" y="704" width="192" height="64"/>
+  <object x="7840" y="128" width="192" height="64"/>
+  <object x="8256" y="0" width="128" height="64"/>
+  <object x="8704" y="192" width="128" height="64"/>
+  <object x="9664" y="160" width="192" height="64"/>
+  <object x="5056" y="32" width="704" height="64"/>
  </objectgroup>
  <objectgroup name="brick_dice" width="400" height="24">
-  <object x="1760" y="320" width="64" height="64"/>
-  <object x="2016" y="448" width="64" height="64"/>
   <object x="3200" y="672" width="64" height="64"/>
   <object x="3264" y="672" width="64" height="64"/>
   <object x="3328" y="672" width="64" height="64"/>
@@ -63,36 +63,10 @@
   <object x="3712" y="672" width="64" height="64"/>
   <object x="3776" y="672" width="64" height="64"/>
   <object x="3840" y="672" width="64" height="64"/>
-  <object x="11392" y="160" width="64" height="64"/>
-  <object x="11328" y="160" width="64" height="64"/>
-  <object x="11456" y="160" width="64" height="64"/>
-  <object x="11200" y="160" width="64" height="64"/>
-  <object x="11136" y="160" width="64" height="64"/>
-  <object x="11264" y="160" width="64" height="64"/>
-  <object x="11360" y="416" width="64" height="64"/>
-  <object x="11552" y="416" width="64" height="64"/>
-  <object x="11424" y="416" width="64" height="64"/>
-  <object x="11680" y="416" width="64" height="64"/>
-  <object x="11616" y="416" width="64" height="64"/>
-  <object x="11488" y="416" width="64" height="64"/>
-  <object x="5984" y="544" width="64" height="64"/>
-  <object x="6048" y="544" width="64" height="64"/>
-  <object x="6112" y="544" width="64" height="64"/>
-  <object x="6176" y="544" width="64" height="64"/>
-  <object x="1696" y="320" width="64" height="64"/>
-  <object x="1952" y="448" width="64" height="64"/>
-  <object x="6944" y="64" width="64" height="64"/>
-  <object x="7008" y="64" width="64" height="64"/>
-  <object x="7072" y="64" width="64" height="64"/>
-  <object x="7680" y="480" width="64" height="64"/>
-  <object x="7616" y="480" width="64" height="64"/>
-  <object x="7552" y="480" width="64" height="64"/>
-  <object x="7840" y="192" width="64" height="64"/>
-  <object x="7904" y="192" width="64" height="64"/>
-  <object x="7968" y="192" width="64" height="64"/>
-  <object x="8096" y="480" width="64" height="64"/>
-  <object x="8224" y="480" width="64" height="64"/>
-  <object x="8160" y="480" width="64" height="64"/>
+  <object x="5952" y="544" width="64" height="64"/>
+  <object x="6016" y="544" width="64" height="64"/>
+  <object x="6080" y="544" width="64" height="64"/>
+  <object x="6144" y="544" width="64" height="64"/>
   <object x="5376" y="96" width="64" height="64"/>
   <object x="5440" y="96" width="64" height="64"/>
   <object x="5504" y="96" width="64" height="64"/>
@@ -100,34 +74,11 @@
   <object x="6592" y="544" width="64" height="64"/>
   <object x="6656" y="544" width="64" height="64"/>
   <object x="6528" y="544" width="64" height="64"/>
-  <object x="8288" y="480" width="64" height="64"/>
-  <object x="8352" y="480" width="64" height="64"/>
-  <object x="8480" y="480" width="64" height="64"/>
-  <object x="8416" y="480" width="64" height="64"/>
-  <object x="8608" y="480" width="64" height="64"/>
-  <object x="8544" y="480" width="64" height="64"/>
-  <object x="8736" y="480" width="64" height="64"/>
-  <object x="8672" y="480" width="64" height="64"/>
-  <object x="8864" y="480" width="64" height="64"/>
-  <object x="8800" y="480" width="64" height="64"/>
-  <object x="8992" y="480" width="64" height="64"/>
-  <object x="8928" y="480" width="64" height="64"/>
-  <object x="9120" y="480" width="64" height="64"/>
-  <object x="9056" y="480" width="64" height="64"/>
-  <object x="9248" y="480" width="64" height="64"/>
-  <object x="9184" y="480" width="64" height="64"/>
-  <object x="9376" y="480" width="64" height="64"/>
-  <object x="9312" y="480" width="64" height="64"/>
-  <object x="9504" y="480" width="64" height="64"/>
-  <object x="9440" y="480" width="64" height="64"/>
-  <object x="9632" y="480" width="64" height="64"/>
-  <object x="9760" y="480" width="64" height="64"/>
-  <object x="9696" y="480" width="64" height="64"/>
-  <object x="9888" y="480" width="64" height="64"/>
-  <object x="9824" y="480" width="64" height="64"/>
-  <object x="10016" y="480" width="64" height="64"/>
-  <object x="10144" y="480" width="64" height="64"/>
-  <object x="10080" y="480" width="64" height="64"/>
+  <object x="8544" y="704" width="128" height="64"/>
+  <object x="8960" y="480" width="64" height="64"/>
+  <object x="9024" y="480" width="64" height="64"/>
+  <object x="9408" y="544" width="64" height="64"/>
+  <object x="9472" y="544" width="64" height="64"/>
   <object x="10208" y="480" width="64" height="64"/>
   <object x="4544" y="224" width="64" height="64"/>
   <object x="4544" y="288" width="64" height="64"/>
@@ -141,14 +92,10 @@
   <object x="6912" y="544" width="64" height="64"/>
   <object x="6976" y="544" width="64" height="64"/>
   <object x="6784" y="544" width="64" height="64"/>
-  <object x="7168" y="544" width="64" height="64"/>
-  <object x="7232" y="544" width="64" height="64"/>
-  <object x="7328" y="96" width="64" height="64"/>
-  <object x="7392" y="96" width="64" height="64"/>
-  <object x="7456" y="96" width="64" height="64"/>
   <object x="3104" y="0" width="64" height="64"/>
   <object x="3168" y="0" width="64" height="64"/>
   <object x="3232" y="0" width="64" height="64"/>
+  <object x="8064" y="576" width="192" height="64"/>
  </objectgroup>
  <objectgroup name="brick_wood" width="400" height="24">
   <object x="704" y="544" width="64" height="64"/>
@@ -171,35 +118,29 @@
   <object x="5088" y="544"/>
   <object x="5184" y="544"/>
   <object x="5280" y="544"/>
-  <object x="8480" y="448"/>
-  <object x="8672" y="448"/>
-  <object x="8992" y="448"/>
-  <object x="9344" y="448"/>
-  <object x="9632" y="448"/>
-  <object x="9856" y="448"/>
-  <object x="10144" y="448"/>
+  <object x="8576" y="672"/>
+  <object x="10240" y="448"/>
   <object x="6176" y="352"/>
   <object x="6624" y="448"/>
-  <object x="6944" y="192"/>
-  <object x="8128" y="416"/>
+  <object x="8096" y="544"/>
   <object x="7360" y="192"/>
   <object x="7232" y="512"/>
  </objectgroup>
  <objectgroup name="heart" width="400" height="24">
   <object x="3872" y="640"/>
-  <object x="6208" y="512"/>
-  <object x="5184" y="608" width="576" height="64"/>
-  <object x="5056" y="32" width="704" height="64"/>
+  <object x="6176" y="512"/>
   <object x="3232" y="640"/>
   <object x="2368" y="576"/>
   <object x="2048" y="416"/>
   <object x="3488" y="640"/>
   <object x="3616" y="640"/>
   <object x="3360" y="640"/>
+  <object x="9504" y="512"/>
+  <object x="8992" y="448"/>
  </objectgroup>
  <layer name="Wall" width="400" height="24">
   <data encoding="base64" compression="zlib">
-   eJzt28FqAyEQBuCF5JJCc2nf/1mzxyRtStyt669+H4iHQBgYYXVGlwUA5nBZx8fd/Op36nnOQcoM8JevdXzfza9+p57nHKTMwE/2W7Cf8wszst+C/ZxfYFlO6zi3DgJgAKn9uVr//7mO64Z4AHiU2p/T/wPo2zv1nho1oaPqTO43AtTxTr2nRk3oqDqT8w0AAJCu9Xth9TZm4L7keEpyOmr+W78XVm9jBu5Ljqckp/L/v0b9HsNvrPf+qLXk8j1mJtZ7f9RagATOHwBs4fxBC6X7lpR9ztY4UuIH6F3pviVln7M1jpT4AXpT2pvf28tv/b4j8U5CQgxHa53nntcLpCjtze/t5bd+35F4JyEhhqO1znPP6wUAAAAAgDw3dachlQ==
+   eJzt2sFqwzAMANDCdulgu3T//63LsZSOxI5tyc57EHIpxERKbcu63Rjtvl1fT3eIJie5ir1cz/4NPLbr9+k+g9d3nvVOnRlzEmrs5bpvoL3Xd571npG5jmhyEM6L2L8cnet82/Qy03oLssq8f2k1FmtN9nxs12f0IIB0Ms6NrbWeI6PP7Uaf/31v10/B7wFai9rjtJ4jo8/tVj7/A3jnKv9fR+o9PWpCo+pM+hsB+jhS7+lRExpVZ7K/AYBz7Lngeu7RA7ig6H6BHvU2ey6y0S+5npKYrhr/6H4B9TauQL/kekpiKv5trTofwzvyfT7RtRe9UP+LnI/FgdGsP+cTXXtRm8lJHBjN/gOAGvYfRChdt2RZ59SOI8v4YQS1VHoqXbdkWefUjiPL+GGE0bVUZ7FrK43v2XyI7iHI2HNQ88xM468RHdeZ8mNmzmLXVhrfs/kQ3UOQseeg5pmZxl8jOq4z5QcAAMDqomt2aoUAc4qu2akV8uoP0UEtZg==
   </data>
  </layer>
 </map>
