@@ -123,7 +123,7 @@
   <object x="1312" y="256"/>
   <object x="2784" y="512"/>
  </objectgroup>
- <layer name="Wall" width="400" height="24" visible="0">
+ <layer name="Wall" width="400" height="24">
   <data encoding="base64" compression="zlib">
    eJzt29lqwzAQBdC0KXRJof3/r61DCDGhEBFr8YzOAaEXx0vAtu7IOhzI4n1pHwU9AKz9LO23oGe80ne9McHcXpb2uuqhNs+QeErf9cYEc/tc2teqh9o8Q+Z1XNrb6JOASmrn8lp5PVN9YM/nRl+npX1X2E/E+yASdagytXN5rbyeqT6w53Ojr1r5I+J9EIk6FLA3tfIH/5PHoI1etcrofQvX3GH+oy15DNroVauM3rdwzR3yByXMv5DNs2Pn0t892i7D2D3DNdCe+ReyeXbsXPq7R9tlGLtnuAbiilDrBWB/ItR6AYC5tJ7j2HqcVvuJenyAvWg9x7H1OK32E/X49OW7KBi/xiLDmo4z6zrm4rsoGL/GIsOajjPrOvqJPtYAWJM7+ok+1qjFe3E//PdsIXfQ25b34ug6crbna5YxCWPIH0Qyuo7s+Qo38geMtzXPRM1D998Dtu65GJ3XZ8373Lg369maZ6LmofvvAVv3XIzO6/I+7k0AovgDUeonkw==
   </data>
