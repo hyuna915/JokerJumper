@@ -13,6 +13,7 @@
 #import "GameScene.h"
 #import "Constants.h"
 #import "SimpleAudioEngine.h"
+#import "VideoScene.h"
 
 #define PLAY_BUTTON_TAG 1
 #define OPTIONS_BUTTON_TAG 2
@@ -441,7 +442,8 @@ CGSize winSize;
     [cloudRight0 runAction:cloudR0];
     [self allCloudMoveOut];
 //    [self schedule:@selector(updateCloudMoveOut:) interval:0.5f];
-    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[LevelScrollScene scene]]];
+//    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[LevelScrollScene scene]]];
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[VideoScene scene]]];
 }
 
 

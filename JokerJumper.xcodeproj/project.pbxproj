@@ -31,6 +31,14 @@
 		A45B18561727BEC000D854E0 /* btn_play_scale_default.png in Resources */ = {isa = PBXBuildFile; fileRef = A45B18521727BEC000D854E0 /* btn_play_scale_default.png */; };
 		A45B18591727D27A00D854E0 /* level2end.png in Resources */ = {isa = PBXBuildFile; fileRef = A45B18571727D27A00D854E0 /* level2end.png */; };
 		A463629D1707D19C00DC75E4 /* heart_hd.png in Resources */ = {isa = PBXBuildFile; fileRef = A463629A1707D19C00DC75E4 /* heart_hd.png */; };
+		A4657C681730DF2400571968 /* CCVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A4657C3E1730DF2400571968 /* CCVideoPlayer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A4657C691730DF2400571968 /* CCVideoPlayerImpliOS.m in Sources */ = {isa = PBXBuildFile; fileRef = A4657C411730DF2400571968 /* CCVideoPlayerImpliOS.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A4657C6A1730DF2400571968 /* videoOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4657C431730DF2400571968 /* videoOverlayView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A4657C6E1730DF2400571968 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A4657C4A1730DF2400571968 /* README.md */; };
+		A4657C771730E4F900571968 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4657C761730E4F900571968 /* MediaPlayer.framework */; };
+		A4657C7A1730ED0000571968 /* joker_jumper.mov in Resources */ = {isa = PBXBuildFile; fileRef = A4657C791730ED0000571968 /* joker_jumper.mov */; };
+		A4657C801730EEE500571968 /* VideoScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = A4657C7F1730EEE500571968 /* VideoScene.mm */; };
+		A4657C831730EFF500571968 /* VideoLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A4657C821730EFF500571968 /* VideoLayer.m */; };
 		A467103717050ABB0010697F /* BackgroundLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = A467103617050ABB0010697F /* BackgroundLayer.mm */; };
 		A470BFA9172BA93C002D13C1 /* lv2_background.wav in Resources */ = {isa = PBXBuildFile; fileRef = A470BFA8172BA93C002D13C1 /* lv2_background.wav */; };
 		A470BFAB172BAABD002D13C1 /* DST-Canopy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A470BFAA172BAABD002D13C1 /* DST-Canopy.mp3 */; };
@@ -422,6 +430,19 @@
 		A45B18521727BEC000D854E0 /* btn_play_scale_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_play_scale_default.png; sourceTree = "<group>"; };
 		A45B18571727D27A00D854E0 /* level2end.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level2end.png; sourceTree = "<group>"; };
 		A463629A1707D19C00DC75E4 /* heart_hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart_hd.png; sourceTree = "<group>"; };
+		A4657C3D1730DF2400571968 /* CCVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCVideoPlayer.h; sourceTree = "<group>"; };
+		A4657C3E1730DF2400571968 /* CCVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCVideoPlayer.m; sourceTree = "<group>"; };
+		A4657C401730DF2400571968 /* CCVideoPlayerImpliOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCVideoPlayerImpliOS.h; sourceTree = "<group>"; };
+		A4657C411730DF2400571968 /* CCVideoPlayerImpliOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCVideoPlayerImpliOS.m; sourceTree = "<group>"; };
+		A4657C421730DF2400571968 /* videoOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = videoOverlayView.h; sourceTree = "<group>"; };
+		A4657C431730DF2400571968 /* videoOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = videoOverlayView.m; sourceTree = "<group>"; };
+		A4657C4A1730DF2400571968 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		A4657C761730E4F900571968 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		A4657C791730ED0000571968 /* joker_jumper.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = joker_jumper.mov; sourceTree = "<group>"; };
+		A4657C7E1730EEE500571968 /* VideoScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoScene.h; sourceTree = "<group>"; };
+		A4657C7F1730EEE500571968 /* VideoScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoScene.mm; sourceTree = "<group>"; };
+		A4657C811730EFF500571968 /* VideoLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoLayer.h; sourceTree = "<group>"; };
+		A4657C821730EFF500571968 /* VideoLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoLayer.m; sourceTree = "<group>"; };
 		A467103517050ABB0010697F /* BackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundLayer.h; sourceTree = "<group>"; };
 		A467103617050ABB0010697F /* BackgroundLayer.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = BackgroundLayer.mm; sourceTree = "<group>"; };
 		A470BFA8172BA93C002D13C1 /* lv2_background.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lv2_background.wav; sourceTree = "<group>"; };
@@ -1014,6 +1035,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4657C771730E4F900571968 /* MediaPlayer.framework in Frameworks */,
 				A4F037BE16D192040068D7C8 /* QuartzCore.framework in Frameworks */,
 				A4F037C016D192040068D7C8 /* OpenGLES.framework in Frameworks */,
 				A4F037C216D192040068D7C8 /* OpenAL.framework in Frameworks */,
@@ -1130,6 +1152,45 @@
 			path = "Resources/Magic Props";
 			sourceTree = "<group>";
 		};
+		A4657C1D1730DF2400571968 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A4657C3C1730DF2400571968 /* CCVideoPlayer */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A4657C3C1730DF2400571968 /* CCVideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				A4657C3D1730DF2400571968 /* CCVideoPlayer.h */,
+				A4657C3E1730DF2400571968 /* CCVideoPlayer.m */,
+				A4657C3F1730DF2400571968 /* iOS */,
+				A4657C4A1730DF2400571968 /* README.md */,
+			);
+			path = CCVideoPlayer;
+			sourceTree = "<group>";
+		};
+		A4657C3F1730DF2400571968 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A4657C401730DF2400571968 /* CCVideoPlayerImpliOS.h */,
+				A4657C411730DF2400571968 /* CCVideoPlayerImpliOS.m */,
+				A4657C421730DF2400571968 /* videoOverlayView.h */,
+				A4657C431730DF2400571968 /* videoOverlayView.m */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		A4657C781730ED0000571968 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				A4657C791730ED0000571968 /* joker_jumper.mov */,
+			);
+			name = Video;
+			path = Resources/Video;
+			sourceTree = "<group>";
+		};
 		A4810E7617057BD600C61964 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -1147,6 +1208,8 @@
 				A4B309C4171E91E400E25430 /* GameOverScene.mm */,
 				A49F61B21726AA1100A98432 /* GameOptionsScene.h */,
 				A49F61B31726AA1100A98432 /* GameOptionsScene.mm */,
+				A4657C7E1730EEE500571968 /* VideoScene.h */,
+				A4657C7F1730EEE500571968 /* VideoScene.mm */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -1198,6 +1261,8 @@
 				DCA232DD170CD4ED00EA70E0 /* LevelScrollLayer.mm */,
 				A4ABCA3817082C8F00FB4623 /* PauseLayer.h */,
 				A4ABCA3917082C8F00FB4623 /* PauseLayer.mm */,
+				A4657C811730EFF500571968 /* VideoLayer.h */,
+				A4657C821730EFF500571968 /* VideoLayer.m */,
 			);
 			name = Menu;
 			sourceTree = "<group>";
@@ -1262,7 +1327,9 @@
 		A4F037B116D192040068D7C8 = {
 			isa = PBXGroup;
 			children = (
+				A4657C761730E4F900571968 /* MediaPlayer.framework */,
 				A4419E9A16E94BBC009A441C /* Default-568h@2x.png */,
+				A4657C1D1730DF2400571968 /* Extensions */,
 				A4F03A0F16D19CD20068D7C8 /* CCControlExtension */,
 				A4F039FC16D19CC20068D7C8 /* CCBReader */,
 				A4F039FB16D19B9B0068D7C8 /* Scenes */,
@@ -1314,6 +1381,7 @@
 		A4F037D016D192040068D7C8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A4657C781730ED0000571968 /* Video */,
 				A433BD2016F0804D003CD7CE /* Background */,
 				A4F039E916D192070068D7C8 /* blocks.png */,
 				A4F03A8616D1A8730068D7C8 /* Button */,
@@ -2246,9 +2314,15 @@
 				A470BFA9172BA93C002D13C1 /* lv2_background.wav in Resources */,
 				A470BFAB172BAABD002D13C1 /* DST-Canopy.mp3 in Resources */,
 				A484190B172F9DDD00E994BF /* map_lv1.tmx in Resources */,
+<<<<<<< HEAD
 				DC6211A31730ED2B00AB6E40 /* map_lv3_trial3.tmx in Resources */,
 				DC6211A71730F1D900AB6E40 /* lv1.tmx in Resources */,
 				DC6211A91730F24D00AB6E40 /* map_lv2.tmx in Resources */,
+=======
+				A484190D172FA28800E994BF /* map_lv2.tmx in Resources */,
+				A4657C6E1730DF2400571968 /* README.md in Resources */,
+				A4657C7A1730ED0000571968 /* joker_jumper.mov in Resources */,
+>>>>>>> Play Video
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2451,6 +2525,11 @@
 				A4BEF47C171E587E00E0ECB4 /* MainMenuScene.mm in Sources */,
 				A4B309C5171E91E400E25430 /* GameOverScene.mm in Sources */,
 				A49F61B41726AA1100A98432 /* GameOptionsScene.mm in Sources */,
+				A4657C681730DF2400571968 /* CCVideoPlayer.m in Sources */,
+				A4657C691730DF2400571968 /* CCVideoPlayerImpliOS.m in Sources */,
+				A4657C6A1730DF2400571968 /* videoOverlayView.m in Sources */,
+				A4657C801730EEE500571968 /* VideoScene.mm in Sources */,
+				A4657C831730EFF500571968 /* VideoLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
