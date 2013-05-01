@@ -2314,15 +2314,12 @@
 				A470BFA9172BA93C002D13C1 /* lv2_background.wav in Resources */,
 				A470BFAB172BAABD002D13C1 /* DST-Canopy.mp3 in Resources */,
 				A484190B172F9DDD00E994BF /* map_lv1.tmx in Resources */,
-<<<<<<< HEAD
 				DC6211A31730ED2B00AB6E40 /* map_lv3_trial3.tmx in Resources */,
 				DC6211A71730F1D900AB6E40 /* lv1.tmx in Resources */,
 				DC6211A91730F24D00AB6E40 /* map_lv2.tmx in Resources */,
-=======
 				A484190D172FA28800E994BF /* map_lv2.tmx in Resources */,
 				A4657C6E1730DF2400571968 /* README.md in Resources */,
 				A4657C7A1730ED0000571968 /* joker_jumper.mov in Resources */,
->>>>>>> Play Video
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
