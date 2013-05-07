@@ -31,7 +31,7 @@
 - (void) moviePlaybackFinished
 {
     //    CCLOG(@"moviePlaybackFinished");
-    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[LevelScrollScene scene]]];
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:0.1 scene:[LevelScrollScene scene]]];
 }
 
 - (void) movieStartsPlaying

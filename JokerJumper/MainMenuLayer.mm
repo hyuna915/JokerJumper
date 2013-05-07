@@ -47,6 +47,7 @@ CCFiniteTimeAction *moveAction4;
 int cloudCount;
 int cloudMoveOutCount;
 CGSize winSize;
+int i;
 
 @implementation MainMenuLayer
 
@@ -66,6 +67,7 @@ CGSize winSize;
     self = [super init];
     if (self) {
         winSize = [[CCDirector sharedDirector] winSize];
+        i = 0;
         
         [self preLoadSoundFiles];
         
@@ -210,14 +212,16 @@ CGSize winSize;
         
         
         // Create Play Button
-        CCMenuItem *playButton = [CCMenuItemImage itemWithNormalImage:@"btn_play0.png" selectedImage:@"btn_play0.png" target:self selector:@selector(buttonReplayAction:)];
-        playButton.scale = 1.3;
-        CCMenu *Menu = [CCMenu menuWithItems:playButton, nil];
-        Menu.position=ccp(500, 80);
+//        CCMenuItem *playButton = [CCMenuItemImage itemWithNormalImage:@"btn_play0.png" selectedImage:@"btn_play0.png" target:self selector:@selector(buttonReplayAction:)];
+//        playButton.scale = 1.3;
+//        CCMenu *Menu = [CCMenu menuWithItems:playButton, nil];
+//        Menu.position=ccp(500, 200);
         
-        Menu.opacity = 0;
+//        Menu.opacity = 0;
         
-        [self addChild:Menu z:1];
+//        [self addChild:Menu z:100];
+//        playButton.position = ccp(500, 80);
+//        [self addChild:playButton z:100];
         [self schedule:@selector(updateObject:) interval:10.0f];
         
         // Create Help Button
@@ -354,10 +358,31 @@ CGSize winSize;
 }
 
 -(void) buttonHelpAction:(id)sender {
-    if(helpMenuButton.visible == true)
-        helpMenuButton.visible = false;
-    else
-        helpMenuButton.visible = true;
+    if(i == 0) {
+        i++;
+        if(helpMenuButton.visible == true)
+            helpMenuButton.visible = false;
+        else
+            helpMenuButton.visible = true;
+
+    }
+    else {
+        cloudCount = 0;
+        
+        [self unschedule:@selector(updateCloudMoveIn:)];
+        
+        [cloudLeft0 stopAllActions];
+        cloudL0 = [CCMoveTo actionWithDuration:0.1f position:ccp(-700, 100)];
+        [cloudLeft0 runAction:cloudL0];
+        
+        [cloudRight0 stopAllActions];
+        cloudR0 = [CCMoveTo actionWithDuration:0.1f position:ccp(1234, 100)];
+        [cloudRight0 runAction:cloudR0];
+        [self allCloudMoveOut];
+        [self schedule:@selector(updateCloudMoveOut:) interval:0.1f];
+    }
+    
+
 }
 
 - (void)updateCloudMoveOut:(ccTime) dt
@@ -396,8 +421,8 @@ CGSize winSize;
         default:
             [self unschedule:@selector(updateCloudMoveOut:)];
             cloudMoveOutCount = 0;
-//            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[LevelScrollScene scene]]];
-            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[VideoScene scene]]];
+            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[LevelScrollScene scene]]];
+//            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[VideoScene scene]]];
             break;
     }
 }
