@@ -19,3 +19,7 @@ Demo Link:
 http://www.youtube.com/watch?v=trFJsnU8M6Q
 
 Enjoy!
+
+Heguang Liu (heguangl@usc.edu)
+Yu Sun(sun812@usc.edu)
+Tao Hu(taohu@usc.edu)
